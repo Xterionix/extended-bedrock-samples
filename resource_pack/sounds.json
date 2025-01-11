@@ -1,0 +1,588 @@
+{
+  "block_sounds": {
+    "sponge": {
+      "volume": 1.0,
+      "pitch": 1.0,
+      "events": {
+        "default": "",
+        "item.use.on": {
+          "sound": "step.sponge",
+          "volume": 1.0
+        },
+        "break": {
+          "sound": "break.sponge",
+          "volume": 1.0,
+          "pitch": 0.8
+        },
+        "hit": {
+          "sound": "hit.sponge",
+          "volume": 0.3,
+          "pitch": 0.5
+        },
+        "place": {
+          "sound": "place.sponge",
+          "volume": 1.0,
+          "pitch": 0.8
+        }
+      }
+    },
+    "wet_sponge": {
+      "volume": 1.0,
+      "pitch": 1.0,
+      "events": {
+        "default": "",
+        "item.use.on": {
+          "sound": "step.wet_sponge",
+          "volume": 1.0
+        },
+        "break": {
+          "sound": "break.wet_sponge",
+          "volume": 1.0,
+          "pitch": 0.8
+        },
+        "hit": {
+          "sound": "hit.wet_sponge",
+          "volume": 0.3,
+          "pitch": 0.5
+        },
+        "place": {
+          "sound": "place.wet_sponge",
+          "volume": 1.0,
+          "pitch": 0.8
+        }
+      }
+    },
+    "creaking_heart": {
+      "volume": 1.0,
+      "pitch": 1.0,
+      "events": {
+        "default": "",
+        "ambient": "block.creaking_heart.ambient",
+        "break": {
+          "sound": "block.creaking_heart.break",
+          "volume": 0.5,
+          "pitch": 0.8
+        },
+        "creaking_heart_spawn": "block.creaking_heart.spawn_mob",
+        "hit": {
+          "sound": "block.creaking_heart.hit",
+          "volume": 0.25,
+          "pitch": 0.5
+        },
+        "place": {
+          "sound": "block.creaking_heart.place",
+          "volume": 0.7,
+          "pitch": 0.8
+        }
+      }
+    },
+    "pale_hanging_moss": {
+      "volume": 1.0,
+      "pitch": 1.0,
+      "events": {
+        "default": "",
+        "ambient": "block.pale_hanging_moss.ambient",
+        // This is just a copy-paste of Moss' setup, as there's no way to reuse it while overriding specific sounds.
+        "item.use.on": {
+          "sound": "use.moss"
+        },
+        "break": {
+          "sound": "dig.moss",
+          "volume": 0.93
+        },
+        "hit": {
+          "sound": "hit.moss"
+        },
+        "place": {
+          "sound": "place.moss",
+          "volume": 0.93
+        }
+      }
+    },
+    "eyeblossom": {
+      "volume": 1.0,
+      "pitch": 1.0,
+      "events": {
+        "default": "",
+        "ambient": "block.eyeblossom.ambient",
+        "open": "block.eyeblossom.open",
+        "open_long": "block.eyeblossom.open_long",
+        "close": "block.eyeblossom.close",
+        "close_long": "block.eyeblossom.close_long",
+        "item.use.on": {
+          "sound": "use.grass"
+        },
+        "break": {
+          "sound": "dig.grass",
+          "volume": 0.7,
+          "pitch": [
+            0.8,
+            1.0
+          ]
+        },
+        "hit": {
+          "sound": "hit.grass",
+          "volume": 0.30,
+          "pitch": 0.5
+        },
+        "place": {
+          "sound": "dig.grass",
+          "volume": 0.8,
+          "pitch": [
+            0.8,
+            1.0
+          ]
+        }
+      }
+    },
+    "amethyst_block": {
+      "volume": 1.0,
+      "pitch": 1.0,
+      "events": {
+        "default": "",
+        "break": {
+          "sound": "break.amethyst_block",
+          "volume": 1.0,
+          "pitch": 0.8
+        },
+        "hit": {
+          "sound": "hit.amethyst_block",
+          "volume": 0.3,
+          "pitch": 0.5
+        },
+        "place": {
+          "sound": "place.amethyst_block",
+          "volume": 1.0,
+          "pitch": 0.8
+        }
+      }
+    },
+    "resin_brick": {
+      "volume": 1.0,
+      "pitch": 1.0,
+      "events": {
+        "default": "",
+        "break": {
+          "sound": "block.resin_brick.break",
+          "volume": 1.0,
+          "pitch": 0.8
+        },
+        "hit": {
+          "sound": "block.resin_brick.hit",
+          "volume": 0.25,
+          "pitch": 0.5
+        },
+        "place": {
+          "sound": "block.resin_brick.place",
+          "volume": 1.0,
+          "pitch": 0.8
+        }
+      }
+    },
+    "resin": {
+      "volume": 1.0,
+      "pitch": 1.0,
+      "events": {
+        "default": "",
+        "break": {
+          "sound": "block.resin.break",
+          "volume": 1.0,
+          "pitch": 0.8
+        },
+        "hit": {
+          "sound": "block.resin.hit",
+          "volume": 0.25,
+          "pitch": 0.5
+        },
+        "place": {
+          "sound": "block.resin.place",
+          "volume": 1.0,
+          "pitch": 0.8
+        }
+      }
+    },
+    "glow_lichen": {
+      "volume": 1.0,
+      "pitch": 1.0,
+      // This is a copy of grass except so we can override the step sound
+      "events": {
+        "default": "",
+        "item.use.on": {
+          "sound": "use.grass",
+          "pitch": 0.8
+        },
+        "break": {
+          "sound": "dig.grass",
+          "volume": 0.7,
+          "pitch": [
+            0.8,
+            1.0
+          ]
+        },
+        "hit": {
+          "sound": "hit.grass",
+          "volume": 0.30,
+          "pitch": 0.5
+        },
+        "place": {
+          "sound": "dig.grass",
+          "volume": 0.8,
+          "pitch": [
+            0.8,
+            1.0
+          ]
+        }
+      }
+    }
+  },
+  "interactive_sounds": {
+    "block_sounds": {
+      "sponge": {
+        "volume": 1.0,
+        "pitch": 1.0,
+        "events": {
+          "default": "",
+          "fall": {
+            "sound": "step.sponge"
+          },
+          "step": {
+            "sound": "step.sponge",
+            "volume": 0.2
+          },
+          "jump": {
+            "sound": "step.sponge",
+            "volume": 0.12,
+            "pitch": 1.1
+          },
+          "land": {
+            "sound": "step.sponge",
+            "volume": 0.4
+          }
+        }
+      },
+      "wet_sponge": {
+        "volume": 1.0,
+        "pitch": 1.0,
+        "events": {
+          "default": "",
+          "fall": {
+            "sound": "step.wet_sponge"
+          },
+          "step": {
+            "sound": "step.wet_sponge",
+            "volume": 0.2
+          },
+          "jump": {
+            "sound": "step.wet_sponge",
+            "volume": 0.12,
+            "pitch": 1.1
+          },
+          "land": {
+            "sound": "step.wet_sponge",
+            "volume": 0.4
+          }
+        }
+      },
+      "creaking_heart": {
+        "volume": 1.0,
+        "pitch": 1.0,
+        "events": {
+          "default": "",
+          "step": {
+            "sound": "block.creaking_heart.step",
+            "volume": 0.15,
+            "pitch": 1.0
+          },
+          "fall": {
+            "sound": "block.creaking_heart.fall",
+            "volume": 0.5,
+            "pitch": 0.75
+          },
+          "jump": {
+            "sound": "block.creaking_heart.step",
+            "volume": 0.12,
+            "pitch": 1.1
+          },
+          "land": {
+            "sound": "block.creaking_heart.step",
+            "volume": 0.4
+          }
+        }
+      },
+      "amethyst_block": {
+        "volume": 1.0,
+        "pitch": 1.0,
+        "events": {
+          "default": "",
+          "fall": {
+            "sound": "fall.amethyst_block",
+            "volume": 0.4
+          },
+          "step": {
+            "sound": "step.amethyst_block",
+            "volume": 0.22
+          },
+          "land": {
+            "sound": "step.amethyst_block",
+            "volume": 0.26
+          }
+        }
+      },
+      "resin_brick": {
+        "volume": 1.0,
+        "pitch": 1.0,
+        "events": {
+          "default": "",
+          "step": {
+            "sound": "block.resin_brick.step",
+            "volume": 0.15,
+            "pitch": 1.0
+          },
+          "fall": {
+            "sound": "block.resin_brick.fall",
+            "volume": 0.5,
+            "pitch": 0.75
+          },
+          "jump": {
+            "sound": "block.resin_brick.step",
+            "volume": 0.12,
+            "pitch": 1.1
+          },
+          "land": {
+            "sound": "block.resin_brick.step",
+            "volume": 0.4
+          }
+        }
+      },
+      "resin": {
+        "volume": 1.0,
+        "pitch": 1.0,
+        "events": {
+          "default": "",
+          "step": {
+            "sound": "block.resin.step",
+            "volume": 0.15,
+            "pitch": 1.0
+          },
+          "fall": {
+            "sound": "block.resin.fall",
+            "volume": 0.5,
+            "pitch": 0.75
+          },
+          "jump": {
+            "sound": "block.resin.step",
+            "volume": 0.12,
+            "pitch": 1.1
+          },
+          "land": {
+            "sound": "block.resin.step",
+            "volume": 0.4
+          }
+        }
+      },
+      "moss_block": {
+        "events": {
+          "default": "",
+          "fall": { "sounds": "fall.moss" },
+          "step": {
+            "sound": "step.moss",
+            "volume": 0.2
+          },
+          "jump": { "sound": "jump.moss" },
+          "land": {
+            "sound": "land.moss",
+            "volume": 0.5
+          }
+        },
+        "volume": 1.0,
+        "pitch": 1.00
+      },
+      "moss_carpet": {
+        "events": {
+          "default": "",
+          "fall": { "sounds": "fall.moss" },
+          "step": {
+            "sound": "step.moss",
+            "volume": 0.2
+          },
+          "jump": { "sound": "jump.moss" },
+          "land": {
+            "sound": "land.moss",
+            "volume": 0.5
+          }
+        },
+        "volume": 0.9,
+        "pitch": 1.10
+      },
+      "glow_lichen": {
+        // This is a copy of grass except for the step override
+        "events": {
+          "default": "",
+          "fall": {
+            "sounds": "fall.grass",
+            "volume": 0.4
+          },
+          "step": {
+            "sound": "step.vines",
+            "volume": 0.30
+          },
+          "jump": {
+            "sound": "jump.grass",
+            "volume": 0.11
+          },
+          "land": {
+            "sound": "land.grass",
+            "volume": 0.21
+          }
+        },
+        "volume": 1.0,
+        "pitch": 1.00
+      }
+    }
+  },
+  "individual_event_sounds": {
+    "events": {
+      "sponge.absorb": {
+        "sound": "sponge.absorb",
+        "volume": 1.0,
+        "pitch": 1.0
+      },
+      "block.creaking_heart.trail": {
+        "sound": "block.creaking_heart.trail",
+        "volume": 1.0,
+        "pitch": 1.0
+      }
+    }
+  },
+  "individual_named_sounds": {
+    "sounds": {
+      "ambient.cave": {
+        "sound": "ambient.cave",
+        "volume": 0.7,
+        "pitch": [ 0.8, 1.0 ]
+      },
+      "ambient.crimson_forest.mood": {
+        "sound": "ambient.crimson_forest.mood",
+        "volume": 0.8,
+        "pitch": [ 0.5, 1.2 ]
+      },
+      "ambient.crimson_forest.loop": {
+        "sound": "ambient.crimson_forest.loop",
+        "volume": 0.9,
+        "pitch": 1.0
+      },
+      "ambient.crimson_forest.additions": {
+        "sound": "ambient.crimson_forest.additions",
+        "volume": 1,
+        "pitch": [ 1, 1.1 ]
+      },
+      "ambient.warped_forest.mood": {
+        "sound": "ambient.warped_forest.mood",
+        "volume": 0.8,
+        "pitch": [ 0.5, 1.2 ]
+      },
+      "ambient.warped_forest.loop": {
+        "sound": "ambient.warped_forest.loop",
+        "volume": 0.9,
+        "pitch": 1.0
+      },
+      "ambient.warped_forest.additions": {
+        "sound": "ambient.warped_forest.additions",
+        "volume": 1,
+        "pitch": [ 1, 1.1 ]
+      },
+      "ambient.soulsand_valley.mood": {
+        "sound": "ambient.soulsand_valley.mood",
+        "volume": 0.8,
+        "pitch": [ 0.5, 1.2 ]
+      },
+      "ambient.soulsand_valley.loop": {
+        "sound": "ambient.soulsand_valley.loop",
+        "volume": 0.95,
+        "pitch": 1.0
+      },
+      "ambient.soulsand_valley.additions": {
+        "sound": "ambient.soulsand_valley.additions",
+        "volume": 1,
+        "pitch": [ 1, 1.1 ]
+      },
+      "ambient.nether_wastes.mood": {
+        "sound": "ambient.nether_wastes.mood",
+        "volume": 0.8,
+        "pitch": [ 0.5, 1.2 ]
+      },
+      "ambient.nether_wastes.loop": {
+        "sound": "ambient.nether_wastes.loop",
+        "volume": 0.9,
+        "pitch": 1.0
+      },
+      "ambient.nether_wastes.additions": {
+        "sound": "ambient.nether_wastes.additions",
+        "volume": 1,
+        "pitch": [ 1, 1.1 ]
+      },
+      "ambient.basalt_deltas.mood": {
+        "sound": "ambient.basalt_deltas.mood",
+        "volume": 0.8,
+        "pitch": [ 0.5, 1.2 ]
+      },
+      "ambient.basalt_deltas.loop": {
+        "sound": "ambient.basalt_deltas.loop",
+        "volume": 0.58,
+        "pitch": 1.0
+      },
+      "ambient.basalt_deltas.additions": {
+        "sound": "ambient.basalt_deltas.additions",
+        "volume": 1,
+        "pitch": [ 1, 1.1 ]
+      }
+    }
+  },
+  "entity_sounds": {
+    "entities": {
+      "creaking": {
+        "volume": 1.0,
+        "pitch": 1.0,
+        "events": {
+          "ambient": "mob.creaking.ambient",
+          "death": "mob.creaking.death",
+          "step": {
+            "sound": "mob.creaking.step",
+            "volume": 0.8,
+            "pitch": 1.0
+          },
+          "attack": "mob.creaking.attack",
+          "activate": "mob.creaking.activate",
+          "deactivate": "mob.creaking.deactivate",
+          "freeze": "mob.creaking.freeze",
+          "unfreeze": "mob.creaking.unfreeze",
+          "creaking_heart_spawn": "mob.creaking.spawn"
+        }
+      },
+      "parrot": {
+        "events": {
+          "imitate.creaking": {
+            "sound": "mob.parrot.imitate_creaking",
+            "volume": 1.0,
+            "pitch": 1.0
+          }
+        }
+      },
+      "breeze": {
+        "events": {
+          "ambient.in.air": {
+            "sound": "mob.breeze.idle_air",
+            "pitch": [
+              0.7,
+              1.1
+            ],
+            "volume": [
+              0.8,
+              1.0
+            ]
+          }
+        }
+      }
+    }
+  }
+}

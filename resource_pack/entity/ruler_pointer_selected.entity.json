@@ -1,0 +1,21 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "editor:ruler_pointer_selected",
+			"materials": {
+				"default": "entity_alphatest"
+			},
+			"textures": {
+				"default": "textures/entity/ruler_pointer_selected"
+			},
+			"geometry": {
+				"default": "geometry.ruler_pointer_selected"
+			},
+			"render_controllers": ["controller.render.default"],
+			"animations": {
+				"spin": "animation.ruler_pointer_selected.spin"
+			}
+		}
+	}
+}

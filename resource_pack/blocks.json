@@ -1,0 +1,169 @@
+{
+  "format_version": "1.21.40",
+  "sponge": {
+    "sound": "sponge"
+  },
+  "wet_sponge": {
+    "sound": "wet_sponge"
+  },
+  "pale_oak_button": {
+    "textures": "pale_oak_planks",
+    "sound": "wood"
+  },
+  "pale_oak_door": {
+    "textures": {
+      "up": "pale_oak_door_bottom",
+      "down": "pale_oak_door_bottom",
+      "side": "pale_oak_door_top"
+    },
+    "sound": "wood"
+  },
+  "pale_oak_double_slab": {
+    "textures": "pale_oak_planks",
+    "sound": "wood"
+  },
+  "pale_oak_fence": {
+    "textures": "pale_oak_planks",
+    "sound": "wood"
+  },
+  "pale_oak_fence_gate": {
+    "textures": "pale_oak_planks",
+    "sound": "wood"
+  },
+  "pale_oak_hanging_sign": {
+    // This block is drawn as an entity but it still needs a texture for destruction particles.
+    // For block autocomplete lists in commands, this block actually uses its item texture.
+    "textures": "pale_oak_planks",
+    "sound": "hanging_sign"
+  },
+  "pale_oak_log": {
+    "textures": {
+      "up": "pale_oak_log_top",
+      "down": "pale_oak_log_top",
+      "side": "pale_oak_log_side"
+    },
+    "sound": "wood"
+  },
+  "pale_oak_planks": {
+    "textures": "pale_oak_planks",
+    "sound": "wood"
+  },
+  "pale_oak_pressure_plate": {
+    "textures": "pale_oak_planks",
+    "sound": "wood"
+  },
+  "pale_oak_slab": {
+    "textures": "pale_oak_planks",
+    "sound": "wood"
+  },
+  "pale_oak_stairs": {
+    "textures": "pale_oak_planks",
+    "sound": "wood"
+  },
+  "pale_oak_standing_sign": {
+    // This block is drawn as an entity but it still needs a texture for destruction particles and block autocomplete lists in commands.
+    "textures": "pale_oak_planks",
+    "sound": "wood"
+  },
+  "pale_oak_trapdoor": {
+    "textures": "pale_oak_trapdoor",
+    "sound": "wood"
+  },
+  "pale_oak_wall_sign": {
+    // This block is drawn as an entity but it still needs a texture for destruction particles and block autocomplete lists in commands.
+    "textures": "pale_oak_planks",
+    "sound": "wood"
+  },
+  "pale_oak_wood": {
+    "textures": "pale_oak_log_side",
+    "sound": "wood"
+  },
+  "stripped_pale_oak_log": {
+    "textures": {
+      "up": "stripped_pale_oak_log_top",
+      "down": "stripped_pale_oak_log_top",
+      "side": "stripped_pale_oak_log_side"
+    },
+    "sound": "wood"
+  },
+  "stripped_pale_oak_wood": {
+    "textures": "stripped_pale_oak_log_side",
+    "sound": "wood"
+  },
+  "pale_oak_sapling": {
+    "textures": "pale_oak_sapling",
+    "sound": "grass"
+  },
+  "pale_oak_leaves": {
+    "textures": "pale_oak_leaves",
+    "ambient_occlusion_exponent": 0.8,
+    "sound": "grass"
+  },
+  "pale_hanging_moss": {
+    "textures": "pale_hanging_moss",
+    "sound": "pale_hanging_moss"
+  },
+  "pale_moss_block": {
+    "textures": "pale_moss_block",
+    "sound": "moss_block"
+  },
+  "pale_moss_carpet": {
+    "textures": "pale_moss_block",
+    "carried_textures": "pale_moss_carpet_side",
+    "sound": "moss_carpet"
+  },
+  "creaking_heart": {
+    "textures": {
+      "up": "creaking_heart_top",
+      "down": "creaking_heart_top",
+      "side": "creaking_heart_side"
+    },
+    "sound": "creaking_heart"
+  },
+  "open_eyeblossom": {
+    "textures": "open_eyeblossom",
+    "carried_textures": "open_eyeblossom_carried",
+    "sound": "eyeblossom"
+  },
+  "closed_eyeblossom": {
+    "textures": "closed_eyeblossom",
+    "sound": "eyeblossom"
+  },
+  "resin_bricks": {
+    "textures": "resin_bricks",
+    "sound": "resin_brick"
+  },
+  "resin_brick_double_slab": {
+    "textures": "resin_bricks",
+    "sound": "resin_brick"
+  },
+  "resin_brick_slab": {
+    "textures": "resin_bricks",
+    "sound": "resin_brick"
+  },
+  "resin_brick_stairs": {
+    "textures": "resin_bricks",
+    "sound": "resin_brick"
+  },
+  "resin_brick_wall": {
+    "textures": "resin_bricks",
+    "sound": "resin_brick"
+  },
+  "chiseled_resin_bricks": {
+    "textures": "chiseled_resin_bricks",
+    "sound": "resin_brick"
+  },
+  "resin_block": {
+    "textures": "resin_block",
+    "sound": "resin"
+  },
+  "resin_clump": {
+    "textures": "resin_clump",
+    "carried_textures": "resin_clump_carried",
+    "sound": "resin"
+  },
+  "glow_lichen": {
+    "textures": "glow_lichen",
+    "sound": "glow_lichen"
+  }
+}

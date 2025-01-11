@@ -1,0 +1,210 @@
+{
+  "namespace": "vr_align_screen",
+
+  "vrinfo_label": {
+    "type": "label",
+    "layer": 2,
+    "size": [ "100%", "default" ],
+    "shadow": true,
+    "text": "#vr_alignscreen_text",
+    "text_alignment": "center",
+    "color": "$body_text_color",
+    "bindings": [
+      {
+        "binding_name": "#vr_alignscreen_text",
+        "binding_condition": "once"
+      }
+    ]
+  },
+
+  "recalibration_label": {
+    "type": "label",
+    "layer": 2,
+    "size": [ "100%", "default" ],
+    "shadow": true,
+    "text": "#text",
+    "text_tts": "#text_tts",
+    "text_alignment": "center",
+    "line_padding": 10.0,
+    "color": "$body_text_color",
+    "bindings": [
+      {
+        "binding_name": "#recalibration_text",
+        "binding_name_override": "#text"
+      },
+      {
+        "binding_name": "#recalibration_text_tts",
+        "binding_name_override": "#text_tts"
+      },
+      {
+        "binding_name": "#show_recalibration_text",
+        "binding_name_override": "#visible"
+      }
+    ]
+  },
+
+  "controller_prompt_label": {
+    "type": "label",
+    "layer": 2,
+    "size": [ "100%", "default" ],
+    "shadow": true,
+    "text": "#text",
+    "text_alignment": "center",
+    "color": "$warning_text_color",
+    "bindings": [
+      {
+        "binding_name": "#controller_prompt",
+        "binding_name_override": "#text"
+      },
+      {
+        "binding_name": "#show_controller_prompt",
+        "binding_name_override": "#visible"
+      }
+    ]
+  },
+
+  "advancement_prompt_label": {
+    "type": "label",
+    "size": [ "100%", "default" ],
+    "layer": 2,
+    "shadow": true,
+    "text": "#text",
+    "text_tts": "#text_tts",
+    "text_alignment": "center",
+    "color": "$body_text_color",
+    "bindings": [
+      {
+        "binding_name": "#advancement_prompt",
+        "binding_name_override": "#text"
+      },
+      {
+        "binding_name": "#advancement_prompt_tts",
+        "binding_name_override": "#text_tts"
+      }
+    ]
+  },
+
+  // Base screen and modal
+
+  "vr_align_screen@common.base_screen": {
+    "send_telemetry": false,
+    "button_mappings": [
+      {
+        "from_button_id": "button.controller_select",
+        "to_button_id": "button.controller_select",
+        "mapping_type": "global"
+      },
+      {
+        "from_button_id": "button.menu_select",
+        "to_button_id": "button.mouse_clicked_vralign",
+        "mapping_type": "global"
+      },
+      {
+        "ignored": "(not $can_quit)",
+        "from_button_id": "button.menu_cancel",
+        "to_button_id": "button.menu_exit",
+        "mapping_type": "global"
+      },
+      {
+        "ignored": "($can_quit)",
+        "from_button_id": "button.menu_cancel",
+        "to_button_id": "button.menu_cancel",
+        "mapping_type": "global"
+      }
+    ],
+    "$screen_content": "vr_align_screen.vr_align_screen_content"
+  },
+
+  "vr_align_screen_content": {
+    "type": "panel",
+    "controls": [
+      {
+        "dialog@vr_align_screen.vr_align_dialog": {}
+      }
+    ]
+  },
+
+  "vr_align_dialog@common_dialogs.form_fitting_main_panel_no_buttons": {
+    "size": [ 340, "100%c" ],
+    "$show_close_button": "$can_quit",
+    "$child_control": "vr_align_screen.main_panel",
+    "$text_name": "vr.alignscreen.title"
+  },
+
+  "focus_panel": {
+    "type": "stack_panel",
+    "orientation": "vertical",
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
+    "size": [ "90%", "100%c" ],
+    "controls": [
+      {
+        "padding_0": {
+          "type": "panel",
+          "size": [ "100%", 5 ]
+        }
+      },
+      {
+        "vrinfo_label@vr_align_screen.vrinfo_label": {}
+      },
+      {
+        "padding_1": {
+          "type": "panel",
+          "size": [ "100%", 15 ]
+        }
+      },
+      {
+        "recalibration_label@vr_align_screen.recalibration_label": {}
+      },
+      {
+        "padding_recalibration": {
+          "type": "panel",
+          "size": [ "100%", 15 ],
+          "bindings": [
+            {
+              "binding_name": "#show_recalibration_text",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "controller_prompt_label@vr_align_screen.controller_prompt_label": {
+        }
+      },
+      {
+        "padding_2": {
+          "type": "panel",
+          "size": [ "100%", 10 ],
+          "bindings": [
+            {
+              "binding_name": "#show_controller_prompt",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "advancement_prompt_label@vr_align_screen.advancement_prompt_label": {}
+      },
+      {
+        "padding_3": {
+          "type": "panel",
+          "size": [ "100%", 5 ]
+        }
+      }
+    ]
+  },
+
+  "main_panel": {
+    "type": "panel",
+    "size": [ "100%", "100%c" ],
+    "controls": [
+      {
+        "focus_panel@common.tts_label_focus_wrapper": {
+          "$tts_label_panel": "vr_align_screen.focus_panel"
+        }
+      }
+    ]
+  }
+}
