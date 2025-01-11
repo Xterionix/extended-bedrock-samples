@@ -1,0 +1,46 @@
+{
+  "resource_pack_name": "vanilla",
+  "texture_name": "atlas.items",
+  "texture_data": {
+    "pale_oak_door": {
+      "textures": "textures/items/pale_oak_door"
+    },
+    "sign_pale_oak_hanging": {
+      "textures": "textures/items/pale_oak_hanging_sign"
+    },
+    "pale_oak_sign": {
+      "textures": "textures/items/pale_oak_sign"
+    },
+    "resin_brick": {
+      "textures": "textures/items/resin_brick"
+    },
+    "boat": {
+      "textures": [
+        "textures/items/boat_oak",
+        "textures/items/boat_spruce",
+        "textures/items/boat_birch",
+        "textures/items/boat_jungle",
+        "textures/items/boat_acacia",
+        "textures/items/boat_darkoak",
+        "textures/items/mangrove_boat",
+        "textures/items/bamboo_raft",
+        "textures/items/cherry_boat",
+        "textures/items/pale_oak_boat"
+      ]
+    },
+    "chest_boat": {
+      "textures": [
+        "textures/items/oak_chest_boat",
+        "textures/items/spruce_chest_boat",
+        "textures/items/birch_chest_boat",
+        "textures/items/jungle_chest_boat",
+        "textures/items/acacia_chest_boat",
+        "textures/items/dark_oak_chest_boat",
+        "textures/items/mangrove_chest_boat",
+        "textures/items/bamboo_chest_raft",
+        "textures/items/cherry_chest_boat",
+        "textures/items/pale_oak_chest_boat"
+      ]
+    }
+  }
+}

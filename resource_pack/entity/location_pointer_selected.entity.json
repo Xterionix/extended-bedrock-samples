@@ -1,0 +1,27 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "editor:location_pointer_selected",
+			"materials": {
+				"default": "entity_alphatest"
+			},
+			"textures": {
+				"default": "textures/entity/location_pointer_selected"
+			},
+			"geometry": {
+				"default": "geometry.location_pointer_selected"
+			},
+			"render_controllers": ["controller.render.default"],
+			"animations": {
+				"spin": "animation.location_pointer_selected.spin"
+			},
+			"scripts": {
+				"scale": 2,
+				"animate": [
+					"spin"
+				]
+			}
+		}
+	}
+}

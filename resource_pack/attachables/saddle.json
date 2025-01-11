@@ -1,0 +1,25 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:attachable": {
+    "description": {
+      "identifier": "minecraft:saddle",
+      "materials": {
+        "default": "saddle"
+      },
+      "textures": {
+        "default": "textures/entity/saddle"
+      },
+      "geometry": {
+        "default": "geometry.saddle"
+      },
+      "scripts": {
+        "initialize": [
+          "variable.should_render = context.owning_entity->query.is_owner_identifier_any('minecraft:pig');"
+        ]
+      },
+      "render_controllers": [
+        "controller.render.saddle"
+      ]
+    }
+  }
+}

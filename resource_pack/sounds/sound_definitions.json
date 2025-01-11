@@ -1,0 +1,148 @@
+{
+  "block.cave_vines.place": {
+    "category": "block",
+    "max_distance": 16.0,
+    "sounds": [
+      "sounds/block/cave_vines/break1",
+      "sounds/block/cave_vines/break2",
+      "sounds/block/cave_vines/break3",
+      "sounds/block/cave_vines/break4",
+      "sounds/block/cave_vines/break5"
+    ]
+  },
+  "block.weeping_vines.use": {
+    "category": "block",
+    "max_distance": 16.0,
+    "sounds": [
+      "sounds/block/vine/break1",
+      "sounds/block/vine/break2",
+      "sounds/block/vine/break3",
+      "sounds/block/vine/break4"
+    ]
+  },
+  "block.weeping_vines.place": {
+    "category": "block",
+    "max_distance": 16.0,
+    "sounds": [
+      "sounds/block/roots/break1",
+      "sounds/block/roots/break2",
+      "sounds/block/roots/break3",
+      "sounds/block/roots/break4",
+      "sounds/block/roots/break5",
+      "sounds/block/roots/break6"
+    ]
+  },
+  "block.weeping_vines.break": {
+    "category": "block",
+    "max_distance": 16.0,
+    "sounds": [
+      "sounds/block/roots/break1",
+      "sounds/block/roots/break2",
+      "sounds/block/roots/break3",
+      "sounds/block/roots/break4",
+      "sounds/block/roots/break5",
+      "sounds/block/roots/break6"
+    ]
+  },
+  "block.weeping_vines.hit": {
+    "category": "block",
+    "max_distance": 16.0,
+    "sounds": [
+      "sounds/block/roots/break1",
+      "sounds/block/roots/break2",
+      "sounds/block/roots/break3",
+      "sounds/block/roots/break4",
+      "sounds/block/roots/break5",
+      "sounds/block/roots/break6"
+    ]
+  },
+  "block.weeping_vines.fall": {
+    "category": "player",
+    "max_distance": 16.0,
+    "sounds": [
+      "sounds/block/roots/break1",
+      "sounds/block/roots/break2",
+      "sounds/block/roots/break3",
+      "sounds/block/roots/break4",
+      "sounds/block/roots/break5",
+      "sounds/block/roots/break6"
+    ]
+  },
+  "block.weeping_vines.step": {
+    "category": "player",
+    "max_distance": 16.0,
+    "sounds": [
+      "sounds/block/roots/step1",
+      "sounds/block/roots/step2",
+      "sounds/block/roots/step3",
+      "sounds/block/roots/step4",
+      "sounds/block/roots/step5"
+    ]
+  },
+  "block.weeping_vines.jump": {
+    "category": "player",
+    "max_distance": 16.0,
+    "sounds": [
+      "sounds/block/roots/step1",
+      "sounds/block/roots/step2",
+      "sounds/block/roots/step3",
+      "sounds/block/roots/step4",
+      "sounds/block/roots/step5"
+    ]
+  },
+  "block.weeping_vines.land": {
+    "category": "player",
+    "max_distance": 16.0,
+    "sounds": [
+      "sounds/block/roots/step1",
+      "sounds/block/roots/step2",
+      "sounds/block/roots/step3",
+      "sounds/block/roots/step4",
+      "sounds/block/roots/step5"
+    ]
+  },
+  "break.iron": {
+    "category": "block",
+    "sounds": [
+      "sounds/block/iron/break1",
+      "sounds/block/iron/break2",
+      "sounds/block/iron/break3",
+      "sounds/block/iron/break4",
+      "sounds/block/iron/break5",
+      "sounds/block/iron/break6",
+      "sounds/block/iron/break7",
+      "sounds/block/iron/break8"
+    ]
+  },
+  "hit.iron": {
+    "category": "block",
+    "sounds": [
+      "sounds/block/iron/step1",
+      "sounds/block/iron/step2",
+      "sounds/block/iron/step3",
+      "sounds/block/iron/step4"
+    ]
+  },
+  "place.iron": {
+    "category": "block",
+    "sounds": [
+      "sounds/block/iron/break1",
+      "sounds/block/iron/break2",
+      "sounds/block/iron/break3",
+      "sounds/block/iron/break4",
+      "sounds/block/iron/break5",
+      "sounds/block/iron/break6",
+      "sounds/block/iron/break7",
+      "sounds/block/iron/break8"
+    ]
+  },
+  "step.iron": {
+    "category": "player",
+    "sounds": [
+      "sounds/block/iron/step1",
+      "sounds/block/iron/step2",
+      "sounds/block/iron/step3",
+      "sounds/block/iron/step4"
+    ]
+  }
+}

@@ -1,0 +1,20 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.idle": {
+			"initial_state": "idle",
+			"states": {
+				"idle": {
+					"animations": [
+						"idle"
+					]
+				},
+				"default": {
+					"animations": [
+						"idle"
+					]
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,180 @@
+{
+  "namespace": "lesson_complete",
+
+  //---------------------------------------------------------------------------
+  // Padding panels
+  //---------------------------------------------------------------------------
+
+  "padding_vertical": {
+    "type": "panel",
+    "size": [ "100%sm", 3 ]
+  },
+
+  "spacer": {
+    "type": "image",
+    "texture": "textures/ui/whiteline",
+    "color": [ 0.7, 0.7, 0.7 ],
+    "tiled": true
+  },
+
+  //---------------------------------------------------------------------------
+  // Content layout panels
+  //---------------------------------------------------------------------------
+
+  "body": {
+    "type": "label",
+    "size": [ "100%", "100%" ],
+    "offset": [ 2, 1 ],
+    "text_alignment": "center",
+    "text": "lesson.end.dialog.body.noimages",
+    "color": "$body_text_color",
+    "font_type": "smooth"
+  },
+
+  "image_wrapper": {
+    "type": "panel",
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
+    "size": [ "100%", "100%c" ],
+    "controls": [
+      {
+        "image": {
+          "type": "image",
+          "fill": true,
+          "size": [ 131, 90 ],
+          "texture": "textures/ui/lesson_complete/certificate_preview",
+          "layer": 1
+        }
+      }
+    ]
+  },
+
+  "internal_content_panel": {
+    "type": "stack_panel",
+    "size": [ "100% - 6px", "100% - 6px" ],
+    "orientation": "vertical",
+    "controls": [
+      { "certificate@lesson_complete.image_wrapper": {} },
+      { "spacer@edu_common.horizontal_divider": {} },
+      {
+        "body_text_tts_panel@common.tts_label_focus_wrapper": {
+          "size": [ "100%", "fill" ],
+          "$tts_label_panel": "lesson_complete.body"
+        }
+      },
+      {
+        "get_certificate_button@common_buttons.light_text_button": {
+          "size": [ "100%", 20 ],
+          "$pressed_button_name": "button.get_certificate",
+          "$button_text": "lesson.end.dialog.button.getcert"
+        }
+      },
+      { "button_padding@lesson_complete.padding_vertical": {} },
+      {
+        "finished_button@common_buttons.light_text_button": {
+          "size": [ "100%", 20 ],
+          "$pressed_button_name": "button.menu_quit",
+          "$button_text": "lesson.end.dialog.button.exit"
+        }
+      }
+    ]
+  },
+
+  //---------------------------------------------------------------------------
+  // Dialog layout panels
+  //---------------------------------------------------------------------------
+
+  "dialog_background@common.dialog_background_hollow_3": {
+    "size": [ "100%", "100%" ],
+    "layer": -2,
+    "$fill_alpha": 0.8
+  },
+
+  "lesson_completed_dialog_content": {
+    "type": "panel",
+    "layer": 6,
+    "controls": [
+      {
+        "background@lesson_complete.dialog_background": {}
+      },
+      {
+        "title@common.minecraftTenLabel": {
+          "text": "lesson.end.dialog.body.title",
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+          "offset": [ 0, 5 ],
+          "color": "$light_button_default_text_color"
+        }
+      },
+      {
+        "close@common.close_button": {
+          "$close_button_offset": [ -1, 1 ]
+        }
+      },
+      {
+        "hollow_content_panel": {
+          "type": "panel",
+          "size": [ "100% - 16px", "100% - 31px" ],
+          "offset": [ 0, 23 ],
+          "anchor_to": "top_middle",
+          "anchor_from": "top_middle",
+          "controls": [
+            { "hollow_content@lesson_complete.internal_content_panel": {} }
+          ]
+        }
+      }
+    ]
+  },
+
+  //---------------------------------------------------------------------------
+  // Screen
+  //---------------------------------------------------------------------------
+
+  "lesson_complete_screen@common.base_screen": {
+    "button_mappings": [
+      {
+        "from_button_id": "button.menu_cancel",
+        "to_button_id": "button.menu_exit",
+        "mapping_type": "global"
+      },
+      {
+        "from_button_id": "button.menu_tab_left",
+        "to_button_id": "button.menu_tab_left",
+        "mapping_type": "global",
+        "scope": "view"
+      },
+      {
+        "from_button_id": "button.menu_tab_right",
+        "to_button_id": "button.menu_tab_right",
+        "mapping_type": "global",
+        "scope": "view"
+      }
+    ],
+    "force_render_below": false,
+    "$screen_content": "lesson_complete.lesson_complete_screen_layout"
+  },
+
+  "lesson_complete_screen_layout": {
+    "type": "panel",
+    "controls": [
+      {
+        "lesson_complete_screen_content_panel": {
+          "type": "panel",
+          "size": [ 246, 196 ],
+          "layer": 2,
+          "controls": [
+            {
+              "lesson_complete_content@lesson_complete.lesson_completed_dialog_content": {}
+            }
+          ]
+        }
+      },
+      {
+        "background@common.screen_background": {
+          "alpha": 0.5,
+          "layer": 1
+        }
+      }
+    ]
+  }
+}

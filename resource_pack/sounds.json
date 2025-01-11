@@ -1,0 +1,150 @@
+{
+  "block_sounds": {
+    "weeping_vines": {
+      "volume": 1.0,
+      "pitch": 1.0,
+      "events": {
+        "default": "",
+        "item.use.on": {
+          "sound": "block.weeping_vines.use",
+          "pitch": 0.8
+        },
+        "break": {
+          "sound": "block.weeping_vines.break",
+          "volume": 1.0,
+          "pitch": [ 0.8, 1.0 ]
+        },
+        "hit": {
+          "sound": "block.weeping_vines.hit",
+          "volume": 0.30,
+          "pitch": 0.5
+        },
+        "place": {
+          "sound": "block.weeping_vines.place",
+          "volume": 1.0,
+          "pitch": [ 0.8, 1.0 ]
+        }
+      }
+    },
+    "iron": {
+      "volume": 1.0,
+      "pitch": 1.0,
+      "events": {
+        "default": "",
+        "item.use.on": {
+          "sound": "step.iron",
+          "volume": 1.0
+        },
+        "break": {
+          "sound": "break.iron",
+          "volume": 1.0,
+          "pitch": 0.8
+        },
+        "hit": {
+          "sound": "hit.iron",
+          "volume": 0.3,
+          "pitch": 0.5
+        },
+        "place": {
+          "sound": "place.iron",
+          "volume": 1.0,
+          "pitch": 0.8
+        },
+        "power.on": {
+          "sound": "random.click",
+          "pitch": 0.6
+        },
+        "power.off": {
+          "sound": "random.click",
+          "pitch": 0.5
+        },
+        "button.click_on": {
+          "sound": "random.click",
+          "pitch": 0.6
+        },
+        "button.click_off": {
+          "sound": "random.click",
+          "pitch": 0.5
+        },
+        "door.open": {
+          "sound": "open.iron_door",
+          "pitch": [
+            0.9,
+            1.0
+          ]
+        },
+        "door.close": {
+          "sound": "close.iron_door",
+          "pitch": [
+            0.9,
+            1.0
+          ]
+        },
+        "trapdoor.open": {
+          "sound": "open.iron_trapdoor",
+          "pitch": [
+            0.9,
+            1.0
+          ]
+        },
+        "trapdoor.close": {
+          "sound": "close.iron_trapdoor",
+          "pitch": [
+            0.9,
+            1.0
+          ]
+        }
+      }
+    }
+  },
+  "interactive_sounds": {
+    "block_sounds": {
+      "weeping_vines": {
+        "events": {
+          "default": "",
+          "fall": {
+            "sounds": "block.weeping_vines.fall",
+            "volume": 0.4
+          },
+          "step": {
+            "sound": "block.weeping_vines.step",
+            "volume": 0.30
+          },
+          "jump": {
+            "sound": "block.weeping_vines.jump",
+            "volume": 0.12
+          },
+          "land": {
+            "sound": "block.weeping_vines.land",
+            "volume": 0.22
+          }
+        },
+        "volume": 1.0,
+        "pitch": 1.00
+      },
+      "iron": {
+        "volume": 1.0,
+        "pitch": 1.0,
+        "events": {
+          "default": "",
+          "fall": {
+            "sound": "step.iron"
+          },
+          "step": {
+            "sound": "step.iron",
+            "volume": 0.2
+          },
+          "jump": {
+            "sound": "step.iron",
+            "volume": 0.12,
+            "pitch": 1.1
+          },
+          "land": {
+            "sound": "step.iron",
+            "volume": 0.4
+          }
+        }
+      }
+    }
+  }
+}

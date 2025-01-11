@@ -1,0 +1,37 @@
+{
+    "deep_dark": {
+        "event_name": "music.overworld.deep_dark",
+        "min_delay": 60,
+        "max_delay": 180
+    },
+    "dripstone_caves": {
+        "event_name": "music.overworld.dripstone_caves",
+        "min_delay": 60,
+        "max_delay": 180
+    },
+    "grove": {
+        "event_name": "music.overworld.grove",
+        "min_delay": 60,
+        "max_delay": 180
+    },
+    "jagged_peaks": {
+        "event_name": "music.overworld.jagged_peaks",
+        "min_delay": 60,
+        "max_delay": 180
+    },
+    "lush_caves": {
+        "event_name": "music.overworld.lush_caves",
+        "min_delay": 60,
+        "max_delay": 180
+    },
+    "snowy_slopes": {
+        "event_name": "music.overworld.snowy_slopes",
+        "min_delay": 60,
+        "max_delay": 180
+    },
+    "stony_peaks": {
+        "event_name": "music.overworld.stony_peaks",
+        "min_delay": 60,
+        "max_delay": 180
+    }
+}

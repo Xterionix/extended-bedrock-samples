@@ -1,0 +1,85 @@
+{
+  "format_version": "1.21.40",
+  "chiseled_nether_bricks": {
+    "sound": "nether_brick",
+    "textures": "chiseled_nether_bricks"
+  },
+  "cracked_nether_bricks": {
+    "sound": "nether_brick",
+    "textures": "cracked_nether_bricks"
+  },
+  "nether_brick_slab": {
+    "sound": "nether_brick",
+    "textures": "nether_brick_slab"
+  },
+  "nether_brick_wall": {
+    "sound": "nether_brick",
+    "textures": "nether_brick_wall"
+  },
+  "red_nether_brick_slab": {
+    "sound": "nether_brick",
+    "textures": "red_nether_brick_slab"
+  },
+  "red_nether_brick_wall": {
+    "sound": "nether_brick",
+    "textures": "red_nether_brick_wall"
+  },
+  "pale_oak_leaves": {
+    "textures": "pale_oak_leaves",
+    "ambient_occlusion_exponent": 1.0,
+    "sound": "grass"
+  },
+  "weeping_vines": {
+    "textures": {
+      "down": "weeping_vines_bottom",
+      "up": "weeping_vines_base",
+      "north": "weeping_vines_base",
+      "south": "weeping_vines_base",
+      "west": "weeping_vines_base",
+      "east": "weeping_vines_base"
+    },
+    "sound": "weeping_vines"
+  },
+  "twisting_vines": {
+    "textures": {
+      "down": "twisting_vines_bottom",
+      "up": "twisting_vines_base",
+      "north": "twisting_vines_base",
+      "south": "twisting_vines_base",
+      "west": "twisting_vines_base",
+      "east": "twisting_vines_base"
+    },
+    "sound": "weeping_vines"
+  },
+  "iron_bars": {
+    "textures": {
+      "up": "iron_bars",
+      "down": "iron_bars",
+      "north": "iron_bars",
+      "south": "iron_bars",
+      "west": "iron_bars",
+      "east": "iron_bars_edge"
+    },
+    "sound": "iron"
+  },
+  "iron_door": {
+    "textures": {
+      "up": "door_lower",
+      "down": "door_lower",
+      "side": "door_upper"
+    },
+    "sound": "iron"
+  },
+  "iron_trapdoor": {
+    "textures": "iron_trapdoor",
+    "sound": "iron"
+  },
+  "heavy_weighted_pressure_plate": {
+    "textures": "iron_block",
+    "sound": "iron"
+  },
+  "iron_block": {
+    "textures": "iron_block",
+    "sound": "iron"
+  }
+}
