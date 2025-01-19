@@ -3,7 +3,7 @@
   "minecraft:feature_rules": {
     "description": {
       "identifier": "minecraft:river_after_surface_seagrass_feature_rules",
-      "places_feature": "minecraft:seagrass_feature"
+      "places_feature": "minecraft:scatter_river_seagrass_feature"
     },
     "conditions": {
       "placement_pass": "after_surface_pass",
@@ -12,7 +12,7 @@
       ]
     },
     "distribution": {
-      "iterations": 12,
+      "iterations": 1,
       "coordinate_eval_order": "zxy",
       "x": {
         "distribution": "uniform",

@@ -10,16 +10,9 @@
       "minecraft:biome_filter": [
         {
           "any_of": [
-            {
-              "test": "has_biome_tag",
-              "operator": "==",
-              "value": "desert"
-            },
-            {
-              "test": "has_biome_tag",
-              "operator": "==",
-              "value": "swamp"
-            }
+            { "test": "has_biome_tag", "value": "desert" },
+            { "test": "has_biome_tag", "value": "swamp" },
+            { "test": "has_biome_tag", "value": "mangrove_swamp" }
           ]
         }
       ]

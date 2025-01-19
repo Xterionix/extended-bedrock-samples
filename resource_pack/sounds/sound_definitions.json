@@ -144,5 +144,23 @@
       "sounds/block/iron/step3",
       "sounds/block/iron/step4"
     ]
+  },
+  "use.grass": {
+    "category": "block",
+    "sounds": [
+      "sounds/block/grass/flatten1",
+      "sounds/block/grass/flatten2",
+      "sounds/block/grass/flatten3",
+      "sounds/block/grass/flatten4"
+    ]
+  },
+  "use.wood": {
+    "category": "block",
+    "sounds": [
+      "sounds/item/axe/strip1",
+      "sounds/item/axe/strip2",
+      "sounds/item/axe/strip3",
+      "sounds/item/axe/strip4"
+    ]
   }
 }

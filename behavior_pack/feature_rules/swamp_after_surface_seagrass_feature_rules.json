@@ -2,13 +2,13 @@
   "format_version": "1.13.0",
   "minecraft:feature_rules": {
     "description": {
-      "identifier": "minecraft:mangrove_swamp_after_surface_seagrass_feature_rules",
+      "identifier": "minecraft:swamp_after_surface_seagrass_feature_rules",
       "places_feature": "minecraft:scatter_swamp_seagrass_feature"
     },
     "conditions": {
       "placement_pass": "after_surface_pass",
       "minecraft:biome_filter": [
-        { "test": "has_biome_tag", "value": "mangrove_swamp" }
+        { "test": "has_biome_tag", "value": "swamp" }
       ]
     },
     "distribution": {

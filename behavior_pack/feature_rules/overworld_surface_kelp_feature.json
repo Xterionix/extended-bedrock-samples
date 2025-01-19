@@ -8,7 +8,7 @@
     "conditions": {
       "placement_pass": "surface_pass",
       "minecraft:biome_filter": [
-        // This feature has been deprecated in favor of "minecraft:overworld_after_surface_kelp_feature_rules".
+        // This feature has been deprecated and is no longer used.
         { "test": "has_biome_tag", "value": "deprecated" }
       ]
     }

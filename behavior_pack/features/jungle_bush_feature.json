@@ -16,7 +16,7 @@
         "max": 1
       },
       "leaf_block": {
-        "name": "minecraft:jungle_leaves"
+        "name": "minecraft:oak_leaves"
       },
       "min_width": 0,
       "canopy_slope": {
