@@ -1,10 +1,9 @@
 {
     "format_version": "1.21.50",
     "minecraft:aim_assist_categories": {
-        "identifier": "minecraft:aim_assist_categories_1",
         "categories": [
             {
-                "name": "bucket",
+                "name": "minecraft:bucket",
                 "entity_default": 30,
                 "block_default": 30,
                 "priorities": {
@@ -16,7 +15,7 @@
                 }
             },
             {
-                "name": "hand",
+                "name": "minecraft:empty_hand",
                 "entity_default": 30,
                 "block_default": 30,
                 "priorities": {
@@ -33,7 +32,7 @@
                 }
             },
             {
-                "name": "default",
+                "name": "minecraft:default",
                 "priorities": {
                     "blocks": {
                         "minecraft:lever": 60,

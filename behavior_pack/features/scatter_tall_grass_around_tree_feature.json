@@ -4,7 +4,7 @@
     "description": {
       "identifier": "minecraft:scatter_tall_grass_around_tree_feature"
     },
-    "iterations": 23,
+    "iterations": 0, // Set to 0 to deprecate this feature and prevent it from being placed.
     "x": {
       "distribution": "triangle",
       "extent": [ -3, 3 ]

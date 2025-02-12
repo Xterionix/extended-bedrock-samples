@@ -2,12 +2,11 @@
     "format_version": "1.21.50",
     "minecraft:aim_assist_preset": {
         "identifier": "minecraft:aim_assist_default",
-        "categories": "minecraft:aim_assist_categories_1",
         "item_settings": {
-            "minecraft:bucket": "bucket"
+            "minecraft:bucket": "minecraft:bucket"
         },
-        "default_item_settings": "default",
-        "hand_settings": "hand",
+        "default_item_settings": "minecraft:default",
+        "hand_settings": "minecraft:empty_hand",
         "exclusion_list": [
           "minecraft:bedrock",
           "minecraft:arrow"

@@ -8,18 +8,9 @@
     "conditions": {
       "placement_pass": "surface_pass",
       "minecraft:biome_filter": [
-        {
-          "test": "has_biome_tag",
-          "operator": "==",
-          "value": "swamp"
-        }
+        // This feature has been deprecated in favor of "minecraft:swamp_after_surface_brown_mushroom_feature_rules" and "minecraft:swamp_after_surface_red_mushroom_feature_rules".
+        { "test": "has_biome_tag", "value": "deprecated" }
       ]
-    },
-    "distribution": {
-      "iterations": 8,
-      "x": 0,
-      "y": "query.heightmap(variable.worldx, variable.worldz)",
-      "z": 0
     }
   }
 }

@@ -8,31 +8,9 @@
     "conditions": {
       "placement_pass": "surface_pass",
       "minecraft:biome_filter": [
-        {
-          "any_of": [
-            {
-              "test": "has_biome_tag",
-              "operator": "==",
-              "value": "mangrove_swamp"
-            }
-          ]
-        }
+        // This feature has been deprecated in favor of "minecraft:mangrove_swamp_after_surface_dead_bush_feature_rules".
+        { "test": "has_biome_tag", "value": "deprecated" }
       ]
-    },
-    "distribution": {
-      "iterations": 6,
-      "x": {
-        "distribution": "uniform",
-        "extent": [ 0, 16 ]
-      },
-      "y": {
-        "distribution": "uniform",
-        "extent": [ 0, "query.heightmap(variable.worldx, variable.worldz) * 2" ]
-      },
-      "z": {
-        "distribution": "uniform",
-        "extent": [ 0, 16 ]
-      }
     }
   }
 }

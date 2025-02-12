@@ -131,7 +131,35 @@
         }
       },
       {
-        "padding_2@common.empty_panel": {"size": [ 3, "100%" ] } },
+        "padding_2@common.empty_panel": {
+          "size": [ 3, "100%" ],
+          "bindings": [
+            {
+              "binding_name": "#edu_server_screen_enabled",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "servers@edu_play.bottom_button_definitions": {
+          "$pressed_button_name": "button.servers",
+          "$nestable_button_size": [ "fill", "100%" ],
+
+          "$nested_control_image": "textures/ui/servers",
+          "$nested_label_text": "edu.play_screen.servers",
+
+          "bindings": [
+            {
+              "binding_name": "#edu_server_screen_enabled",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "padding_3@common.empty_panel": { "size": [ 3, "100%" ] }
+      },
       {
         "import@edu_play.bottom_button_definitions": {
           "$pressed_button_name": "button.import",
