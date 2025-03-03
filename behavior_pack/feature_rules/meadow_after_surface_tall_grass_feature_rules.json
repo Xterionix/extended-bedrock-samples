@@ -3,7 +3,7 @@
   "minecraft:feature_rules": {
     "description": {
       "identifier": "minecraft:meadow_after_surface_tall_grass_feature_rules",
-      "places_feature": "minecraft:scatter_tall_grass_feature"
+      "places_feature": "minecraft:scatter_meadow_tall_grass_feature"
     },
     "conditions": {
       "placement_pass": "after_surface_pass",

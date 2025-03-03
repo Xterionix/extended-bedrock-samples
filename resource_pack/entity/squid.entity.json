@@ -22,8 +22,7 @@
       },
       "render_controllers": [ "controller.render.squid" ],
       "spawn_egg": {
-        "texture": "spawn_egg",
-        "texture_index": 15
+        "texture": "spawn_egg_squid"
       }
     }
   }

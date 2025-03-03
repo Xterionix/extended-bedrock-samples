@@ -52,8 +52,7 @@
       "render_controllers": [ "controller.render.husk" ],
       "enable_attachables": true,
       "spawn_egg": {
-        "texture": "spawn_egg",
-        "texture_index": 28
+        "texture": "spawn_egg_husk"
       }
     }
   }

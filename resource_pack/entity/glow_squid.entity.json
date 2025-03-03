@@ -22,8 +22,7 @@
       },
       "render_controllers": [ "controller.render.glow_squid" ],
       "spawn_egg": {
-        "base_color": "#0x095656",
-        "overlay_color": "#0x85f1bc"
+        "texture": "spawn_egg_glow_squid"
       }
     }
   }

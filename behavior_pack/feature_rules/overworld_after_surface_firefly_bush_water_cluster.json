@@ -23,7 +23,7 @@
       "iterations": 1,
       "scatter_chance": {
         "numerator": 1,
-        "denominator": 4
+        "denominator": 8
       },
       "x": 0,
       "y": "query.heightmap(variable.worldx, variable.worldz)",

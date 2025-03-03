@@ -128,7 +128,10 @@
       // Blocks used to decorate the tree
       "minecraft:vine",
       "minecraft:moss_carpet",
-      "minecraft:mangrove_propagule"
+      "minecraft:mangrove_propagule",
+      // Plants
+      "minecraft:wildflowers",
+      "minecraft:leaf_litter"
     ]
   }
 }

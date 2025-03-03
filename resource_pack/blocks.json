@@ -1,85 +1,89 @@
 {
   "format_version": "1.21.40",
-  "chiseled_nether_bricks": {
-    "sound": "nether_brick",
-    "textures": "chiseled_nether_bricks"
+  "wildflowers": {
+    "textures": "wildflowers",
+    "carried_textures": "wildflowers_carried",
+    "sound": "pink_petals"
   },
-  "cracked_nether_bricks": {
-    "sound": "nether_brick",
-    "textures": "cracked_nether_bricks"
+  "firefly_bush": {
+    "textures": "firefly_bush",
+    "carried_textures": "firefly_bush_carried",
+    "sound": "firefly_bush"
   },
-  "nether_brick_slab": {
-    "sound": "nether_brick",
-    "textures": "nether_brick_slab"
-  },
-  "nether_brick_wall": {
-    "sound": "nether_brick",
-    "textures": "nether_brick_wall"
-  },
-  "red_nether_brick_slab": {
-    "sound": "nether_brick",
-    "textures": "red_nether_brick_slab"
-  },
-  "red_nether_brick_wall": {
-    "sound": "nether_brick",
-    "textures": "red_nether_brick_wall"
-  },
-  "pale_oak_leaves": {
-    "textures": "pale_oak_leaves",
-    "ambient_occlusion_exponent": 1.0,
+  "bush": {
+    "textures": "bush",
+    "carried_textures": "bush_carried",
     "sound": "grass"
   },
-  "weeping_vines": {
-    "textures": {
-      "down": "weeping_vines_bottom",
-      "up": "weeping_vines_base",
-      "north": "weeping_vines_base",
-      "south": "weeping_vines_base",
-      "west": "weeping_vines_base",
-      "east": "weeping_vines_base"
-    },
-    "sound": "weeping_vines"
+  "leaf_litter": {
+    "textures": "leaf_litter",
+    "carried_textures": "leaf_litter_carried",
+    "sound": "leaf_litter"
   },
-  "twisting_vines": {
-    "textures": {
-      "down": "twisting_vines_bottom",
-      "up": "twisting_vines_base",
-      "north": "twisting_vines_base",
-      "south": "twisting_vines_base",
-      "west": "twisting_vines_base",
-      "east": "twisting_vines_base"
-    },
-    "sound": "weeping_vines"
+  "hardened_clay": {
+    "sound": "terracotta"
   },
-  "iron_bars": {
-    "textures": {
-      "up": "iron_bars",
-      "down": "iron_bars",
-      "north": "iron_bars",
-      "south": "iron_bars",
-      "west": "iron_bars",
-      "east": "iron_bars_edge"
-    },
-    "sound": "iron"
+  "white_terracotta": {
+    "sound": "terracotta"
   },
-  "iron_door": {
-    "textures": {
-      "up": "door_lower",
-      "down": "door_lower",
-      "side": "door_upper"
-    },
-    "sound": "iron"
+  "orange_terracotta": {
+    "sound": "terracotta"
   },
-  "iron_trapdoor": {
-    "textures": "iron_trapdoor",
-    "sound": "iron"
+  "magenta_terracotta": {
+    "sound": "terracotta"
   },
-  "heavy_weighted_pressure_plate": {
-    "textures": "iron_block",
-    "sound": "iron"
+  "light_blue_terracotta": {
+    "sound": "terracotta"
   },
-  "iron_block": {
-    "textures": "iron_block",
-    "sound": "iron"
+  "yellow_terracotta": {
+    "sound": "terracotta"
+  },
+  "lime_terracotta": {
+    "sound": "terracotta"
+  },
+  "pink_terracotta": {
+    "sound": "terracotta"
+  },
+  "gray_terracotta": {
+    "sound": "terracotta"
+  },
+  "light_gray_terracotta": {
+    "sound": "terracotta"
+  },
+  "cyan_terracotta": {
+    "sound": "terracotta"
+  },
+  "purple_terracotta": {
+    "sound": "terracotta"
+  },
+  "blue_terracotta": {
+    "sound": "terracotta"
+  },
+  "brown_terracotta": {
+    "sound": "terracotta"
+  },
+  "green_terracotta": {
+    "sound": "terracotta"
+  },
+  "red_terracotta": {
+    "sound": "terracotta"
+  },
+  "black_terracotta": {
+    "sound": "terracotta"
+  },
+  "deadbush": {
+    "sound": "deadbush"
+  },
+  "cactus_flower": {
+    "textures": "cactus_flower",
+    "sound": "cactus_flower"
+  },
+  "short_dry_grass": {
+    "textures": "short_dry_grass",
+    "sound": "grass"
+  },
+  "tall_dry_grass": {
+    "textures": "tall_dry_grass",
+    "sound": "grass"
   }
 }

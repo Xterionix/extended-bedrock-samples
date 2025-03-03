@@ -4,9 +4,10 @@
     "controller.render.saddle": {
       "geometry": "Geometry.default",
       "materials": [ { "*": "Material.default" } ],
-      "textures": [ "Texture.default" ],
+      "textures": [ "Texture.saddle" ],
       "part_visibility": [
-        { "*": "variable.should_render" }
+        { "*": false },
+        { "body": "q.is_saddled" } 
       ]
     }
   }

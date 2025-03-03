@@ -46,8 +46,7 @@
       },
       "render_controllers": [ "controller.render.donkey.v3" ],
       "spawn_egg": {
-        "texture": "spawn_egg",
-        "texture_index": 30
+        "texture": "spawn_egg_donkey"
       }
     }
   }
