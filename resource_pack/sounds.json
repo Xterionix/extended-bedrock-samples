@@ -1,200 +1,37 @@
 {
-  "block_sounds": {
-    "leaf_litter": {
-      "volume": 1.0,
-      "pitch": 1.0,
-      "events": {
-        "default": "",
-        "break": {
-          "sound": "block.leaf_litter.break",
-          "pitch": 0.8
-        },
-        "hit": {
-          "sound": "block.leaf_litter.step",
-          "volume": 0.25,
-          "pitch": 0.5
-        },
-        "place": {
-          "sound": "block.leaf_litter.place",
-          "pitch": 0.8
-        }
-      }
-    },
-    "firefly_bush": {
-      "base": "sweet_berry_bush",
-      "volume": 1.0,
-      "pitch": 1.0,
-      "events": {
-        "ambient": "block.firefly_bush.ambient"
-      }
-    },
-    "cactus_flower": {
-      "base": "sweet_berry_bush",
-      "volume": 1.0,
-      "pitch": 1.0,
-      "events": {
-        "break": {
-          "sound": "block.cactus_flower.break",
-          "pitch": 0.8
-        },
-        "place": {
-          "sound": "block.cactus_flower.place",
-          "pitch": 0.8
-        }
-      }
-    }
-  },
-  "sand": {
-    "volume": 1.0,
-    "pitch": 1.0,
-    "events": {
-      "ambient": "block.sand.ambient"
-    }
-  },
-  "terracotta": {
-    "base": "stone",
-    "volume": 1.0,
-    "pitch": 1.0,
-    "events": {
-      "ambient": "block.sand.ambient"
-    }
-  },
-  "deadbush": {
-    "base": "grass",
-    "volume": 1.0,
-    "pitch": 1.0,
-    "events": {
-      "ambient": "block.deadbush.ambient"
-    }
-  },
-  "interactive_sounds": {
-    "block_sounds": {
-      "leaf_litter": {
-        "volume": 1.0,
-        "pitch": 1.0,
-        "events": {
-          "default": "",
-          "fall": {
-            "sounds": "block.leaf_litter.step",
-            "volume": 0.5,
-            "pitch": 0.75
-          },
-          "step": {
-            "sound": "block.leaf_litter.step",
-            "volume": 0.15
-          },
-          "jump": {
-            "sound": "block.leaf_litter.step",
-            "volume": 0.12
-          },
-          "land": {
-            "sound": "block.leaf_litter.step",
-            "volume": 0.22
-          }
-        }
-      }
-    }
-  },
   "entity_sounds": {
     "entities": {
-      "wolf": {
-        "volume": 1.0,
-        "pitch": [ 0.8, 1.2 ],
+      "parrot": {
         "events": {
-          "ambient": "mob.wolf.bark",
-          "hurt": "mob.wolf.hurt",
-          "death": "mob.wolf.death",
-          "step": {
-            "sound": "mob.wolf.step",
-            "volume": 0.65,
-            "pitch": 1.0
+          "imitate.phantom": {
+            "sound": "mob.phantom.idle",
+            "volume": 0.7,
+            "pitch": 1.5
           },
-          "shake": {
-            "sound": "mob.wolf.shake",
-            "pitch": [ 0.8, 1.2 ]
+          "imitate.zoglin": {
+            "sound": "mob.zoglin.idle",
+            "volume": 0.7,
+            "pitch": 1.7
           },
-          "growl": "mob.wolf.growl",
-          "whine": "mob.wolf.whine",
-          "pant": "mob.wolf.panting",
-          "hurt.reduced": "armor.damage_wolf",
-          "eat": ""
-        },
-
-        "variants": {
-          "key": "query.property('minecraft:sound_variant')",
-          "map": {
-            "big": {
-              "volume": 1.0,
-              "pitch": [ 0.8, 1.2 ],
-              "events": {
-                "ambient": "mob.wolf.big.bark",
-                "hurt": "mob.wolf.big.hurt",
-                "death": "mob.wolf.big.death",
-                "growl": "mob.wolf.big.growl",
-                "whine": "mob.wolf.big.whine",
-                "pant": "mob.wolf.big.panting"
-              }
-            },
-            "cute": {
-              "volume": 1.0,
-              "pitch": [ 0.8, 1.2 ],
-              "events": {
-                "ambient": "mob.wolf.cute.bark",
-                "hurt": "mob.wolf.cute.hurt",
-                "death": "mob.wolf.cute.death",
-                "growl": "mob.wolf.cute.growl",
-                "whine": "mob.wolf.cute.whine",
-                "pant": "mob.wolf.cute.panting"
-              }
-            },
-            "grumpy": {
-              "volume": 1.0,
-              "pitch": [ 0.8, 1.2 ],
-              "events": {
-                "ambient": "mob.wolf.grumpy.bark",
-                "hurt": "mob.wolf.grumpy.hurt",
-                "death": "mob.wolf.grumpy.death",
-                "growl": "mob.wolf.grumpy.growl",
-                "whine": "mob.wolf.grumpy.whine",
-                "pant": "mob.wolf.grumpy.panting"
-              }
-            },
-            "mad": {
-              "volume": 1.0,
-              "pitch": [ 0.8, 1.2 ],
-              "events": {
-                "ambient": "mob.wolf.mad.bark",
-                "hurt": "mob.wolf.mad.hurt",
-                "death": "mob.wolf.mad.death",
-                "growl": "mob.wolf.mad.growl",
-                "whine": "mob.wolf.mad.whine",
-                "pant": "mob.wolf.mad.panting"
-              }
-            },
-            "puglin": {
-              "volume": 1.0,
-              "pitch": [ 0.8, 1.2 ],
-              "events": {
-                "ambient": "mob.wolf.puglin.bark",
-                "hurt": "mob.wolf.puglin.hurt",
-                "death": "mob.wolf.puglin.death",
-                "growl": "mob.wolf.puglin.growl",
-                "whine": "mob.wolf.puglin.whine",
-                "pant": "mob.wolf.puglin.panting"
-              }
-            },
-            "sad": {
-              "volume": 1.0,
-              "pitch": [ 0.8, 1.2 ],
-              "events": {
-                "ambient": "mob.wolf.sad.bark",
-                "hurt": "mob.wolf.sad.hurt",
-                "death": "mob.wolf.sad.death",
-                "growl": "mob.wolf.sad.growl",
-                "whine": "mob.wolf.sad.whine",
-                "pant": "mob.wolf.sad.panting"
-              }
-            }
+          "imitate.guardian": {
+            "sound": "mob.guardian.ambient",
+            "volume": 0.7,
+            "pitch": 1.8
+          },
+          "imitate.ravager": {
+            "sound": "mob.ravager.ambient",
+            "volume": 0.7,
+            "pitch": 1.7
+          },
+          "imitate.pillager": {
+            "sound": "mob.pillager.idle",
+            "volume": 0.7,
+            "pitch": 1.8
+          },
+          "imitate.blaze": {
+            "sound": "mob.blaze.breathe",
+            "volume": 0.4,
+            "pitch": 1.8
           }
         }
       }
