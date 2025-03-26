@@ -12,8 +12,7 @@
         "default": "geometry.piglin"
       },
       "spawn_egg": {
-        "texture": "spawn_egg",
-        "texture_index": 13
+        "texture": "spawn_egg_zombified_piglin"
       },
       "scripts": {
         "pre_animation": [

@@ -39,8 +39,7 @@
       ],
       "render_controllers": [ "controller.render.tropicalfish" ],
       "spawn_egg": {
-        "texture": "spawn_egg",
-        "texture_index": 44
+        "texture": "spawn_egg_tropicalfish"
       }
     }
   }

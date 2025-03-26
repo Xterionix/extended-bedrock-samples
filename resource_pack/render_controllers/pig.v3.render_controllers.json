@@ -5,7 +5,7 @@
       "arrays": {
         "textures": {
           "Array.default": [
-            "Texture.temperate",
+            "Texture.default",
             "Texture.warm",
             "Texture.cold"
           ]

@@ -18,8 +18,7 @@
       ],
       "render_controllers": [ "controller.render.endermite" ],
       "spawn_egg": {
-        "texture": "spawn_egg",
-        "texture_index": 25
+        "texture": "spawn_egg_endermite"
       }
     }
   }

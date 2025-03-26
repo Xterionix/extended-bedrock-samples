@@ -56,8 +56,7 @@
       "render_controllers": [ "controller.render.drowned" ],
       "enable_attachables": true,
       "spawn_egg": {
-        "texture": "spawn_egg",
-        "texture_index": 48
+        "texture": "spawn_egg_drowned"
       }
     }
   }

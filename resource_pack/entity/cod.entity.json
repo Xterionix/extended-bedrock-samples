@@ -27,8 +27,7 @@
       ],
       "render_controllers": [ "controller.render.cod" ],
       "spawn_egg": {
-        "texture": "spawn_egg",
-        "texture_index": 45
+        "texture": "spawn_egg_cod"
       }
     }
   }

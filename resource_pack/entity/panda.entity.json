@@ -34,8 +34,7 @@
       ],
       "render_controllers": [ "controller.render.panda" ],
       "spawn_egg": {
-        "texture": "spawn_egg",
-        "texture_index": 54
+        "texture": "spawn_egg_panda"
       }
     }
   }

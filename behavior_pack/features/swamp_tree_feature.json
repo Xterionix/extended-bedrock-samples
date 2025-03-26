@@ -79,7 +79,10 @@
       "minecraft:spruce_leaves",
       // Water
       "minecraft:water",
-      "minecraft:flowing_water"
+      "minecraft:flowing_water",
+      // Plants
+      "minecraft:wildflowers",
+      "minecraft:leaf_litter"
     ]
   }
 }

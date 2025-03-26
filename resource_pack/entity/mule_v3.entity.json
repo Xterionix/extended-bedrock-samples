@@ -46,8 +46,7 @@
       },
       "render_controllers": [ "controller.render.mule.v3" ],
       "spawn_egg": {
-        "texture": "spawn_egg",
-        "texture_index": 31
+        "texture": "spawn_egg_mule"
       }
     }
   }

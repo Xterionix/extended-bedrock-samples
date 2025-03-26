@@ -30,10 +30,9 @@
         { "vex_idle": "controller.animation.vex.idle" }
       ],
       "render_controllers": [ "controller.render.vex" ],
-	  "held_item_ignores_lighting": true,
+	    "held_item_ignores_lighting": true,
       "spawn_egg": {
-        "texture": "spawn_egg",
-        "texture_index": 41
+        "texture": "spawn_egg_vex"
       }
     }
   }

@@ -1,0 +1,573 @@
+{
+  "namespace": "edu_servers",
+  /* Table of Contents
+    Misc Definitions
+    Add Server Button
+    Server Button
+    Servers Grid
+    Screen
+  */
+
+  //---------------------------------------------------------------------------
+  // Misc Definitions
+  //---------------------------------------------------------------------------
+
+  "server_entry_button_def@common_buttons.light_text_button": {
+    "$font_type": "MinecraftTen",
+    "$new_ui_label_offset": [ 0, -2 ],
+    "size": [ "100%", 18 ],
+    "$border_visible": false,
+    "$button_bindings": [
+      {
+        "binding_type": "collection_details",
+        "binding_collection_name": "server_column_collection",
+        "binding_collection_prefix": "server_column"
+      },
+      {
+        "binding_type": "collection_details",
+        "binding_collection_name": "server_row_collection",
+        "binding_collection_prefix": "server_row"
+      }
+    ]
+  },
+
+  "grid_label_def": {
+    "type": "label",
+    "text": "$text_binding",
+    "color": "$text_color",
+    "font_type": "smooth",
+    "max_size": [ "100%", 15 ],
+    "$text_color_binding|default": "#none",
+
+    "bindings": [
+      {
+        "binding_type": "collection_details",
+        "binding_collection_name": "server_column_collection",
+        "binding_collection_prefix": "server_column"
+      },
+      {
+        "binding_type": "collection_details",
+        "binding_collection_name": "server_row_collection",
+        "binding_collection_prefix": "server_row"
+      },
+      {
+        "binding_name": "$text_binding",
+        "binding_type": "global"
+      },
+      {
+        "binding_name": "$text_color_binding",
+        "binding_name_override": "#color",
+        "binding_type": "global"
+      }
+    ]
+  },
+
+  //---------------------------------------------------------------------------
+  // Add Server Button
+  //---------------------------------------------------------------------------
+
+  "add_server_button@common_buttons.dark_nestable_button": {
+    "$pressed_button_name": "button.servers.add_server",
+    "$use_parent_size": true,
+    "$nestable_button_size": [ "100%", "100%" ],
+
+    "$nested_button_content_size": [ "100%", "fill" ],
+    "$nested_control_image": "textures/ui/color_plus",
+
+    "$nested_button_label_size": [ "100%", 31 ],
+    "$nested_label_text": "edu.servers_screen.add_server",
+    "$nested_label_font_type": "smooth"
+  },
+
+  //---------------------------------------------------------------------------
+  // Server Button
+  //---------------------------------------------------------------------------
+
+  "server_image": {
+    "type": "image",
+    "force_texture_reload": true,
+    "keep_ratio": false,
+    "bindings": [
+      {
+        "binding_type": "collection_details",
+        "binding_collection_name": "server_column_collection",
+        "binding_collection_prefix": "server_column"
+      },
+      {
+        "binding_type": "collection_details",
+        "binding_collection_name": "server_row_collection",
+        "binding_collection_prefix": "server_row"
+      },
+      {
+        "binding_name": "#server_texture",
+        "binding_name_override": "#texture",
+        "binding_type": "global"
+      },
+      {
+        "binding_name": "#server_texture_source",
+        "binding_name_override": "#texture_file_system",
+        "binding_type": "global"
+      }
+    ]
+  },
+
+  "server_name@edu_servers.grid_label_def": {
+    "$text_binding": "#server_name",
+    "$text_color": "$dark_button_default_text_color"
+  },
+
+  "server_player_info": {
+    "type": "stack_panel",
+    "orientation": "horizontal",
+    "size": [ "100%", 12 ],
+
+    "bindings": [
+      {
+        "binding_type": "collection_details",
+        "binding_collection_name": "server_column_collection",
+        "binding_collection_prefix": "server_column"
+      },
+      {
+        "binding_type": "collection_details",
+        "binding_collection_name": "server_row_collection",
+        "binding_collection_prefix": "server_row"
+      }
+    ],
+    "controls": [
+      {
+        "image": {
+          "type": "image",
+          "texture": "textures/ui/edu_player_icon",
+          "size": [ 12, 12 ]
+        }
+      },
+      {
+        "image_to_label_padding@common.empty_panel": {
+          "size": [ 2, "100%" ]
+        }
+      },
+      {
+        "label": {
+          "type": "label",
+          "text": "#server_player_info_text",
+          "font_type": "smooth",
+          "color": "$dark_button_default_text_color",
+          "bindings": [
+            {
+              "binding_name": "#server_player_info_text",
+              "binding_type": "global"
+            },
+            {
+              "binding_type": "collection_details",
+              "binding_collection_name": "server_column_collection",
+              "binding_collection_prefix": "server_column"
+            },
+            {
+              "binding_type": "collection_details",
+              "binding_collection_name": "server_row_collection",
+              "binding_collection_prefix": "server_row"
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "server_connection_strength": {
+    "type": "image",
+    "size": [ 12, 12 ],
+    "bindings": [
+      {
+        "binding_type": "collection_details",
+        "binding_collection_name": "server_column_collection",
+        "binding_collection_prefix": "server_column"
+      },
+      {
+        "binding_type": "collection_details",
+        "binding_collection_name": "server_row_collection",
+        "binding_collection_prefix": "server_row"
+      },
+      {
+        "binding_name": "#server_connection_strength",
+        "binding_name_override": "#texture",
+        "binding_type": "global"
+      }
+    ]
+  },
+
+  "server_entry_buttons@edu_common.nested_buttons_base_definition": {
+    "controls": [
+      {
+        "play_nested_button@edu_servers.server_entry_button_def": {
+          "$button_text": "edu.servers_screen.play",
+          "$pressed_button_name": "button.servers.entry.play"
+        }
+      },
+      { "button_padding_1@edu_common.nested_buttons_base_definition": {} },
+      {
+        "share@edu_servers.server_entry_button_def": {
+          "$button_text": "edu.servers_screen.share",
+          "$pressed_button_name": "button.servers.entry.share_copy"
+        }
+      },
+      { "button_padding_2@edu_common.nested_buttons_base_definition": {} },
+      {
+        "remove@edu_servers.server_entry_button_def": {
+          "$button_text": "edu.servers_screen.remove",
+          "$pressed_button_name": "remove_server_button"
+        }
+      }
+    ]
+  },
+
+  "server_nested_buttons": {
+    "type": "panel",
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
+    "size": [ "100%", "100%c" ],
+
+    "controls": [
+      {
+        "server_entry_buttons@edu_servers.server_entry_buttons": {
+          "bindings": [
+            {
+              "binding_name": "#show_nested_buttons",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "server_button@common_buttons.transparent_label_nestable_button": {
+    "$has_special_nested_controls": true,
+    "$pressed_button_name": "button.servers.server_button",
+    "$nested_content_visibility_binding": "#server_controls_visiblity",
+    "$nested_content_controls": "edu_servers.server_nested_buttons",
+    "$special_nested_content_bindings": [
+      {
+        "binding_type": "collection_details",
+        "binding_collection_name": "server_column_collection",
+        "binding_collection_prefix": "server_column"
+      },
+      {
+        "binding_type": "collection_details",
+        "binding_collection_name": "server_row_collection",
+        "binding_collection_prefix": "server_row"
+      },
+      {
+        "binding_name": "#server_nested_buttons_visible",
+        "binding_name_override": "#visible",
+        "binding_type": "global"
+      }
+    ],
+    "$special_nested_button_bindings": [
+      {
+        "binding_type": "collection_details",
+        "binding_collection_name": "server_column_collection",
+        "binding_collection_prefix": "server_column"
+      },
+      {
+        "binding_type": "collection_details",
+        "binding_collection_name": "server_row_collection",
+        "binding_collection_prefix": "server_row"
+      },
+      {
+        "binding_name": "(not #server_nested_buttons_visible)",
+        "binding_name_override": "#enabled",
+        "binding_type": "global"
+      }
+    ],
+
+    "$use_parent_size": true,
+    "$nestable_button_size": [ "100%", "100%" ],
+
+    "$nested_content_control": "edu_servers.server_image",
+    "$nested_button_content_size": [ "100%", "fill" ],
+
+    "$nested_button_label_size": [ "100%", 30 ],
+    "$nested_label_control": "common_buttons.nested_six_part_label_control",
+    "$left_top_label_definition": "edu_servers.server_name",
+    "$left_bottom_label_definition": "edu_servers.server_player_info",
+
+    "$right_bottom_label_definition": "edu_servers.server_connection_strength",
+
+    "$transparent_label_color": [ 0, 0, 0 ],
+    "$transparent_label_hover_color": [ 0, 0.45, 0 ],
+    "$transparent_label_pressed_color": [ 0, 0.45, 0 ],
+    "$nested_transparent_label_alpha": 0.7
+  },
+
+  //---------------------------------------------------------------------------
+  // Servers Grid
+  //---------------------------------------------------------------------------
+
+  "server_tile_button": {
+    "type": "panel",
+    "controls": [
+      {
+        "add_server@edu_servers.add_server_button": {
+          "bindings": [
+            {
+              "binding_type": "collection_details",
+              "binding_collection_name": "server_column_collection",
+              "binding_collection_prefix": "server_column"
+            },
+            {
+              "binding_type": "collection_details",
+              "binding_collection_name": "server_row_collection",
+              "binding_collection_prefix": "server_row"
+            },
+            {
+              "binding_name": "#is_first",
+              "binding_name_override": "#visible",
+              "binding_type": "global"
+            }
+          ]
+        }
+      },
+      {
+        "server@edu_servers.server_button": {
+          "bindings": [
+            {
+              "binding_type": "collection_details",
+              "binding_collection_name": "server_column_collection",
+              "binding_collection_prefix": "server_column"
+            },
+            {
+              "binding_type": "collection_details",
+              "binding_collection_name": "server_row_collection",
+              "binding_collection_prefix": "server_row"
+            },
+            {
+              "binding_name": "(not #is_first)",
+              "binding_name_override": "#visible",
+              "binding_type": "global"
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "server_tile": {
+    "type": "stack_panel",
+    "orientation": "horizontal",
+    "size": [ "100%", "100%cm" ],
+    "controls": [
+      { "left_padding@common.empty_panel": { "size": [ 2, "100%sm" ] } },
+      // Since we scroll on y we will fill on x and set y size to screenshot ratio + label size
+      { "button@edu_servers.server_tile_button": { "size": [ "fill", "56.25%x + 31px" ] } },
+      { "right_padding@common.empty_panel": { "size": [ 2, "100%sm" ] } }
+    ]
+  },
+
+  //---------------------------------------------------------------------------
+  // Screen
+  //---------------------------------------------------------------------------
+
+  "servers_scroll_content": {
+    "type": "stack_panel",
+    "size": [ "100% - 8px", "100%c" ],
+    "controls": [
+      { "top_padding@common.empty_panel": { "size": [ "100%", 4 ] } },
+      {
+        "servers_grid@edu_common.stack_panel_grid": {
+          "$grid_collection_prefix": "server",
+          "$stack_grid_item": "edu_servers.server_tile"
+        }
+      },
+      { "bottom_padding@common.empty_panel": { "size": [ "100%", 33 ] } }
+    ]
+  },
+
+  "servers_text_bar": {
+    "$show_icon|default": false,
+    "$icon_texture|default": "textures/ui/classrooms_icon",
+    //Top level image background, holds a stack panel that organizes elements
+    "type": "image",
+    "size": [ "100%", 33 ],
+    "texture": "textures/ui/edu_worlds_search_bar",
+    "controls": [
+      {
+        "stack_panel": {
+          "type": "stack_panel",
+          "orientation": "horizontal",
+          "size": [ "100%", 30 ],
+          "anchor_from": "top_right",
+          "anchor_to": "top_right",
+          "controls": [
+            {
+              //Each element needs to be set in a wrapper panel to use offsets
+              "text_bar_wrapper": {
+                "type": "panel",
+                "size": [ "fill", 26 ],
+                "controls": [
+                  {
+                    "text_bar@common.text_edit_box": {
+                      "size": [ "100%", 26 ],
+                      "offset": [ 4, 3 ],
+                      "max_length": 50,
+                      "$placeholder_label_size": [ "100%", 10 ],
+                      // Variable expected to be overwritten where element is used
+                      "$place_holder_text": "$place_holder_text",
+                      "$text_box_name": "$text_box_name"
+                    }
+                  }
+                ]
+              }
+            },
+            //3px space + 4 offset of text_bar
+            //Will be updated with addition of sort button later
+            { "temp_padding@common.empty_panel": { "size": [ 7, "100%sm" ] } }
+            //Space for Sort dropdown
+          ]
+        }
+      }
+    ]
+  },
+
+  "screen_content_while_adding_server": {
+    "type": "stack_panel",
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
+    "size": [ "100%", "100%" ],
+    "controls": [
+      {
+        "add_info_bar@edu_servers.servers_text_bar": {
+          "$show_icon": true,
+          "$icon_texture": "textures/ui/classrooms_icon",
+          "size": [ "100%", 33 ],
+          "$place_holder_text": "edu.servers_screen.add_info_placeholder",
+          "$text_box_name": "#server_add_info_box"
+        }
+      },
+      {
+        "add_info_row": {
+          "type": "stack_panel",
+          "orientation": "horizontal",
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+          "size": [ "100%", 100 ],
+          "controls": [
+            {
+              "cancel_add_server@common_buttons.dark_nestable_button": {
+                "$pressed_button_name": "button.servers.cancel_add_server",
+                "$use_parent_size": true,
+                "$nestable_button_size": [ "fill", "100%" ],
+
+                "$nested_button_content_size": [ "100%", "fill" ],
+                "$nested_control_image": "textures/ui/listx", //icon_servers_small, cancel, classrooms_icon, undoArrow, check, color_plus, listcheck, listx
+
+                "$nested_button_label_size": [ "100%", 31 ],
+                "$nested_label_font_type": "smooth"
+              }
+            },
+            {
+              "confirm_add_server@common_buttons.dark_nestable_button": {
+                "$pressed_button_name": "button.servers.confirm_add_server",
+                "$use_parent_size": true,
+                "$nestable_button_size": [ "fill", "100%" ],
+
+                "$nested_button_content_size": [ "100%", "fill" ],
+                "$nested_control_image": "textures/ui/listcheck", //icon_servers_small, cancel, classrooms_icon, undoArrow, check, color_plus, listcheck, listx
+
+                "$nested_button_label_size": [ "100%", 31 ],
+                "$nested_label_text": "edu.servers_screen.confirm_add_server",
+                "$nested_label_font_type": "smooth"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "screen_content_while_selecting": {
+    "type": "stack_panel",
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
+    "size": [ "100%", "100%" ],
+    "controls": [
+      {
+        "search_bar@edu_servers.servers_text_bar": {
+          "$place_holder_text": "edu.servers_screen.search_placeholder",
+          "$text_box_name": "#server_search_box"
+        }
+      },
+      {
+        "server_scroll_panel": {
+          "type": "panel",
+          "size": [ "100% - 8px", "fill" ],
+          "controls": [
+            {
+              "server_scroll@common.scrolling_panel": {
+                "size": [ "100%", "100%" ],
+                "$scrolling_content": "edu_servers.servers_scroll_content",
+                "$show_background": false,
+                "$scroll_bar_left_padding_size": [ 0, 0 ],
+                "$scroll_bar_right_padding_size": [ 1, 0 ],
+                "$scroll_size": [ 5, "100% - 32px" ],
+                "$scroll_size_touch": "$scroll_size",
+                "$scroll_track_anchor": "top_middle",
+                "$scrolling_content_anchor_from": "top_middle",
+                "$scrolling_content_anchor_to": "top_middle"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "screen_content_stack_panel": {
+    "type": "stack_panel",
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
+    "size": [ "100%", "100%" ],
+    "controls": [
+      {
+        "title@edu_common.edu_screen_header": {
+          "$title_text": "edu.servers_screen.title",
+          "$title_has_image": true,
+          "$title_texture": "textures/ui/servers"
+        }
+      },
+      {
+        "adding@edu_servers.screen_content_while_adding_server": {
+          "bindings": [
+            {
+              "binding_name": "#is_entering_add_info",
+              "binding_name_override": "#visible",
+              "binding_type": "global"
+            }
+          ]
+        }
+      },
+      {
+        "selecting@edu_servers.screen_content_while_selecting": {
+          "bindings": [
+            {
+              "binding_name": "(not #is_entering_add_info)",
+              "binding_name_override": "#visible",
+              "binding_type": "global"
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "edu_servers_screen@common.base_screen": {
+    "$screen_content": "edu_servers.screen_content_stack_panel",
+    "$screen_bg_content": "common.screen_background",
+    "button_mappings": [
+      {
+        "from_button_id": "button.menu_cancel",
+        "to_button_id": "button.menu_exit",
+        "mapping_type": "global"
+      }
+    ]
+  }
+}

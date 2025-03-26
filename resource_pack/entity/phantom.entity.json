@@ -38,8 +38,7 @@
       },
       "render_controllers": [ "controller.render.phantom" ],
       "spawn_egg": {
-        "texture": "spawn_egg",
-        "texture_index": 51
+        "texture": "spawn_egg_phantom"
       }
     }
   }
