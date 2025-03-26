@@ -31,6 +31,28 @@
     ]
   },
 
+  // This separate definition from the one above allows us to show nested buttons based on if the server was added by the client
+  // It is required to put the #is_added_server binding here and not directly on the button to not corrupt the server_row/server_column indices
+  "server_entry_button_client_added_def@edu_servers.server_entry_button_def": {
+    "$button_bindings": [
+      {
+        "binding_type": "collection_details",
+        "binding_collection_name": "server_column_collection",
+        "binding_collection_prefix": "server_column"
+      },
+      {
+        "binding_type": "collection_details",
+        "binding_collection_name": "server_row_collection",
+        "binding_collection_prefix": "server_row"
+      },
+      {
+        "binding_name": "#is_added_server",
+        "binding_name_override": "#visible",
+        "binding_type": "global"
+      }
+    ]
+  },
+
   "grid_label_def": {
     "type": "label",
     "text": "$text_binding",
@@ -212,9 +234,9 @@
       },
       { "button_padding_2@edu_common.nested_buttons_base_definition": {} },
       {
-        "remove@edu_servers.server_entry_button_def": {
+        "remove@edu_servers.server_entry_button_client_added_def": {
           "$button_text": "edu.servers_screen.remove",
-          "$pressed_button_name": "remove_server_button"
+          "$pressed_button_name": "button.servers.entry.remove_server"
         }
       }
     ]

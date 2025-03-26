@@ -1,5 +1,5 @@
 {
-  "format_version": "1.21.60",
+  "format_version": "1.21.70",
   "minecraft:client_biome": {
     "description": {
       "identifier": "mesa"
@@ -16,6 +16,9 @@
       },
       "minecraft:grass_appearance": {
         "color": "#90814d"
+      },
+      "minecraft:biome_music": {
+        "music_definition": "mesa"
       }
     }
   }
