@@ -949,7 +949,9 @@
           "size": [ "100% - 16px", "default" ],
           "alpha": "$alpha",
           "bindings": "$radio_label_bindings",
-          "layer": 2
+          "layer": 2,
+          "$tts_override_control_value|default": "$radio_label_text",
+          "tts_override_control_value": "$tts_override_control_value"
         }
       },
       {
@@ -1047,7 +1049,7 @@
     "controls": [
       { "radio_with_label_core@settings_common.radio_with_label_core": {} },
       {
-        "mobile_data_ios_icon": {
+        "radio_with_label_icon": {
           "type": "image",
           "anchor_from": "right_middle",
           "anchor_to": "right_middle",
@@ -1334,6 +1336,8 @@
                 "$options_dropdown_toggle_label_shadow|default": false,
                 "shadow": "$options_dropdown_toggle_label_shadow",
                 "alpha": "$content_alpha",
+                "$tts_override_control_value|default": "$options_dropdown_toggle_label_binding",
+                "tts_override_control_value": "$tts_override_control_value",
 
                 "$options_dropdown_toggle_label_binding_type|default": "global",
                 "$options_dropdown_toggle_label_binding_collection_name|default": "",
@@ -1348,6 +1352,12 @@
                     "binding_name": "$options_dropdown_label_color_binding",
                     "binding_type": "$options_dropdown_label_color_binding_type",
                     "binding_name_override": "#color"
+                  },
+                  {
+                    "binding_name": "$tts_override_control_value",
+                    "binding_condition": "none",
+                    "binding_type": "$options_dropdown_toggle_label_binding_type",
+                    "binding_collection_name": "$options_dropdown_toggle_label_binding_collection_name"
                   }
                 ],
 
@@ -1452,6 +1462,73 @@
 
   "option_dropdown_control_no_scroll@settings_common.option_dropdown_control": {
     "$option_dropdown_type": "common.dropdown_no_scrollpanel"
+  },
+
+  "option_info_label_with_icon": {
+    "type": "image",
+    "texture": "textures/ui/text_label_box",
+    "size": [ "100%", "100%c + 6px" ],
+    "$used_fontsize|default": "normal",
+    "$used_fonttype|default": "default",
+    "controls": [
+      {
+        "control": {
+          "type": "label",
+          "color": "$main_header_text_color",
+          "size": [ "100% - 8px", "default" ],
+          "layer": 1,
+          "text": "$container_text_binding_name",
+          "font_size": "$used_fontsize",
+          "font_type": "$used_fonttype",
+          "tts_override_control_value": "$container_tts_binding_name",
+          "bindings": [
+            {
+              "binding_name": "$container_text_binding_name"
+            },
+            {
+              "binding_name": "$container_tts_binding_name"
+            }
+          ]
+        }
+      },
+      {
+        "icon_panel": {
+          "type": "stack_panel",
+          "orientation": "horizontal",
+          "size": [ "100%c", "100%c" ],
+          "anchor_to": "right_middle",
+          "anchor_from": "right_middle",
+          "controls": [
+            {
+              "icon_image": {
+                "type": "image",
+                "size": [ 8, 8 ],
+                "texture": "$container_icon_binding_name",
+                "bindings": [
+                  {
+                    "binding_name": "$container_icon_binding_name",
+                    "binding_name_override": "#texture"
+                  }
+                ]
+              }
+            },
+            {
+              "padding2@common.empty_panel": {
+                "size": [ 8, 0 ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "option_info_label_icon@common.tts_label_focus_wrapper": {
+    "$tts_label_panel": "settings_common.option_info_label_with_icon"
+  },
+
+  "option_icon_label@settings_common.option_generic": {
+    "$control_name": "settings_common.option_info_label_icon"
   },
 
   "option_info_label_with_bulb": {

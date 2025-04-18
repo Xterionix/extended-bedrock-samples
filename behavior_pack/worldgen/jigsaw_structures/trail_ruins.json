@@ -15,7 +15,12 @@
     "terrain_adaptation": "bury",
     "start_pool": "minecraft:trail_ruins/tower",
     "max_depth": 7,
-    "start_height": -15,
+    "start_height": {
+      "type": "constant",
+      "value": {
+        "absolute": -15
+      }
+    },
     "heightmap_projection": "world_surface"
   }
 }
