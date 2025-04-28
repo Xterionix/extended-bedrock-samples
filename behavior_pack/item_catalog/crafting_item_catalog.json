@@ -1088,6 +1088,7 @@
                     "minecraft:dragon_egg",
                     "minecraft:turtle_egg",
                     "minecraft:sniffer_egg",
+                    "minecraft:dried_ghast",
                     "minecraft:frog_spawn",
                     "minecraft:pearlescent_froglight",
                     "minecraft:verdant_froglight",
@@ -1178,7 +1179,8 @@
                     "minecraft:breeze_spawn_egg",
                     "minecraft:armadillo_spawn_egg",
                     "minecraft:bogged_spawn_egg",
-                    "minecraft:creaking_spawn_egg"
+                    "minecraft:creaking_spawn_egg",
+                    "minecraft:happy_ghast_spawn_egg"
                  ]
               },
               {
@@ -1365,7 +1367,12 @@
                  ]
               },
               {
-                 "items" : [ "minecraft:bow", "minecraft:crossbow", "minecraft:mace" ]
+                 "items": [
+                    "minecraft:bow",
+                    "minecraft:crossbow",
+                    "minecraft:mace",
+                    "minecraft:trident"
+                 ]
               },
               {
                  "group_identifier" : {
@@ -1488,6 +1495,30 @@
                  "items" : [ "minecraft:empty_map", "minecraft:empty_map:2", "minecraft:saddle" ]
               },
               {
+               "group_identifier": {
+                 "icon": "minecraft:white_harness",
+                 "name": "minecraft:itemGroup.name.harnesses"
+               },
+               "items": [
+                 "minecraft:white_harness",
+                 "minecraft:light_gray_harness",
+                 "minecraft:gray_harness",
+                 "minecraft:black_harness",
+                 "minecraft:brown_harness",
+                 "minecraft:red_harness",
+                 "minecraft:orange_harness",
+                 "minecraft:yellow_harness",
+                 "minecraft:lime_harness",
+                 "minecraft:green_harness",
+                 "minecraft:cyan_harness",
+                 "minecraft:light_blue_harness",
+                 "minecraft:blue_harness",
+                 "minecraft:purple_harness",
+                 "minecraft:magenta_harness",
+                 "minecraft:pink_harness"
+               ]
+              },
+              {
                  "group_identifier" : {
                     "icon" : "minecraft:bundle",
                     "name" : "minecraft:itemGroup.name.bundles"
@@ -1527,7 +1558,6 @@
               {
                  "items" : [
                     "minecraft:wolf_armor",
-                    "minecraft:trident",
                     "minecraft:turtle_helmet",
                     "minecraft:elytra",
                     "minecraft:totem_of_undying",

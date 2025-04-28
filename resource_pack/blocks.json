@@ -1,89 +1,15 @@
 {
   "format_version": "1.21.40",
-  "wildflowers": {
-    "textures": "wildflowers",
-    "carried_textures": "wildflowers_carried",
-    "sound": "pink_petals"
-  },
-  "firefly_bush": {
-    "textures": "firefly_bush",
-    "carried_textures": "firefly_bush_carried",
-    "sound": "firefly_bush"
-  },
-  "bush": {
-    "textures": "bush",
-    "carried_textures": "bush_carried",
-    "sound": "grass"
-  },
-  "leaf_litter": {
-    "textures": "leaf_litter",
-    "carried_textures": "leaf_litter_carried",
-    "sound": "leaf_litter"
-  },
-  "hardened_clay": {
-    "sound": "terracotta"
-  },
-  "white_terracotta": {
-    "sound": "terracotta"
-  },
-  "orange_terracotta": {
-    "sound": "terracotta"
-  },
-  "magenta_terracotta": {
-    "sound": "terracotta"
-  },
-  "light_blue_terracotta": {
-    "sound": "terracotta"
-  },
-  "yellow_terracotta": {
-    "sound": "terracotta"
-  },
-  "lime_terracotta": {
-    "sound": "terracotta"
-  },
-  "pink_terracotta": {
-    "sound": "terracotta"
-  },
-  "gray_terracotta": {
-    "sound": "terracotta"
-  },
-  "light_gray_terracotta": {
-    "sound": "terracotta"
-  },
-  "cyan_terracotta": {
-    "sound": "terracotta"
-  },
-  "purple_terracotta": {
-    "sound": "terracotta"
-  },
-  "blue_terracotta": {
-    "sound": "terracotta"
-  },
-  "brown_terracotta": {
-    "sound": "terracotta"
-  },
-  "green_terracotta": {
-    "sound": "terracotta"
-  },
-  "red_terracotta": {
-    "sound": "terracotta"
-  },
-  "black_terracotta": {
-    "sound": "terracotta"
-  },
-  "deadbush": {
-    "sound": "deadbush"
-  },
-  "cactus_flower": {
-    "textures": "cactus_flower",
-    "sound": "cactus_flower"
-  },
-  "short_dry_grass": {
-    "textures": "short_dry_grass",
-    "sound": "grass"
-  },
-  "tall_dry_grass": {
-    "textures": "tall_dry_grass",
-    "sound": "grass"
+  "dried_ghast": {
+    "textures": {
+      "up": "dried_ghast_top",
+      "down": "dried_ghast_bottom",
+      "north": "dried_ghast_back",
+      "west": "dried_ghast_right",
+      "east": "dried_ghast_left",
+      "south": "dried_ghast_front"
+    },
+    "carried_textures": "dried_ghast_tentacles",
+    "sound": "dried_ghast"
   }
 }

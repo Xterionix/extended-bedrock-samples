@@ -1,5 +1,5 @@
 {
-  "format_version": "1.21.80",
+  "format_version": "1.21.90",
   "use_beta_features": true,
   "minecraft:entity": {
     "description": {
@@ -40,9 +40,8 @@
         },
         "presets": [
           {
-            "soft_distance": 4.0,
-            "hard_distance": 6.0,
-            "max_distance": 10.0
+            "hard_distance": 10,
+            "max_distance": 14
           }
         ]
       },
@@ -74,6 +73,8 @@
       },
       "minecraft:behavior.float": {
         "priority": 0
+      },
+      "minecraft:body_rotation_always_follows_head": {
       }
     },
 
@@ -86,6 +87,8 @@
         "minecraft:health": {
           "value": 20,
           "max": 20
+        },
+        "minecraft:leashable_to": {
         },
         "minecraft:breathable": {
           "total_supply": 5,
@@ -106,7 +109,7 @@
               "event": "minecraft:on_no_player_detected_above",
               "cooldown": 0.0,
               "y_offset": 4.5,
-              "range": [ 3.0, 1.5 ],
+              "range": [ 2.0, 1.5 ],
               "minimum_count": 0,
               "maximum_count": 0,
               // This filter must be exactly the same as the one for minecraft:on_player_detected_above.
@@ -118,7 +121,7 @@
               "event": "minecraft:on_player_detected_above",
               "cooldown": 0.0,
               "y_offset": 4.5,
-              "range": [ 3.0, 1.5 ],
+              "range": [ 2.0, 1.5 ],
               "minimum_count": 1,
               // This filter must be exactly the same as the one for minecraft:on_no_player_detected_above.
               "event_filters": {
@@ -159,6 +162,9 @@
         "minecraft:movement": {
           "value": 0.0
         },
+        "minecraft:flying_speed": {
+          "value": 0.0
+        },
         "minecraft:knockback_resistance": {
           "value": 1.0
         },
@@ -191,7 +197,7 @@
           "breathes_water": true
         },
         "minecraft:ageable": {
-          "duration": 24000,
+          "duration": 1200,
           "feed_items": [
             "minecraft:snowball"
           ],
@@ -421,7 +427,10 @@
             "minecraft:snowball"
           ],
           "within_radius": 16,
-          "stop_distance": 7
+          "stop_distance": 7,
+          "on_tempt_end": {
+            "event": "minecraft:on_stop_tempting"
+          }
         },
         "minecraft:interact": {
           "interactions": [
@@ -430,7 +439,8 @@
                 "filters": {
                   "all_of": [
                     { "test": "has_equipment", "subject": "other", "domain": "hand", "value": "shears" },
-                    { "test": "is_family", "subject": "other", "value": "player" }
+                    { "test": "is_family", "subject": "other", "value": "player" },
+                    { "test": "rider_count", "subject": "self", "operator": "equals", "value": 0 }
                   ]
                 },
                 "event": "minecraft:on_unharnessed",
@@ -449,11 +459,19 @@
       "minecraft:has_passengers": {
         "minecraft:ambient_sound_interval": {
           "value": 30.0
+        },
+        "minecraft:pushable": {
+          "is_pushable": false,
+          "is_pushable_by_piston": true
         }
       },
       "minecraft:has_no_passengers": {
         "minecraft:ambient_sound_interval": {
           "value": 5.0
+        },
+        "minecraft:pushable": {
+          "is_pushable": true,
+          "is_pushable_by_piston": true
         }
       }
     },

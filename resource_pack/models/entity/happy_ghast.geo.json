@@ -28,7 +28,12 @@
             }
           ],
           "locators": {
-            "lead": [ 0.0, 0.0, 0.0 ]
+            "lead": [ 0, 0, 0 ],
+            "lead_hold": [ 0, 8, 0 ],
+            "multi_lead_hold_1": [ 8, 0, 8 ],
+            "multi_lead_hold_2": [ 8, 0, -8 ],
+            "multi_lead_hold_3": [ -8, 0, -8 ],
+            "multi_lead_hold_4": [ -8, 0, 8 ]
           }
         },
         {

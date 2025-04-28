@@ -1,5 +1,5 @@
 {
-  "format_version": "1.20.60",
+  "format_version": "1.21.90",
   "minecraft:entity": {
     "description": {
       "identifier": "minecraft:zoglin",
@@ -43,6 +43,8 @@
           "width": 1.4,
           "height": 1.4
         },
+        "minecraft:leashable_to": {
+        },
         "minecraft:custom_hit_test": {
           "hitboxes": [
             {
@@ -81,6 +83,8 @@
         "target": "self"
       },
       "minecraft:is_hidden_when_invisible": {
+      },
+      "minecraft:remove_in_peaceful": {
       },
       "minecraft:nameable": {
       },
@@ -141,9 +145,6 @@
       "minecraft:fire_immune": {
       },
       "minecraft:leashable": {
-        "soft_distance": 4.0,
-        "hard_distance": 6.0,
-        "max_distance": 10.0
       },
       "minecraft:balloonable": {
       },
