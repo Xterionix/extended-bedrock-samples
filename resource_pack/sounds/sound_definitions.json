@@ -193,6 +193,14 @@
       "sounds": [
         "sounds/mob/happy_ghast/harness_unequip"
       ]
+    },
+    "mob.blaze.shoot": {
+      "category": "hostile",
+      "max_distance": 32.0,
+      "sounds": [
+         "sounds/mob/ghast/fireball4"
+      ],
+      "subtitle": "subtitles.entity.blaze.shoot"
     }
   }
 }
