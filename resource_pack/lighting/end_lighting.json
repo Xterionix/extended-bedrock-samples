@@ -1,0 +1,18 @@
+{
+  "format_version": "1.21.80",
+  "minecraft:lighting_settings": {
+    "description": {
+      "identifier": "minecraft:end_lighting"
+    },
+    "directional_lights": {
+      "flash": {
+        "illuminance": 3.0,
+        "color": [ 228, 93, 255 ]
+      }
+    },
+    "ambient": {
+      "color": [ 255, 255, 255 ],
+      "illuminance": 0.125
+    },
+  }
+}

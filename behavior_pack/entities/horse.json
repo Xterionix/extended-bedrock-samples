@@ -36,6 +36,10 @@
               "growth": 0.05
             },
             {
+              "item": "carrot",
+              "growth": 0.05
+            },
+            {
               "item": "golden_carrot",
               "growth": 0.05
             },
@@ -117,6 +121,10 @@
               "temper_mod": 3
             },
             {
+              "item": "carrot",
+              "temper_mod": 3
+            },
+            {
               "item": "golden_carrot",
               "temper_mod": 5
             },
@@ -166,12 +174,10 @@
           "seats": {
             "position": [ 0.0, 1.1, -0.2 ]
           }
-
         },
         "minecraft:interact": {
           "interactions": [
             {
-              "play_sounds": "armor.equip_generic",
               "on_interact": {
                 "filters": {
                   "all_of": [
@@ -191,30 +197,72 @@
                         { "test": "has_equipment", "subject": "player", "domain": "hand", "value": "diamond_horse_armor" }
                       ]
                     },
-                    { "test": "is_family", "subject": "other", "value": "player" },
                     { "test": "is_sneak_held", "subject": "other", "value": false }
                   ]
                 },
                 "target": "self"
               },
               "equip_item_slot": "1",
-              "interact_text": "action.interact.equiphorsearmor"
+              "interact_text": "action.interact.equiphorsearmor",
+              "play_sounds": "armor.equip_generic"
             },
             {
-              "play_sounds": "saddle",
+              "on_interact": {
+                "filters": {
+                  "all_of": [
+                    { "test": "rider_count", "subject": "self", "operator": "equals", "value": 0 },
+                    {
+                      "any_of": [
+                        { "test": "has_equipment", "subject": "self", "domain": "inventory", "value": "leather_horse_armor" },
+                        { "test": "has_equipment", "subject": "self", "domain": "inventory", "value": "iron_horse_armor" },
+                        { "test": "has_equipment", "subject": "self", "domain": "inventory", "value": "golden_horse_armor" },
+                        { "test": "has_equipment", "subject": "self", "domain": "inventory", "value": "diamond_horse_armor" }
+                      ]
+                    },
+                    { "test": "has_equipment", "subject": "other", "domain": "hand", "value": "shears" },
+                    { "test": "is_sneak_held", "subject": "other", "value": false }
+                  ]
+                }
+              },
+              "hurt_item": 1,
+              "drop_item_slot": "1",
+              "drop_item_y_offset": 1.1,
+              "interact_text": "action.interact.removehorsearmor",
+              "play_sounds": "armor.unequip_generic",
+              "vibration": "shear"
+            },
+            {
               "on_interact": {
                 "filters": {
                   "all_of": [
                     { "test": "has_equipment", "subject": "self", "domain": "inventory", "operator": "not", "value": "saddle" },
                     { "test": "has_equipment", "subject": "other", "domain": "hand", "value": "saddle" },
-                    { "test": "is_family", "subject": "other", "value": "player" },
                     { "test": "is_sneak_held", "subject": "other", "value": false }
                   ]
                 },
                 "target": "self"
               },
               "equip_item_slot": "0",
-              "interact_text": "action.interact.saddle"
+              "interact_text": "action.interact.saddle",
+              "play_sounds": "saddle"
+            },
+            {
+              "on_interact": {
+                "filters": {
+                  "all_of": [
+                    { "test": "rider_count", "subject": "self", "operator": "equals", "value": 0 },
+                    { "test": "has_equipment", "subject": "self", "domain": "inventory", "value": "saddle" },
+                    { "test": "has_equipment", "subject": "other", "domain": "hand", "value": "shears" },
+                    { "test": "is_sneak_held", "subject": "other", "value": false }
+                  ]
+                }
+              },
+              "hurt_item": 1,
+              "drop_item_slot": "0",
+              "drop_item_y_offset": 1.1,
+              "interact_text": "action.interact.removesaddle",
+              "play_sounds": "unsaddle",
+              "vibration": "shear"
             }
           ]
         },
@@ -397,12 +445,7 @@
       "minecraft:hurt_on_condition": {
         "damage_conditions": [
           {
-            "filters": {
-              "test": "in_lava",
-              "subject": "self",
-              "operator": "==",
-              "value": true
-            },
+            "filters": { "test": "in_lava", "subject": "self" },
             "cause": "lava",
             "damage_per_tick": 4
           }
@@ -457,6 +500,10 @@
           },
           {
             "item": "apple",
+            "heal_amount": 3
+          },
+          {
+            "item": "carrot",
             "heal_amount": 3
           },
           {
@@ -681,6 +728,7 @@
           ]
         }
       },
+
       "minecraft:horse_unsaddled": {
         "remove": {
           "component_groups": [

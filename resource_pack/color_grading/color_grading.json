@@ -1,5 +1,5 @@
 {
-  "format_version": "1.21.40",
+  "format_version": "1.21.90",
   "minecraft:color_grading_settings": {
     "description": {
       "identifier": "minecraft:default_color_grading"
@@ -31,6 +31,11 @@
           1.05,
           1.05
         ]
+      },
+      "temperature": {
+        "enabled": true,
+        "temperature": 6500,
+        "type": "color_temperature"
       }
     },
     "tone_mapping": {

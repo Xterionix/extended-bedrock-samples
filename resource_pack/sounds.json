@@ -68,6 +68,33 @@
   },
   "individual_event_sounds": {
     "events": {
+      "ambient.weather.the_end_light_flash": {
+        "sound": "ambient.weather.the_end_light_flash",
+        "volume": 6.25,
+        "pitch": [ 0.8, 1.0 ]
+      },
+      "record.tears": {
+        "sound": "record.tears",
+        "volume": 1.0,
+        "pitch": 1.0
+      },
+      // Pretty much an alias of "leashknot.place", but defined separately for clarity.
+      "lead.leash": {
+        "sound": "leashknot.place",
+        "volume": 1.0,
+        "pitch": 1.0
+      },
+      // Pretty much an alias of "leashknot.break", but defined separetly for clarity.
+      "lead.unleash": {
+        "sound": "leashknot.break",
+        "volume": 1.0,
+        "pitch": 1.0
+      },
+      "lead.break": {
+        "sound": "lead.break",
+        "volume": 1.0,
+        "pitch": 1.0
+      }
     }
   },
   "entity_sounds": {
@@ -114,6 +141,16 @@
           "imitate.happy_ghast": {
             "sound": "mob.happy_ghast.ambient",
             "pitch": 1.7
+          },
+          "imitate.drowned": {
+            "sound": "mob.drowned.say",
+            "volume": 0.6,
+            "pitch": 1.8
+          },
+          "imitate.wither_skeleton": {
+            "sound": "entity.wither_skeleton.ambient",
+            "volume": 0.7,
+            "pitch": 1.8
           }
         }
       },
@@ -122,6 +159,42 @@
         "pitch": [ 0.8, 1.2 ],
         "events": {
           "shoot": "mob.blaze.shoot"
+        }
+      },
+      "camel": {
+        "events": {
+          "unsaddle": "mob.unsaddle"
+        }
+      },
+      "horse": {
+        "events": {
+          "unsaddle": "mob.unsaddle",
+          "armor.unequip_generic": "mob.horse.horse_armor_unequip"
+        }
+      },
+      "donkey": {
+        "events": {
+          "unsaddle": "mob.unsaddle"
+        }
+      },
+      "mule": {
+        "events": {
+          "unsaddle": "mob.unsaddle"
+        }
+      },
+      "pig": {
+        "events": {
+          "unsaddle": "mob.unsaddle"
+        }
+      },
+      "strider": {
+        "events": {
+          "unsaddle": "mob.unsaddle"
+        }
+      },
+      "llama": {
+        "events": {
+          "armor.unequip_generic": "mob.llama.carpet_unequip"
         }
       }
     }

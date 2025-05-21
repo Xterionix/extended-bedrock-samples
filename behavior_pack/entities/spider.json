@@ -1,5 +1,5 @@
 {
-  "format_version": "1.21.60",
+  "format_version": "1.21.90",
   "minecraft:entity": {
     "description": {
       "identifier": "minecraft:spider",
@@ -25,7 +25,7 @@
       },
       "minecraft:spider_stray_jockey": {
         "minecraft:addrider": {
-          "entity_type": "minecraft:skeleton.stray"
+          "entity_type": "minecraft:stray"
         },
         "minecraft:rideable": {
           "seat_count": 1,
@@ -39,7 +39,7 @@
       },
       "minecraft:spider_wither_jockey": {
         "minecraft:addrider": {
-          "entity_type": "minecraft:skeleton.wither"
+          "entity_type": "minecraft:wither_skeleton"
         },
         "minecraft:rideable": {
           "seat_count": 1,
@@ -123,8 +123,6 @@
       "minecraft:is_hidden_when_invisible": {
       },
       "minecraft:renders_when_invisible": {
-      },
-      "minecraft:remove_in_peaceful": {
       },
       "minecraft:experience_reward": {
         "on_death": "query.last_hit_by_player ? 5 : 0"
@@ -258,7 +256,6 @@
                     { "test": "is_underground", "value": false }
                   ]
                 },
-                "remove": {},
                 "add": {
                   "component_groups": [
                     "minecraft:spider_stray_jockey",
@@ -269,10 +266,8 @@
               {
                 "weight": 80,
                 "filters": {
-                  "test": "is_biome",
-                  "value": "the_nether"
+                  "test": "has_biome_tag", "value": "nether"
                 },
-                "remove": {},
                 "add": {
                   "component_groups": [
                     "minecraft:spider_wither_jockey",
@@ -288,7 +283,6 @@
                     { "test": "is_underground", "value": true }
                   ]
                 },
-                "remove": {},
                 "add": {
                   "component_groups": [
                     "minecraft:spider_jockey",

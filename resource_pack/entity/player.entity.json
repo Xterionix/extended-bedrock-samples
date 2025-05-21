@@ -34,9 +34,9 @@
           "variable.tcos0 = (math.cos(query.modified_distance_moved * 38.17) * query.modified_move_speed / variable.gliding_speed_value) * 57.3;",
           "variable.first_person_rotation_factor = math.sin((1 - variable.attack_time) * 180.0);",
           "variable.hand_bob = query.life_time < 0.01 ? 0.0 : variable.hand_bob + ((query.is_on_ground && query.is_alive ? math.clamp(math.sqrt(math.pow(query.position_delta(0), 2.0) + math.pow(query.position_delta(2), 2.0)), 0.0, 0.1) : 0.0) - variable.hand_bob) * 0.02;",
-
           "variable.map_angle = math.clamp(1 - variable.player_x_rotation / 45.1, 0.0, 1.0);",
-          "variable.item_use_normalized = query.main_hand_item_use_duration / query.main_hand_item_max_duration;"
+          "variable.item_use_normalized = query.main_hand_item_use_duration / query.main_hand_item_max_duration;",
+          "variable.riding_y_offset = query.is_riding_any_entity_of_type('minecraft:minecart', 'minecraft:boat', 'minecraft:chest_boat', 'minecraft:strider') ? -3.0 : 0.0;"
         ],
         "animate": [
           "root"
@@ -60,6 +60,7 @@
         "swimming.legs": "animation.player.swim.legs",
         "crawling": "animation.player.crawl",
         "crawling.legs": "animation.player.crawl.legs",
+        "riding.root": "animation.player.riding.root",
         "riding.arms": "animation.player.riding.arms",
         "riding.legs": "animation.player.riding.legs",
         "holding": "animation.player.holding",
@@ -97,9 +98,9 @@
         "shield_block_main_hand": "animation.player.shield_block_main_hand",
         "shield_block_off_hand": "animation.player.shield_block_off_hand",
         "blink": "controller.animation.persona.blink",
-		    "tooting_goat_horn": "animation.humanoid.tooting_goat_horn",
-		    "holding_brush": "animation.humanoid.holding_brush",
-		    "brushing": "animation.humanoid.brushing"
+        "tooting_goat_horn": "animation.humanoid.tooting_goat_horn",
+        "holding_brush": "animation.humanoid.holding_brush",
+        "brushing": "animation.humanoid.brushing"
       },
       "render_controllers": [
         { "controller.render.player.first_person_spectator": "variable.is_first_person && query.is_spectator" },

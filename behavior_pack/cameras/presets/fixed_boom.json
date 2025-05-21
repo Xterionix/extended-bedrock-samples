@@ -3,7 +3,6 @@
   "minecraft:camera_preset": {
     "identifier": "minecraft:fixed_boom",
     "view_offset": [ 0.0, 0.0 ],
-    "entity_offset": [ 0.0, 0.0, 0.0 ],
-    "align_target_and_camera_forward": false
+    "entity_offset": [ 0.0, 0.0, 0.0 ]
   }
 }
