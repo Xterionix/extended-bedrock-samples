@@ -1,5 +1,5 @@
 {
-  "format_version": "1.21.40",
+  "format_version": "1.21.70",
   "minecraft:client_biome": {
     "description": {
       "identifier": "crimson_forest"
@@ -15,6 +15,9 @@
         "addition": "ambient.crimson_forest.additions",
         "loop": "ambient.crimson_forest.loop",
         "mood": "ambient.crimson_forest.mood"
+      },
+      "minecraft:biome_music": {
+        "music_definition": "crimson_forest"
       }
     }
   }

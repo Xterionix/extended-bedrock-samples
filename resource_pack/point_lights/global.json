@@ -1,0 +1,54 @@
+{
+  "format_version": "1.21.40",
+  "minecraft:point_light_settings": {
+    "colors": {
+      "minecraft:torch": "#EFE39D",
+      "minecraft:redstone_torch": "#FF0000",
+      "minecraft:soul_torch": "#00FFFF",
+      "minecraft:lantern": "#CE8133",
+      "minecraft:soul_lantern": "#00FFFF",
+      "minecraft:end_rod": "#FFFFFF",
+
+      "minecraft:candle": "#EFE39D",
+      "minecraft:white_candle": "#EFE39D",
+      "minecraft:orange_candle": "#EFE39D",
+      "minecraft:magenta_candle": "#EFE39D",
+      "minecraft:light_blue_candle": "#EFE39D",
+      "minecraft:yellow_candle": "#EFE39D",
+      "minecraft:lime_candle": "#EFE39D",
+      "minecraft:pink_candle": "#EFE39D",
+      "minecraft:gray_candle": "#EFE39D",
+      "minecraft:light_gray_candle": "#EFE39D",
+      "minecraft:cyan_candle": "#EFE39D",
+      "minecraft:purple_candle": "#EFE39D",
+      "minecraft:blue_candle": "#EFE39D",
+      "minecraft:brown_candle": "#EFE39D",
+      "minecraft:green_candle": "#EFE39D",
+      "minecraft:red_candle": "#EFE39D",
+      "minecraft:black_candle": "#EFE39D",
+
+      "minecraft:candle_cake": "#EFE39D",
+      "minecraft:white_candle_cake": "#EFE39D",
+      "minecraft:orange_candle_cake": "#EFE39D",
+      "minecraft:magenta_candle_cake": "#EFE39D",
+      "minecraft:light_blue_candle_cake": "#EFE39D",
+      "minecraft:yellow_candle_cake": "#EFE39D",
+      "minecraft:lime_candle_cake": "#EFE39D",
+      "minecraft:pink_candle_cake": "#EFE39D",
+      "minecraft:gray_candle_cake": "#EFE39D",
+      "minecraft:light_gray_candle_cake": "#EFE39D",
+      "minecraft:cyan_candle_cake": "#EFE39D",
+      "minecraft:purple_candle_cake": "#EFE39D",
+      "minecraft:blue_candle_cake": "#EFE39D",
+      "minecraft:brown_candle_cake": "#EFE39D",
+      "minecraft:green_candle_cake": "#EFE39D",
+      "minecraft:red_candle_cake": "#EFE39D",
+      "minecraft:black_candle_cake": "#EFE39D",
+
+      "tile.colored_torch.blue.name": "#0000FF",
+      "tile.colored_torch.purple.name": "#FF00FF",
+      "tile.colored_torch.red.name": "#FF0000",
+      "tile.colored_torch.green.name": "#00FF00"
+    }
+  }
+}

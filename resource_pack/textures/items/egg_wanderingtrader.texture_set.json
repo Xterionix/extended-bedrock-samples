@@ -1,0 +1,7 @@
+{
+    "format_version": "1.21.30",
+    "minecraft:texture_set": {
+        "color": "egg_wanderingtrader",
+        "metalness_emissive_roughness_subsurface": "egg_wanderingtrader_mers"
+    }
+}

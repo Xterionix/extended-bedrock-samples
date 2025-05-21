@@ -1,5 +1,5 @@
 {
-  "format_version": "1.21.40",
+  "format_version": "1.21.70",
   "minecraft:client_biome": {
     "description": {
       "identifier": "warped_forest"
@@ -15,6 +15,9 @@
         "addition": "ambient.warped_forest.additions",
         "loop": "ambient.warped_forest.loop",
         "mood": "ambient.warped_forest.mood"
+      },
+      "minecraft:biome_music": {
+        "music_definition": ""
       }
     }
   }
