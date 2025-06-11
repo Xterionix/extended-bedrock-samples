@@ -430,11 +430,6 @@
           "name": "sounds/music/game/os_piano",
           "stream": true,
           "volume": 0.3
-        },
-        {
-          "name": "sounds/music/game/tears",
-          "stream": true,
-          "volume": 0.3
         }
       ]
     },

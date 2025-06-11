@@ -714,8 +714,7 @@
 
   "file_storage_dropdown@settings_common.option_dropdown": {
     "$option_label": "worlds.storage.missing",
-    "ignored": "($education_edition or ($is_holographic and $is_reality_mode))",
-    "visible": "(not $gear_vr)",
+    "ignored": "($education_edition)",
     "$dropdown_content": "general_section.file_storage_location_content",
     "$dropdown_area": "storage_dropdown_content_area",
     "$dropdown_name": "storage_dropdown",
