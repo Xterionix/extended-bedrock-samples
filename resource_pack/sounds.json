@@ -1,38 +1,200 @@
 {
+  "block_sounds": {
+    "dried_ghast": {
+      "volume": 1.0,
+      "pitch": 1.0,
+      "events": {
+        "default": "",
+        "ambient": "block.dried_ghast.ambient",
+        "ambient.in.water": "block.dried_ghast.ambient_water",
+        "break": {
+          "sound": "block.dried_ghast.break",
+          "volume": 0.8,
+          "pitch": 0.96
+        },
+        "hit": {
+          "sound": "block.dried_ghast.hit",
+          "volume": 0.2,
+          "pitch": 0.6
+        },
+        "place": {
+          "sound": "block.dried_ghast.place",
+          "volume": 0.8,
+          "pitch": 0.96
+        },
+        "place_in_water": {
+          "sound": "block.dried_ghast.place_in_water",
+          "volume": 0.8,
+          "pitch": 0.96
+        },
+        "state_change": {
+          "sound": "block.dried_ghast.state_change",
+          "volume": 1.0,
+          "pitch": 1.0
+        }
+      }
+    }
+  },
+  "interactive_sounds": {
+    "block_sounds": {
+      "dried_ghast": {
+        "volume": 1.0,
+        "pitch": 1.0,
+        "events": {
+          "default": "",
+          "step": {
+            "sound": "block.dried_ghast.step",
+            "volume": 0.12,
+            "pitch": 1.2
+          },
+          "fall": {
+            "sound": "block.dried_ghast.fall",
+            "volume": 0.4,
+            "pitch": 0.9
+          },
+          "jump": {
+            "sound": "block.dried_ghast.step",
+            "volume": 0.12,
+            "pitch": 1.2
+          },
+          "land": {
+            "sound": "block.dried_ghast.step",
+            "volume": 1.0,
+            "pitch": 1.0
+          }
+        }
+      }
+    }
+  },
+  "individual_event_sounds": {
+    "events": {
+      "ambient.weather.the_end_light_flash": {
+        "sound": "ambient.weather.the_end_light_flash",
+        "volume": 6.25,
+        "pitch": [ 0.8, 1.0 ]
+      },
+      "record.tears": {
+        "sound": "record.tears",
+        "volume": 1.0,
+        "pitch": 1.0
+      },
+      // Pretty much an alias of "leashknot.place", but defined separately for clarity.
+      "lead.leash": {
+        "sound": "leashknot.place",
+        "volume": 1.0,
+        "pitch": 1.0
+      },
+      // Pretty much an alias of "leashknot.break", but defined separetly for clarity.
+      "lead.unleash": {
+        "sound": "leashknot.break",
+        "volume": 1.0,
+        "pitch": 1.0
+      },
+      "lead.break": {
+        "sound": "lead.break",
+        "volume": 1.0,
+        "pitch": 1.0
+      }
+    }
+  },
   "entity_sounds": {
     "entities": {
+      "happy_ghast": {
+        "volume": 1.0,
+        "pitch": 1.0,
+        "events": {
+          "death": "mob.happy_ghast.death",
+          "hurt": "mob.happy_ghast.hurt",
+          "ambient": "mob.happy_ghast.ambient",
+          "armor.equip_generic": "mob.happy_ghast.harness_equip",
+          "armor.unequip_generic": "mob.happy_ghast.harness_unequip",
+          "attach": "mob.happy_ghast.goggles_down",
+          "detach": "mob.happy_ghast.goggles_up"
+        },
+        "variants": {
+          "key": "query.is_baby ? 'ghastling' : 'adult'",
+          "map": {
+            "ghastling": {
+              "volume": 1.0,
+              "pitch": 0.5,
+              "events": {
+                "spawn": "mob.ghastling.spawn",
+                "death": "mob.ghastling.death",
+                "hurt": "mob.ghastling.hurt",
+                "ambient": "mob.ghastling.ambient"
+              }
+            },
+            "adult": {
+              "volume": 1.0,
+              "pitch": 1.0,
+              "events": {
+                "death": "mob.happy_ghast.death",
+                "hurt": "mob.happy_ghast.hurt",
+                "ambient": "mob.happy_ghast.ambient"
+              }
+            }
+          }
+        }
+      },
       "parrot": {
         "events": {
-          "imitate.phantom": {
-            "sound": "mob.phantom.idle",
-            "volume": 0.7,
-            "pitch": 1.5
-          },
-          "imitate.zoglin": {
-            "sound": "mob.zoglin.idle",
-            "volume": 0.7,
+          "imitate.happy_ghast": {
+            "sound": "mob.happy_ghast.ambient",
             "pitch": 1.7
           },
-          "imitate.guardian": {
-            "sound": "mob.guardian.ambient",
-            "volume": 0.7,
+          "imitate.drowned": {
+            "sound": "mob.drowned.say",
+            "volume": 0.6,
             "pitch": 1.8
           },
-          "imitate.ravager": {
-            "sound": "mob.ravager.ambient",
+          "imitate.wither_skeleton": {
+            "sound": "entity.wither_skeleton.ambient",
             "volume": 0.7,
-            "pitch": 1.7
-          },
-          "imitate.pillager": {
-            "sound": "mob.pillager.idle",
-            "volume": 0.7,
-            "pitch": 1.8
-          },
-          "imitate.blaze": {
-            "sound": "mob.blaze.breathe",
-            "volume": 0.4,
             "pitch": 1.8
           }
+        }
+      },
+      "blaze": {
+        "volume": 2.0,
+        "pitch": [ 0.8, 1.2 ],
+        "events": {
+          "shoot": "mob.blaze.shoot"
+        }
+      },
+      "camel": {
+        "events": {
+          "unsaddle": "mob.unsaddle"
+        }
+      },
+      "horse": {
+        "events": {
+          "unsaddle": "mob.unsaddle",
+          "armor.unequip_generic": "mob.horse.horse_armor_unequip"
+        }
+      },
+      "donkey": {
+        "events": {
+          "unsaddle": "mob.unsaddle"
+        }
+      },
+      "mule": {
+        "events": {
+          "unsaddle": "mob.unsaddle"
+        }
+      },
+      "pig": {
+        "events": {
+          "unsaddle": "mob.unsaddle"
+        }
+      },
+      "strider": {
+        "events": {
+          "unsaddle": "mob.unsaddle"
+        }
+      },
+      "llama": {
+        "events": {
+          "armor.unequip_generic": "mob.llama.carpet_unequip"
         }
       }
     }

@@ -2,6 +2,7 @@
   "namespace": "edu_servers",
   /* Table of Contents
     Misc Definitions
+    Add Server Modal
     Add Server Button
     Server Button
     Servers Grid
@@ -11,6 +12,14 @@
   //---------------------------------------------------------------------------
   // Misc Definitions
   //---------------------------------------------------------------------------
+
+  "servers_popup_factory": {
+    "type": "factory",
+    "control_ids": {
+      "add_server_entry": "@edu_servers.add_server_entry",
+      "password_entry": "@edu_servers.password_entry"
+    }
+  },
 
   "server_entry_button_def@common_buttons.light_text_button": {
     "$font_type": "MinecraftTen",
@@ -82,6 +91,46 @@
         "binding_type": "global"
       }
     ]
+  },
+
+  //---------------------------------------------------------------------------
+  // Add Server Modal
+  //---------------------------------------------------------------------------
+
+  "add_server_entry": {
+    "type": "panel",
+    "controls": [
+      {
+        "add@edu_servers.add_server_popup": {
+        }
+      }
+    ]
+  },
+
+  "add_server_popup@popup_dialog.form_fit_modal_dialog_popup": {
+    "$modal_title": "edu.servers_screen.add_server",
+    "$popup_dialog_escape_button_name": "button.add_popup_escape",
+    "$modal_contents": "edu_add_server.add_server_content"
+  },
+
+  //---------------------------------------------------------------------------
+  // Password Entry Modal
+  //---------------------------------------------------------------------------
+
+  "password_entry": {
+    "type": "panel",
+    "controls": [
+      {
+        "password_entry@edu_servers.password_entry_popup": {
+        }
+      }
+    ]
+  },
+
+  "password_entry_popup@popup_dialog.form_fit_modal_dialog_popup": {
+    "$modal_title": "edu.password_entry_screen.enter_password_title",
+    "$popup_dialog_escape_button_name": "button.password_popup_escape",
+    "$modal_contents": "edu_password_entry.password_entry_content"
   },
 
   //---------------------------------------------------------------------------
@@ -195,24 +244,83 @@
     ]
   },
 
-  "server_connection_strength": {
-    "type": "image",
-    "size": [ 12, 12 ],
-    "bindings": [
+  "server_status_label_panel": {
+    "type": "stack_panel",
+    "orientation": "horizontal",
+    "size": [ 40, 12 ],
+    "controls": [
       {
-        "binding_type": "collection_details",
-        "binding_collection_name": "server_column_collection",
-        "binding_collection_prefix": "server_column"
+        "server_broadcasted": {
+          "type": "image",
+          "size": [ 12, 12 ],
+          "texture": "textures/ui/edu_broadcast_glyph",
+          "bindings": [
+            {
+              "binding_type": "collection_details",
+              "binding_collection_name": "server_column_collection",
+              "binding_collection_prefix": "server_column"
+            },
+            {
+              "binding_type": "collection_details",
+              "binding_collection_name": "server_row_collection",
+              "binding_collection_prefix": "server_row"
+            },
+            {
+              "binding_name": "#server_is_broadcasted",
+              "binding_name_override": "#alpha",
+              "binding_type": "global"
+            }
+          ]
+        }
       },
+      { "padding_panel_1@common.empty_panel": { "size": [ 2, "100%" ] } },
       {
-        "binding_type": "collection_details",
-        "binding_collection_name": "server_row_collection",
-        "binding_collection_prefix": "server_row"
+        "server_password": {
+          "type": "image",
+          "size": [ 12, 12 ],
+          "texture": "textures/ui/achievement_locked_icon",
+          "bindings": [
+            {
+              "binding_type": "collection_details",
+              "binding_collection_name": "server_column_collection",
+              "binding_collection_prefix": "server_column"
+            },
+            {
+              "binding_type": "collection_details",
+              "binding_collection_name": "server_row_collection",
+              "binding_collection_prefix": "server_row"
+            },
+            {
+              "binding_name": "#server_has_password",
+              "binding_name_override": "#alpha",
+              "binding_type": "global"
+            }
+          ]
+        }
       },
+      { "padding_panel_2@common.empty_panel": { "size": [ 2, "100%" ] } },
       {
-        "binding_name": "#server_connection_strength",
-        "binding_name_override": "#texture",
-        "binding_type": "global"
+        "server_connection_strength": {
+          "type": "image",
+          "size": [ 12, 12 ],
+          "bindings": [
+            {
+              "binding_type": "collection_details",
+              "binding_collection_name": "server_column_collection",
+              "binding_collection_prefix": "server_column"
+            },
+            {
+              "binding_type": "collection_details",
+              "binding_collection_name": "server_row_collection",
+              "binding_collection_prefix": "server_row"
+            },
+            {
+              "binding_name": "#server_connection_strength",
+              "binding_name_override": "#texture",
+              "binding_type": "global"
+            }
+          ]
+        }
       }
     ]
   },
@@ -313,7 +421,7 @@
     "$left_top_label_definition": "edu_servers.server_name",
     "$left_bottom_label_definition": "edu_servers.server_player_info",
 
-    "$right_bottom_label_definition": "edu_servers.server_connection_strength",
+    "$right_bottom_label_definition": "edu_servers.server_status_label_panel",
 
     "$transparent_label_color": [ 0, 0, 0 ],
     "$transparent_label_hover_color": [ 0, 0.45, 0 ],
@@ -450,62 +558,6 @@
     ]
   },
 
-  "screen_content_while_adding_server": {
-    "type": "stack_panel",
-    "anchor_from": "top_middle",
-    "anchor_to": "top_middle",
-    "size": [ "100%", "100%" ],
-    "controls": [
-      {
-        "add_info_bar@edu_servers.servers_text_bar": {
-          "$show_icon": true,
-          "$icon_texture": "textures/ui/classrooms_icon",
-          "size": [ "100%", 33 ],
-          "$place_holder_text": "edu.servers_screen.add_info_placeholder",
-          "$text_box_name": "#server_add_info_box"
-        }
-      },
-      {
-        "add_info_row": {
-          "type": "stack_panel",
-          "orientation": "horizontal",
-          "anchor_from": "top_middle",
-          "anchor_to": "top_middle",
-          "size": [ "100%", 100 ],
-          "controls": [
-            {
-              "cancel_add_server@common_buttons.dark_nestable_button": {
-                "$pressed_button_name": "button.servers.cancel_add_server",
-                "$use_parent_size": true,
-                "$nestable_button_size": [ "fill", "100%" ],
-
-                "$nested_button_content_size": [ "100%", "fill" ],
-                "$nested_control_image": "textures/ui/listx", //icon_servers_small, cancel, classrooms_icon, undoArrow, check, color_plus, listcheck, listx
-
-                "$nested_button_label_size": [ "100%", 31 ],
-                "$nested_label_font_type": "smooth"
-              }
-            },
-            {
-              "confirm_add_server@common_buttons.dark_nestable_button": {
-                "$pressed_button_name": "button.servers.confirm_add_server",
-                "$use_parent_size": true,
-                "$nestable_button_size": [ "fill", "100%" ],
-
-                "$nested_button_content_size": [ "100%", "fill" ],
-                "$nested_control_image": "textures/ui/listcheck", //icon_servers_small, cancel, classrooms_icon, undoArrow, check, color_plus, listcheck, listx
-
-                "$nested_button_label_size": [ "100%", 31 ],
-                "$nested_label_text": "edu.servers_screen.confirm_add_server",
-                "$nested_label_font_type": "smooth"
-              }
-            }
-          ]
-        }
-      }
-    ]
-  },
-
   "screen_content_while_selecting": {
     "type": "stack_panel",
     "anchor_from": "top_middle",
@@ -543,46 +595,40 @@
     ]
   },
 
-  "screen_content_stack_panel": {
-    "type": "stack_panel",
+  "screen_content_panel": {
+    "type": "panel",
     "anchor_from": "top_middle",
     "anchor_to": "top_middle",
     "size": [ "100%", "100%" ],
     "controls": [
       {
-        "title@edu_common.edu_screen_header": {
-          "$title_text": "edu.servers_screen.title",
-          "$title_has_image": true,
-          "$title_texture": "textures/ui/servers"
-        }
-      },
-      {
-        "adding@edu_servers.screen_content_while_adding_server": {
-          "bindings": [
+        "screen_content_stack_panel": {
+          "type": "stack_panel",
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+          "size": [ "100%", "100%" ],
+          "controls": [
             {
-              "binding_name": "#is_entering_add_info",
-              "binding_name_override": "#visible",
-              "binding_type": "global"
+              "title@edu_common.edu_screen_header": {
+                "$title_text": "edu.servers_screen.title",
+                "$title_has_image": true,
+                "$title_texture": "textures/ui/servers"
+              }
+            },
+            {
+              "selecting@edu_servers.screen_content_while_selecting": {
+              }
             }
           ]
         }
       },
-      {
-        "selecting@edu_servers.screen_content_while_selecting": {
-          "bindings": [
-            {
-              "binding_name": "(not #is_entering_add_info)",
-              "binding_name_override": "#visible",
-              "binding_type": "global"
-            }
-          ]
-        }
-      }
+      { "servers_popup_factory@edu_servers.servers_popup_factory": {} }
     ]
   },
 
+
   "edu_servers_screen@common.base_screen": {
-    "$screen_content": "edu_servers.screen_content_stack_panel",
+    "$screen_content": "edu_servers.screen_content_panel",
     "$screen_bg_content": "common.screen_background",
     "button_mappings": [
       {

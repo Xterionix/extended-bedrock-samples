@@ -1,6 +1,5 @@
 {
-  "format_version": "1.21.80",
-  "use_beta_features": true,
+  "format_version": "1.21.90",
   "minecraft:entity": {
     "description": {
       "identifier": "minecraft:happy_ghast",
@@ -19,6 +18,10 @@
     "components": {
       "minecraft:type_family": {
         "family": [ "happy_ghast", "mob" ]
+      },
+      "minecraft:collision_box": {
+        "width": 4.0,
+        "height": 4.0
       },
       "minecraft:physics": {
         "has_gravity": false
@@ -40,9 +43,8 @@
         },
         "presets": [
           {
-            "soft_distance": 4.0,
-            "hard_distance": 6.0,
-            "max_distance": 10.0
+            "hard_distance": 10,
+            "max_distance": 14
           }
         ]
       },
@@ -74,111 +76,17 @@
       },
       "minecraft:behavior.float": {
         "priority": 0
+      },
+      "minecraft:body_rotation_always_follows_head": {
       }
     },
 
     "component_groups": {
-      "minecraft:adult": {
-        "minecraft:collision_box": {
-          "width": 4.0,
-          "height": 4.0
-        },
-        "minecraft:health": {
-          "value": 20,
-          "max": 20
-        },
-        "minecraft:breathable": {
-          "total_supply": 5,
-          "suffocate_time": 0,
-          "breathes_air": true,
-          "breathes_water": false
-        },
-        "minecraft:navigation.float": {
-          "can_path_over_water": true,
-          "avoid_damage_blocks": true,
-          "avoid_water": true
-        },
-        "minecraft:entity_sensor": {
-          "find_players_only": true,
-          "relative_range": false,
-          "subsensors": [
-            {
-              "event": "minecraft:on_no_player_detected_above",
-              "cooldown": 0.0,
-              "y_offset": 4.5,
-              "range": [ 3.0, 1.5 ],
-              "minimum_count": 0,
-              "maximum_count": 0,
-              // This filter must be exactly the same as the one for minecraft:on_player_detected_above.
-              "event_filters": {
-                "test": "is_riding", "subject": "other", "value": false
-              }
-            },
-            {
-              "event": "minecraft:on_player_detected_above",
-              "cooldown": 0.0,
-              "y_offset": 4.5,
-              "range": [ 3.0, 1.5 ],
-              "minimum_count": 1,
-              // This filter must be exactly the same as the one for minecraft:on_no_player_detected_above.
-              "event_filters": {
-                "test": "is_riding", "subject": "other", "value": false
-              }
-            }
-          ]
-        }
-      },
-      "minecraft:adult_mobile": {
-        "minecraft:movement": {
-          "value": 0.03
-        },
-        "minecraft:flying_speed": {
-          "value": 0.016
-        },
-        "minecraft:knockback_resistance": {
-          "value": 0.0
-        },
-        "minecraft:pushable": {
-          "is_pushable": true,
-          "is_pushable_by_piston": true
-        },
-        "minecraft:behavior.float_wander": {
-          "priority": 7,
-          "must_reach": true,
-          "random_reselect": true,
-          "navigate_around_surface": true,
-          "additional_collision_buffer": true,
-          "allow_navigating_through_liquids": false,
-          "use_home_position_restriction": true,
-          "surface_xz_dist": 16,
-          "surface_y_dist": 16,
-          "float_duration": [2.0, 7.0]
-        }
-      },
-      "minecraft:adult_immobile": {
-        "minecraft:movement": {
-          "value": 0.0
-        },
-        "minecraft:knockback_resistance": {
-          "value": 1.0
-        },
-        "minecraft:pushable": {
-          "is_pushable": false,
-          "is_pushable_by_piston": true
-        },
-        "minecraft:body_rotation_blocked": {
-        },
-        "minecraft:body_rotation_axis_aligned": {
-        },
-        "minecraft:is_collidable": {
-        }
-      },
       "minecraft:baby": {
         "minecraft:is_baby": {
         },
-        "minecraft:collision_box": {
-          "width": 0.95,
-          "height": 0.95
+        "minecraft:scale": {
+          "value": 0.2375 // Resulting in a final size of 0.95.
         },
         "minecraft:health": {
           "value": 20,
@@ -191,7 +99,7 @@
           "breathes_water": true
         },
         "minecraft:ageable": {
-          "duration": 24000,
+          "duration": 1200,
           "feed_items": [
             "minecraft:snowball"
           ],
@@ -208,7 +116,7 @@
           "value": 0.3
         },
         "minecraft:flying_speed": {
-          "value": 0.15
+          "value": 0.0833333
         },
         "minecraft:movement.hover": {
         },
@@ -241,6 +149,7 @@
                   { "test": "is_family", "subject": "other", "value": "donkey" },
                   { "test": "is_family", "subject": "other", "value": "fox" },
                   { "test": "is_family", "subject": "other", "value": "goat" },
+                  { "test": "is_family", "subject": "other", "value": "happy_ghast" },
                   { "test": "is_family", "subject": "other", "value": "horse" },
                   { "test": "is_family", "subject": "other", "value": "skeleton_horse" },
                   { "test": "is_family", "subject": "other", "value": "llama" },
@@ -291,7 +200,109 @@
           "restriction_type": "random_movement"
         }
       },
-      "minecraft:unharnessed": {
+      "minecraft:adult": {
+        "minecraft:health": {
+          "value": 20,
+          "max": 20
+        },
+        "minecraft:leashable_to": {
+        },
+        "minecraft:breathable": {
+          "total_supply": 5,
+          "suffocate_time": 0,
+          "breathes_air": true,
+          "breathes_water": false
+        },
+        "minecraft:navigation.float": {
+          "can_path_over_water": true,
+          "avoid_damage_blocks": true,
+          "avoid_water": true
+        },
+        "minecraft:entity_sensor": {
+          "find_players_only": true,
+          "relative_range": false,
+          "subsensors": [
+            {
+              "event": "minecraft:become_mobile",
+              "cooldown": 0.0,
+              "y_offset": 4.5,
+              "range": [ 3.5, 2.0 ],
+              "minimum_count": 0,
+              "maximum_count": 0,
+              // This filter must match exactly the one used by "minecraft:become_mobile".
+              "event_filters": {
+                "all_of": [
+                  { "test": "is_vehicle_family", "subject": "other", "operator": "not", "value": "happy_ghast" },
+                  { "test": "actor_health", "operator" : ">", "value": 0 }
+                ]
+              }
+            },
+            {
+              "event": "minecraft:become_immobile",
+              "cooldown": 0.0,
+              "y_offset": 4.5,
+              "range": [ 3.0, 1.5 ],
+              "minimum_count": 1,
+              // This filter must match exactly the one used by "minecraft:become_immobile".
+              "event_filters": {
+                "all_of": [
+                  { "test": "is_vehicle_family", "subject": "other", "operator": "not", "value": "happy_ghast" },
+                  { "test": "actor_health", "operator" : ">", "value": 0 }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      "minecraft:adult_mobile": {
+        "minecraft:movement": {
+          "value": 0.03
+        },
+        "minecraft:flying_speed": {
+          "value": 0.016
+        },
+        "minecraft:knockback_resistance": {
+          "value": 0.0
+        },
+        "minecraft:pushable": {
+          "is_pushable": true,
+          "is_pushable_by_piston": true
+        },
+        "minecraft:behavior.float_wander": {
+          "priority": 7,
+          "must_reach": true,
+          "random_reselect": true,
+          "navigate_around_surface": true,
+          "additional_collision_buffer": true,
+          "allow_navigating_through_liquids": false,
+          "use_home_position_restriction": true,
+          "surface_xz_dist": 16,
+          "surface_y_dist": 16,
+          "float_duration": [2.0, 7.0]
+        }
+      },
+      "minecraft:adult_immobile": {
+        "minecraft:movement": {
+          "value": 0.0
+        },
+        "minecraft:flying_speed": {
+          "value": 0.0
+        },
+        "minecraft:knockback_resistance": {
+          "value": 1.0
+        },
+        "minecraft:pushable": {
+          "is_pushable": false,
+          "is_pushable_by_piston": true
+        },
+        "minecraft:body_rotation_blocked": {
+        },
+        "minecraft:body_rotation_axis_aligned": {
+        },
+        "minecraft:is_collidable": {
+        }
+      },
+      "minecraft:adult_unharnessed": {
         "minecraft:behavior.float_tempt": {
           "priority": 4,
           "can_tempt_vertically": true,
@@ -329,28 +340,23 @@
             {
               "on_interact": {
                 "filters": {
-                  "all_of": [
-                    {
-                      "any_of": [
-                        { "test": "has_equipment", "subject": "other", "domain": "hand", "value": "black_harness" },
-                        { "test": "has_equipment", "subject": "other", "domain": "hand", "value": "blue_harness" },
-                        { "test": "has_equipment", "subject": "other", "domain": "hand", "value": "brown_harness" },
-                        { "test": "has_equipment", "subject": "other", "domain": "hand", "value": "cyan_harness" },
-                        { "test": "has_equipment", "subject": "other", "domain": "hand", "value": "gray_harness" },
-                        { "test": "has_equipment", "subject": "other", "domain": "hand", "value": "green_harness" },
-                        { "test": "has_equipment", "subject": "other", "domain": "hand", "value": "light_blue_harness" },
-                        { "test": "has_equipment", "subject": "other", "domain": "hand", "value": "light_gray_harness" },
-                        { "test": "has_equipment", "subject": "other", "domain": "hand", "value": "lime_harness" },
-                        { "test": "has_equipment", "subject": "other", "domain": "hand", "value": "magenta_harness" },
-                        { "test": "has_equipment", "subject": "other", "domain": "hand", "value": "orange_harness" },
-                        { "test": "has_equipment", "subject": "other", "domain": "hand", "value": "pink_harness" },
-                        { "test": "has_equipment", "subject": "other", "domain": "hand", "value": "purple_harness" },
-                        { "test": "has_equipment", "subject": "other", "domain": "hand", "value": "red_harness" },
-                        { "test": "has_equipment", "subject": "other", "domain": "hand", "value": "white_harness" },
-                        { "test": "has_equipment", "subject": "other", "domain": "hand", "value": "yellow_harness" }
-                      ]
-                    },
-                    { "test": "is_family", "subject": "other", "value": "player" }
+                  "any_of": [
+                    { "test": "has_equipment", "subject": "other", "domain": "hand", "value": "black_harness" },
+                    { "test": "has_equipment", "subject": "other", "domain": "hand", "value": "blue_harness" },
+                    { "test": "has_equipment", "subject": "other", "domain": "hand", "value": "brown_harness" },
+                    { "test": "has_equipment", "subject": "other", "domain": "hand", "value": "cyan_harness" },
+                    { "test": "has_equipment", "subject": "other", "domain": "hand", "value": "gray_harness" },
+                    { "test": "has_equipment", "subject": "other", "domain": "hand", "value": "green_harness" },
+                    { "test": "has_equipment", "subject": "other", "domain": "hand", "value": "light_blue_harness" },
+                    { "test": "has_equipment", "subject": "other", "domain": "hand", "value": "light_gray_harness" },
+                    { "test": "has_equipment", "subject": "other", "domain": "hand", "value": "lime_harness" },
+                    { "test": "has_equipment", "subject": "other", "domain": "hand", "value": "magenta_harness" },
+                    { "test": "has_equipment", "subject": "other", "domain": "hand", "value": "orange_harness" },
+                    { "test": "has_equipment", "subject": "other", "domain": "hand", "value": "pink_harness" },
+                    { "test": "has_equipment", "subject": "other", "domain": "hand", "value": "purple_harness" },
+                    { "test": "has_equipment", "subject": "other", "domain": "hand", "value": "red_harness" },
+                    { "test": "has_equipment", "subject": "other", "domain": "hand", "value": "white_harness" },
+                    { "test": "has_equipment", "subject": "other", "domain": "hand", "value": "yellow_harness" }
                   ]
                 },
                 "event": "minecraft:on_harnessed",
@@ -364,7 +370,7 @@
           ]
         }
       },
-      "minecraft:harnessed": {
+      "minecraft:adult_harnessed": {
         "minecraft:home": {
           "restriction_radius": 32,
           "restriction_type": "random_movement"
@@ -380,28 +386,28 @@
             {
               "min_rider_count": 0,
               "max_rider_count": 4,
-              "position": [ 0.0, 3.8, 1.8 ],
+              "position": [ 0.0, 3.8, 1.7 ],
               "third_person_camera_radius": 8.0,
               "camera_relax_distance_smoothing": 6.0
             },
             {
               "min_rider_count": 1,
               "max_rider_count": 4,
-              "position": [ -1.8, 3.8, 0.0 ],
+              "position": [ -1.7, 3.8, 0.0 ],
               "third_person_camera_radius": 8.0,
               "camera_relax_distance_smoothing": 6.0
             },
             {
               "min_rider_count": 2,
               "max_rider_count": 4,
-              "position": [ 0.0, 3.8, -1.8 ],
+              "position": [ 0.0, 3.8, -1.7 ],
               "third_person_camera_radius": 8.0,
               "camera_relax_distance_smoothing": 6.0
             },
             {
               "min_rider_count": 3,
               "max_rider_count": 4,
-              "position": [ 1.8, 3.8, 0.0 ],
+              "position": [ 1.7, 3.8, 0.0 ],
               "third_person_camera_radius": 8.0,
               "camera_relax_distance_smoothing": 6.0
             }
@@ -421,7 +427,10 @@
             "minecraft:snowball"
           ],
           "within_radius": 16,
-          "stop_distance": 7
+          "stop_distance": 7,
+          "on_tempt_end": {
+            "event": "minecraft:on_stop_tempting"
+          }
         },
         "minecraft:interact": {
           "interactions": [
@@ -429,8 +438,9 @@
               "on_interact": {
                 "filters": {
                   "all_of": [
+                    { "test": "is_sneak_held", "subject": "other", "value": false },
                     { "test": "has_equipment", "subject": "other", "domain": "hand", "value": "shears" },
-                    { "test": "is_family", "subject": "other", "value": "player" }
+                    { "test": "rider_count", "subject": "self", "operator": "equals", "value": 0 }
                   ]
                 },
                 "event": "minecraft:on_unharnessed",
@@ -446,12 +456,12 @@
           ]
         }
       },
-      "minecraft:has_passengers": {
+      "minecraft:adult_with_passengers": {
         "minecraft:ambient_sound_interval": {
           "value": 30.0
         }
       },
-      "minecraft:has_no_passengers": {
+      "minecraft:adult_without_passengers": {
         "minecraft:ambient_sound_interval": {
           "value": 5.0
         }
@@ -476,8 +486,8 @@
           "component_groups": [
             "minecraft:adult",
             "minecraft:adult_mobile",
-            "minecraft:unharnessed",
-            "minecraft:has_no_passengers"
+            "minecraft:adult_unharnessed",
+            "minecraft:adult_without_passengers"
           ]
         },
         "set_property": {
@@ -496,8 +506,8 @@
           "component_groups": [
             "minecraft:adult",
             "minecraft:adult_mobile",
-            "minecraft:unharnessed",
-            "minecraft:has_no_passengers"
+            "minecraft:adult_unharnessed",
+            "minecraft:adult_without_passengers"
           ]
         },
         "remove": {
@@ -509,7 +519,7 @@
           "minecraft:can_move": true
         }
       },
-      "minecraft:on_player_detected_above": {
+      "minecraft:become_immobile": {
         "filters": {
           "test": "bool_property", "domain": "minecraft:can_move", "value": true
         },
@@ -529,7 +539,7 @@
         "stop_movement": {
         }
       },
-      "minecraft:on_no_player_detected_above": {
+      "minecraft:become_mobile": {
         "filters": {
           "test": "bool_property", "domain": "minecraft:can_move", "value": false
         },
@@ -550,12 +560,12 @@
       "minecraft:on_harnessed": {
         "remove": {
           "component_groups": [
-            "minecraft:unharnessed"
+            "minecraft:adult_unharnessed"
           ]
         },
         "add": {
           "component_groups": [
-            "minecraft:harnessed"
+            "minecraft:adult_harnessed"
           ]
         },
         "set_home_position": {}
@@ -563,12 +573,12 @@
       "minecraft:on_unharnessed": {
         "remove": {
           "component_groups": [
-            "minecraft:harnessed"
+            "minecraft:adult_harnessed"
           ]
         },
         "add": {
           "component_groups": [
-            "minecraft:unharnessed"
+            "minecraft:adult_unharnessed"
           ]
         },
         "set_home_position": {}
@@ -584,12 +594,12 @@
             },
             "add": {
               "component_groups": [
-                "minecraft:has_passengers"
+                "minecraft:adult_with_passengers"
               ]
             },
             "remove": {
               "component_groups": [
-                "minecraft:has_no_passengers"
+                "minecraft:adult_without_passengers"
               ]
             },
             "play_sound": {
@@ -606,12 +616,12 @@
             },
             "add": {
               "component_groups": [
-                "minecraft:has_no_passengers"
+                "minecraft:adult_without_passengers"
               ]
             },
             "remove": {
               "component_groups": [
-                "minecraft:has_passengers"
+                "minecraft:adult_with_passengers"
               ]
             },
             "play_sound": {

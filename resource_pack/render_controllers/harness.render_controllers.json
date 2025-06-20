@@ -6,8 +6,8 @@
       "materials": [ { "*": "Material.default" } ],
       "textures": [ "Texture.default" ],
       "part_visibility": [
-        { "goggles_up": "!query.property('minecraft:can_move') || !query.has_player_rider" },
-        { "goggles": "query.property('minecraft:can_move') && query.has_player_rider" }
+        { "goggles_up": "!query.has_player_rider" },
+        { "goggles": "query.has_player_rider" }
       ]
     }
   }
