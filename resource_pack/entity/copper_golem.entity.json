@@ -19,7 +19,11 @@
         "eyes_oxidized": "textures/entity/copper_golem/copper_golem_eyes_oxidized"
       },
       "geometry": {
-        "default": "geometry.copper_golem"
+        "default": "geometry.copper_golem",
+        "standing": "geometry.copper_golem",
+        "sitting": "geometry.copper_golem.sitting",
+        "running": "geometry.copper_golem.running",
+        "star": "geometry.copper_golem.star"
       },
       "animations": {
         "look_at_target": "animation.common.look_at_target",
@@ -45,7 +49,7 @@
           "v.chest_interaction = query.property('minecraft:chest_interaction');"
         ],
         "animate": [
-          { "look_at_target": "query.property('minecraft:oxidation_level') == 'none'" },
+          { "look_at_target": "query.property('minecraft:chest_interaction') == 'none'" },
           { "walk_controller": "query.property('minecraft:chest_interaction') == 'none'" },
           { "idle_controller": "query.property('minecraft:chest_interaction') == 'none'" },
           "chest_interaction_controller"

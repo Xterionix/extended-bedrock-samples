@@ -880,9 +880,8 @@
 				}
 			},
 			"sound_effects": {
-				"0.45": { "effect": "put_item_fail" }
+                "0.125": { "effect": "put_item_fail" }
 			}
-
 		},
 		"animation.copper_golem.chest_interaction.take_item": {
 			"loop": true,
@@ -1420,7 +1419,7 @@
 				}
 			},
 			"sound_effects": {
-				"0.45": { "effect": "take_item_fail" }
+				"0.125": { "effect": "take_item_fail" }
 			}
 
 		}
