@@ -17,7 +17,8 @@
     "type": "factory",
     "control_ids": {
       "add_server_entry": "@edu_servers.add_server_entry",
-      "password_entry": "@edu_servers.password_entry"
+      "password_entry": "@edu_servers.password_entry",
+      "server_share_link_popup": "@edu_servers.server_edu_popup"
     }
   },
 
@@ -56,6 +57,26 @@
       },
       {
         "binding_name": "#is_added_server",
+        "binding_name_override": "#visible",
+        "binding_type": "global"
+      }
+    ]
+  },
+
+  "server_entry_button_share_enabled_def@edu_servers.server_entry_button_def": {
+    "$button_bindings": [
+      {
+        "binding_type": "collection_details",
+        "binding_collection_name": "server_column_collection",
+        "binding_collection_prefix": "server_column"
+      },
+      {
+        "binding_type": "collection_details",
+        "binding_collection_name": "server_row_collection",
+        "binding_collection_prefix": "server_row"
+      },
+      {
+        "binding_name": "#is_sharing_enabled",
         "binding_name_override": "#visible",
         "binding_type": "global"
       }
@@ -131,6 +152,26 @@
     "$modal_title": "edu.password_entry_screen.enter_password_title",
     "$popup_dialog_escape_button_name": "button.password_popup_escape",
     "$modal_contents": "edu_password_entry.password_entry_content"
+  },
+
+  //---------------------------------------------------------------------------
+  // Server Share Link Popup Modal
+  //---------------------------------------------------------------------------
+
+  "server_share_link_popup": {
+    "type": "panel",
+    "controls": [
+      {
+        "server_share_link_popup@edu_servers.server_edu_popup": {
+        }
+      }
+    ]
+  },
+
+  "server_edu_popup@popup_dialog.form_fit_modal_dialog_popup": {
+    "$modal_title": "link.item.sharepopup.title.simple",
+    "$popup_dialog_escape_button_name": "button.close_share_popup",
+    "$modal_contents": "edu_common.joincode_body_panel"
   },
 
   //---------------------------------------------------------------------------
@@ -335,9 +376,9 @@
       },
       { "button_padding_1@edu_common.nested_buttons_base_definition": {} },
       {
-        "share@edu_servers.server_entry_button_def": {
+        "share@edu_servers.server_entry_button_share_enabled_def": {
           "$button_text": "edu.servers_screen.share",
-          "$pressed_button_name": "button.servers.entry.share_copy"
+          "$pressed_button_name": "button.servers.entry.share"
         }
       },
       { "button_padding_2@edu_common.nested_buttons_base_definition": {} },

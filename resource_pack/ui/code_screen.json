@@ -130,14 +130,23 @@
           "size": [ "fill", "100%" ],
           "controls": [
             {
-              "editor_description@edu_common.light_label": {
+              "editor_description1@edu_common.light_label": {
                 "size": [ "100% - 10px", "100% - 4px" ],
                 "anchor_from": "center",
                 "anchor_to": "center",
                 "text": "#editor_button_text",
+                "color": "#editor_button_color",
                 "bindings": [
                   {
                     "binding_name": "#editor_button_text",
+                    "binding_type": "collection",
+                    "binding_collection_name": "editor_buttons_collection",
+                    "binding_collection_prefix": "editor_buttons",
+                    "binding_condition": "once"
+                  },
+                  {
+                    "binding_name": "#editor_button_color",
+                    "binding_name_override": "#color",
                     "binding_type": "collection",
                     "binding_collection_name": "editor_buttons_collection",
                     "binding_collection_prefix": "editor_buttons",
@@ -682,6 +691,12 @@
     "$button_text": "codeScreen.deprecatedIDE.button.close"
   },
 
+  "modal_try_makecode@code.modal_button": {
+    "$button_mapping": "$close_mapping",
+    "$pressed_button_name": "codeScreen.tynkerDeprecated.button.tryMakeCode",
+    "$button_text": "codeScreen.tynkerDeprecated.try"
+  },
+
   "modal": {
     "type": "input_panel",
     "size": [ 220, 140 ],
@@ -718,6 +733,13 @@
     "$child_control": "$modal_content",
     "$top_button_panel": "code.modal_learn_more",
     "$bottom_button_panel": "code.modal_close"
+  },
+
+  "two_button_modal_type_deprecated_tynker@common_dialogs.main_panel_two_buttons": {
+    "$show_close_button": false,
+    "$child_control": "$modal_content",
+    "$top_button_panel": "code.modal_learn_more",
+    "$bottom_button_panel": "code.modal_try_makecode"
   },
 
   "memory_error@code.modal": {
@@ -765,6 +787,82 @@
     "size": [ 260, 200 ]
   },
 
+  "tynker_deprecated_modal@code.modal": {
+    "$modal_type": "code.two_button_modal_type_deprecated_tynker",
+    "$modal_content": "code.tynker_deprecated_content",
+    "$text_name": "codeScreen.tynkerDeprecated.title",
+    "$learn_more_mapping": "codeScreen.deprecatedIDE.button.learnMore",
+    "$close_mapping": "codeScreen.tynkerDeprecated.button.tryMakeCode",
+    "$modal_visible_binding": "#show_tynker_deprecated_modal",
+    "size": [ 260, 200 ]
+  },
+
+  "tynker_deprecated_content@common.screen_background": {
+    "size": [ "100%", "100%" ],
+    "layer": 1,
+    "controls": [
+      {
+        "text_panel": {
+          "type": "stack_panel",
+          "orientation": "vertical",
+          "size": [ "100%", "100%" ],
+          "controls": [
+            {
+              "body1_panel": {
+                "type": "panel",
+                "size": [ "100%", 20 ],
+                "controls": [
+                  {
+                    "body1_label": {
+                      "type": "label",
+                      "size": [ "100%", 20 ],
+                      "offset": [ 4, 2 ],
+                      "text": "codeScreen.tynkerDeprecated.body1"
+                    }
+                  }
+                ]
+              }
+            },
+            { "padding1@common.empty_panel": { "size": [ 0, 5 ] } },
+            {
+              "makeCode_image_panel": {
+                "type": "panel",
+                "size": [ 220, 40 ],
+                "controls": [
+                  {
+                    "makeCode_image": {
+                      "type": "image",
+                      "size": [ 220, 40 ],
+                      "offset": [ 0, 1 ],
+                      "texture": "textures/ui/MakeCode_logo"
+                    }
+                  }
+                ]
+              }
+            },
+            { "padding2@common.empty_panel": { "size": [ 0, 5 ] } },
+            {
+              "body2_panel": {
+                "type": "panel",
+                "size": [ "100%", 20 ],
+                "controls": [
+                  {
+                    "body2_label": {
+                      "type": "label",
+                      "size": [ "100%", 20 ],
+                      "offset": [ 4, 3 ],
+                      "text": "codeScreen.tynkerDeprecated.body2"
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
   "code_screen_panel": {
     "type": "panel",
     "controls": [
@@ -782,7 +880,8 @@
       { "memory_warning@code.memory_warning": {} },
       { "network_error@code.network_error": {} },
       { "reset@code.reset_warning": {} },
-      { "deprecated_ide_warning@code.deprecated_ide_warning": {} }
+      { "deprecated_ide_warning@code.deprecated_ide_warning": {} },
+      { "tynker_deprecated@code.tynker_deprecated_modal": {} }
     ]
   }
 }
