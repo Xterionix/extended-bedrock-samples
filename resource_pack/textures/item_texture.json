@@ -2,59 +2,113 @@
   "resource_pack_name": "vanilla",
   "texture_name": "atlas.items",
   "texture_data": {
-    "spawn_egg_happy_ghast": {
-      "textures": "textures/items/spawn_eggs/spawn_egg_happy_ghast"
+    "axe": {
+      "textures": [
+        "textures/items/wood_axe",
+        "textures/items/stone_axe",
+        "textures/items/iron_axe",
+        "textures/items/gold_axe",
+        "textures/items/diamond_axe",
+        "textures/items/netherite_axe",
+        "textures/items/copper_axe"
+      ]
     },
-    "harness_black": {
-      "textures": "textures/items/harness/harness_black"
+    "boots": {
+      "textures": [
+        "textures/items/leather_boots",
+        "textures/items/chainmail_boots",
+        "textures/items/iron_boots",
+        "textures/items/gold_boots",
+        "textures/items/diamond_boots",
+        "textures/items/netherite_boots",
+        "textures/items/copper_boots"
+      ]
     },
-    "harness_blue": {
-      "textures": "textures/items/harness/harness_blue"
+    "chestplate": {
+      "textures": [
+        "textures/items/leather_chestplate",
+        "textures/items/chainmail_chestplate",
+        "textures/items/iron_chestplate",
+        "textures/items/gold_chestplate",
+        "textures/items/diamond_chestplate",
+        "textures/items/netherite_chestplate",
+        "textures/items/copper_chestplate"
+      ]
     },
-    "harness_brown": {
-      "textures": "textures/items/harness/harness_brown"
+    "helmet": {
+      "textures": [
+        "textures/items/leather_helmet",
+        "textures/items/chainmail_helmet",
+        "textures/items/iron_helmet",
+        "textures/items/gold_helmet",
+        "textures/items/diamond_helmet",
+        "textures/items/netherite_helmet",
+        "textures/items/copper_helmet"
+      ]
     },
-    "harness_cyan": {
-      "textures": "textures/items/harness/harness_cyan"
+    "hoe": {
+      "textures": [
+        "textures/items/wood_hoe",
+        "textures/items/stone_hoe",
+        "textures/items/iron_hoe",
+        "textures/items/gold_hoe",
+        "textures/items/diamond_hoe",
+        "textures/items/netherite_hoe",
+        "textures/items/copper_hoe"
+      ]
     },
-    "harness_gray": {
-      "textures": "textures/items/harness/harness_gray"
+    "leggings": {
+      "textures": [
+        "textures/items/leather_leggings",
+        "textures/items/chainmail_leggings",
+        "textures/items/iron_leggings",
+        "textures/items/gold_leggings",
+        "textures/items/diamond_leggings",
+        "textures/items/netherite_leggings",
+        "textures/items/copper_leggings"
+      ]
     },
-    "harness_green": {
-      "textures": "textures/items/harness/harness_green"
+    "pickaxe": {
+      "textures": [
+        "textures/items/wood_pickaxe",
+        "textures/items/stone_pickaxe",
+        "textures/items/iron_pickaxe",
+        "textures/items/gold_pickaxe",
+        "textures/items/diamond_pickaxe",
+        "textures/items/netherite_pickaxe",
+        "textures/items/copper_pickaxe"
+      ]
     },
-    "harness_light_blue": {
-      "textures": "textures/items/harness/harness_light_blue"
+    "shovel": {
+      "textures": [
+        "textures/items/wood_shovel",
+        "textures/items/stone_shovel",
+        "textures/items/iron_shovel",
+        "textures/items/gold_shovel",
+        "textures/items/diamond_shovel",
+        "textures/items/netherite_shovel",
+        "textures/items/copper_shovel"
+      ]
     },
-    "harness_light_gray": {
-      "textures": "textures/items/harness/harness_light_gray"
+    "sword": {
+      "textures": [
+        "textures/items/wood_sword",
+        "textures/items/stone_sword",
+        "textures/items/iron_sword",
+        "textures/items/gold_sword",
+        "textures/items/diamond_sword",
+        "textures/items/netherite_sword",
+        "textures/items/copper_sword"
+      ]
     },
-    "harness_lime": {
-      "textures": "textures/items/harness/harness_lime"
+    "copper_nugget": {
+      "textures": "textures/items/copper_nugget"
     },
-    "harness_magenta": {
-      "textures": "textures/items/harness/harness_magenta"
+    "spawn_egg_copper_golem": {
+      "textures": "textures/items/spawn_eggs/spawn_egg_copper_golem"
     },
-    "harness_orange": {
-      "textures": "textures/items/harness/harness_orange"
-    },
-    "harness_pink": {
-      "textures": "textures/items/harness/harness_pink"
-    },
-    "harness_purple": {
-      "textures": "textures/items/harness/harness_purple"
-    },
-    "harness_red": {
-      "textures": "textures/items/harness/harness_red"
-    },
-    "harness_white": {
-      "textures": "textures/items/harness/harness_white"
-    },
-    "harness_yellow": {
-      "textures": "textures/items/harness/harness_yellow"
-    },
-    "record_tears": {
-      "textures": "textures/items/music_disc_tears"
+    "copper_horse_armor": {
+      "textures": "textures/items/copper_horse_armor"
     }
   }
 }
