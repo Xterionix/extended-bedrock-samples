@@ -1,38 +1,124 @@
 {
+  "block_sounds": {
+    "copper_chest": {
+      "base": "copper",
+      "volume": 1.0,
+      "pitch": 1.0,
+      "events": {
+        "chest.open": {
+          "sound": "block.copper_chest.open",
+          "pitch": [
+            0.9,
+            1.0
+          ]
+        },
+        "chest.closed": {
+          "sound": "block.copper_chest.closed",
+          "pitch": [
+            0.9,
+            1.0
+          ]
+        }
+      }
+    },
+    "copper_chest_weathered": {
+      "base": "copper",
+      "volume": 1.0,
+      "pitch": 1.0,
+      "events": {
+        "chest.open": {
+          "sound": "block.copper_chest.weathered.open",
+          "pitch": [
+            0.9,
+            1.0
+          ]
+        },
+        "chest.closed": {
+          "sound": "block.copper_chest.weathered.closed",
+          "pitch": [
+            0.9,
+            1.0
+          ]
+        }
+      }
+    },
+    "copper_chest_oxidized": {
+      "base": "copper",
+      "volume": 1.0,
+      "pitch": 1.0,
+      "events": {
+        "chest.open": {
+          "sound": "block.copper_chest.oxidized.open",
+          "pitch": [
+            0.9,
+            1.0
+          ]
+        },
+        "chest.closed": {
+          "sound": "block.copper_chest.oxidized.closed",
+          "pitch": [
+            0.9,
+            1.0
+          ]
+        }
+      }
+    },
+    "copper_golem_statue": {
+      "base": "copper",
+      "volume": 1.0,
+      "pitch": 1.0,
+      "events": {
+        "break": "block.copper_golem_statue.break",
+        "hit": "block.copper_golem_statue.hit",
+        "place": "block.copper_golem_statue.place",
+        "activate": "mob.copper_golem.becoming_statue"
+      }
+    },
+    "shelf": {
+      "base": "chiseled_bookshelf",
+      "volume": 1.0,
+      "pitch": 1.0,
+      "events": {
+        "activate": "block.shelf.activate",
+        "deactivate": "block.shelf.deactivate",
+        "break": "block.shelf.break",
+        "multi_swap": "block.shelf.multi_swap",
+        "single_swap": "block.shelf.single_swap",
+        "place_item": "block.shelf.place_item"
+      }
+    }
+  },
   "entity_sounds": {
     "entities": {
-      "happy_ghast": {
+      "copper_golem": {
         "volume": 1.0,
         "pitch": 1.0,
         "events": {
-          "death": "mob.happy_ghast.death",
-          "hurt": "mob.happy_ghast.hurt",
-          "ambient": "mob.happy_ghast.ambient",
-          "armor.equip_generic": "mob.happy_ghast.harness_equip",
-          "armor.unequip_generic": "mob.happy_ghast.harness_unequip",
-          "attach": "mob.happy_ghast.goggles_down",
-          "detach": "mob.happy_ghast.goggles_up"
+          "spawn": "mob.copper_golem.spawn",
+          "hurt": "mob.copper_golem.hurt",
+          "death": "mob.copper_golem.death",
+          "step": "mob.copper_golem.step",
+          "deactivate": "mob.copper_golem.becoming_statue"
         },
         "variants": {
-          "key": "query.is_baby ? 'ghastling' : 'adult'",
+          "key": "query.property('minecraft:oxidation_level')",
           "map": {
-            "ghastling": {
+            "weathered": {
               "volume": 1.0,
-              "pitch": 0.5,
-              "events": {
-                "spawn": "mob.ghastling.spawn",
-                "death": "mob.ghastling.death",
-                "hurt": "mob.ghastling.hurt",
-                "ambient": "mob.ghastling.ambient"
-              }
-            },
-            "adult": {
-              "volume": 4.0,
               "pitch": 1.0,
               "events": {
-                "death": "mob.happy_ghast.death",
-                "hurt": "mob.happy_ghast.hurt",
-                "ambient": "mob.happy_ghast.ambient"
+                "hurt": "mob.copper_golem.weathered.hurt",
+                "death": "mob.copper_golem.weathered.death",
+                "step": "mob.copper_golem.weathered.step"
+              }
+            },
+            "oxidized": {
+              "volume": 1.0,
+              "pitch": 1.0,
+              "events": {
+                "hurt": "mob.copper_golem.oxidized.hurt",
+                "death": "mob.copper_golem.oxidized.death",
+                "step": "mob.copper_golem.oxidized.step"
               }
             }
           }
@@ -40,10 +126,41 @@
       }
     }
   },
+  "interactive_sounds": {
+    "block_sounds": {
+      "copper_golem_statue": {
+        "base": "copper",
+        "volume": 1.0,
+        "pitch": 1.0,
+        "events": {
+          "fall": "block.copper_golem_statue.hit",
+          "step": "block.copper_golem_statue.hit"
+        }
+      },
+      "copper_chest": {
+        "base": "copper",
+        "volume": 1.0,
+        "pitch": 1.0
+      },
+      "copper_chest_weathered": {
+        "base": "copper",
+        "volume": 1.0,
+        "pitch": 1.0
+      },
+      "copper_chest_oxidized": {
+        "base": "copper",
+        "volume": 1.0,
+        "pitch": 1.0
+      },
+      "shelf": {
+        "base": "chiseled_bookshelf"
+      }
+    }
+  },
   "individual_event_sounds": {
     "events": {
-      "record.lava_chicken": {
-        "sound": "record.lava_chicken",
+      "armor.equip_copper": {
+        "sound": "armor.equip_copper",
         "volume": 1.0,
         "pitch": 1.0
       }

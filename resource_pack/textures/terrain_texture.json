@@ -4,61 +4,224 @@
   "padding": 8,
   "num_mip_levels": 4,
   "texture_data": {
-    "dried_ghast_back": {
+    "copper_chest_inventory_top": {
       "textures": [
-        "textures/blocks/dried_ghast_state_1_back",
-        "textures/blocks/dried_ghast_state_2_back",
-        "textures/blocks/dried_ghast_state_3_back",
-        "textures/blocks/dried_ghast_state_4_back"
+        "textures/blocks/copper_chest_inventory_top"
       ]
     },
-    "dried_ghast_front": {
+    "copper_chest_inventory_side": {
       "textures": [
-        "textures/blocks/dried_ghast_state_1_front",
-        "textures/blocks/dried_ghast_state_2_front",
-        "textures/blocks/dried_ghast_state_3_front",
-        "textures/blocks/dried_ghast_state_4_front"
+        "textures/blocks/copper_chest_inventory_side"
       ]
     },
-    "dried_ghast_left": {
+    "copper_chest_inventory_front": {
       "textures": [
-        "textures/blocks/dried_ghast_state_1_left",
-        "textures/blocks/dried_ghast_state_2_left",
-        "textures/blocks/dried_ghast_state_3_left",
-        "textures/blocks/dried_ghast_state_4_left"
+        "textures/blocks/copper_chest_inventory_front"
       ]
     },
-    "dried_ghast_right": {
+    "exposed_copper_chest_inventory_top": {
       "textures": [
-        "textures/blocks/dried_ghast_state_1_right",
-        "textures/blocks/dried_ghast_state_2_right",
-        "textures/blocks/dried_ghast_state_3_right",
-        "textures/blocks/dried_ghast_state_4_right"
+        "textures/blocks/exposed_copper_chest_inventory_top"
       ]
     },
-    "dried_ghast_top": {
+    "exposed_copper_chest_inventory_side": {
       "textures": [
-        "textures/blocks/dried_ghast_state_1_top",
-        "textures/blocks/dried_ghast_state_2_top",
-        "textures/blocks/dried_ghast_state_3_top",
-        "textures/blocks/dried_ghast_state_4_top"
+        "textures/blocks/exposed_copper_chest_inventory_side"
       ]
     },
-    "dried_ghast_bottom": {
+    "exposed_copper_chest_inventory_front": {
       "textures": [
-        "textures/blocks/dried_ghast_state_1_bottom",
-        "textures/blocks/dried_ghast_state_2_bottom",
-        "textures/blocks/dried_ghast_state_3_bottom",
-        "textures/blocks/dried_ghast_state_4_bottom"
+        "textures/blocks/exposed_copper_chest_inventory_front"
       ]
     },
-    "dried_ghast_tentacles": {
+    "weathered_copper_chest_inventory_top": {
       "textures": [
-        "textures/blocks/dried_ghast_state_1_tentacles",
-        "textures/blocks/dried_ghast_state_2_tentacles",
-        "textures/blocks/dried_ghast_state_3_tentacles",
-        "textures/blocks/dried_ghast_state_4_tentacles"
+        "textures/blocks/weathered_copper_chest_inventory_top"
       ]
+    },
+    "weathered_copper_chest_inventory_side": {
+      "textures": [
+        "textures/blocks/weathered_copper_chest_inventory_side"
+      ]
+    },
+    "weathered_copper_chest_inventory_front": {
+      "textures": [
+        "textures/blocks/weathered_copper_chest_inventory_front"
+      ]
+    },
+    "oxidized_copper_chest_inventory_top": {
+      "textures": [
+        "textures/blocks/oxidized_copper_chest_inventory_top"
+      ]
+    },
+    "oxidized_copper_chest_inventory_side": {
+      "textures": [
+        "textures/blocks/oxidized_copper_chest_inventory_side"
+      ]
+    },
+    "oxidized_copper_chest_inventory_front": {
+      "textures": [
+        "textures/blocks/oxidized_copper_chest_inventory_front"
+      ]
+    },
+    "acacia_shelf": {
+      "textures": [
+        "textures/blocks/acacia_shelf"
+      ]
+    },
+    "bamboo_shelf": {
+      "textures": [
+        "textures/blocks/bamboo_shelf"
+      ]
+    },
+    "birch_shelf": {
+      "textures": [
+        "textures/blocks/birch_shelf"
+      ]
+    },
+    "cherry_shelf": {
+      "textures": [
+        "textures/blocks/cherry_shelf"
+      ]
+    },
+    "crimson_shelf": {
+      "textures": [
+        "textures/blocks/crimson_shelf"
+      ]
+    },
+    "dark_oak_shelf": {
+      "textures": [
+        "textures/blocks/dark_oak_shelf"
+      ]
+    },
+    "jungle_shelf": {
+      "textures": [
+        "textures/blocks/jungle_shelf"
+      ]
+    },
+    "mangrove_shelf": {
+      "textures": [
+        "textures/blocks/mangrove_shelf"
+      ]
+    },
+    "oak_shelf": {
+      "textures": [
+        "textures/blocks/oak_shelf"
+      ]
+    },
+    "pale_oak_shelf": {
+      "textures": [
+        "textures/blocks/pale_oak_shelf"
+      ]
+    },
+    "spruce_shelf": {
+      "textures": [
+        "textures/blocks/spruce_shelf"
+      ]
+    },
+    "warped_shelf": {
+      "textures": [
+        "textures/blocks/warped_shelf"
+      ]
+    },
+    "lightning_rod": {
+      "textures": [ 
+        "textures/blocks/lightning_rod",
+        "textures/blocks/lightning_rod_powered"
+      ]
+    },
+    "exposed_lightning_rod": {
+      "textures": [ 
+        "textures/blocks/exposed_lightning_rod",
+        "textures/blocks/lightning_rod_powered"
+      ]
+    },
+    "weathered_lightning_rod": {
+      "textures": [ 
+        "textures/blocks/weathered_lightning_rod",
+        "textures/blocks/lightning_rod_powered"
+      ]
+    },
+    "oxidized_lightning_rod": {
+      "textures": [
+        "textures/blocks/oxidized_lightning_rod",
+        "textures/blocks/lightning_rod_powered"
+      ]
+    },
+    "copper_torch": {
+      "textures": "textures/blocks/copper_torch"
+    },
+    "copper_lantern": {
+      "textures": "textures/blocks/copper_lantern"
+    },
+    "exposed_copper_lantern": {
+      "textures": "textures/blocks/exposed_copper_lantern"
+    },
+    "weathered_copper_lantern": {
+      "textures": "textures/blocks/weathered_copper_lantern"
+    },
+    "oxidized_copper_lantern": {
+      "textures": "textures/blocks/oxidized_copper_lantern"
+    },
+    "copper_lantern_carried": {
+      "textures": "textures/items/copper_lantern"
+    },
+    "exposed_copper_lantern_carried": {
+      "textures": "textures/items/exposed_copper_lantern"
+    },
+    "weathered_copper_lantern_carried": {
+      "textures": "textures/items/weathered_copper_lantern"
+    },
+    "oxidized_copper_lantern_carried": {
+      "textures": "textures/items/oxidized_copper_lantern"
+    },
+    "copper_chain1": {
+      "textures": "textures/blocks/copper_chain1"
+    },
+    "copper_chain2": {
+      "textures": "textures/blocks/copper_chain2"
+    },
+    "exposed_copper_chain1": {
+      "textures": "textures/blocks/exposed_copper_chain1"
+    },
+    "exposed_copper_chain2": {
+      "textures": "textures/blocks/exposed_copper_chain2"
+    },
+    "weathered_copper_chain1": {
+      "textures": "textures/blocks/weathered_copper_chain1"
+    },
+    "weathered_copper_chain2": {
+      "textures": "textures/blocks/weathered_copper_chain2"
+    },
+    "oxidized_copper_chain1": {
+      "textures": "textures/blocks/oxidized_copper_chain1"
+    },
+    "oxidized_copper_chain2": {
+      "textures": "textures/blocks/oxidized_copper_chain2"
+    },
+    "copper_chain_carried": {
+      "textures": "textures/items/copper_chain"
+    },
+    "exposed_copper_chain_carried": {
+      "textures": "textures/items/exposed_copper_chain"
+    },
+    "weathered_copper_chain_carried": {
+      "textures": "textures/items/weathered_copper_chain"
+    },
+    "oxidized_copper_chain_carried": {
+      "textures": "textures/items/oxidized_copper_chain"
+    },
+    "copper_bars": {
+      "textures": "textures/blocks/copper_bars"
+    },
+    "exposed_copper_bars": {
+      "textures": "textures/blocks/exposed_copper_bars"
+    },
+    "weathered_copper_bars": {
+      "textures": "textures/blocks/weathered_copper_bars"
+    },
+    "oxidized_copper_bars": {
+      "textures": "textures/blocks/oxidized_copper_bars"
     }
   }
 }

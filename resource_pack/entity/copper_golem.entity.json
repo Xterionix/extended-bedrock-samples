@@ -6,7 +6,8 @@
       "min_engine_version": "1.12.0",
       "materials": {
         "default": "copper_golem",
-        "eyes": "copper_golem_eyes"
+        "eyes": "copper_golem_eyes",
+        "flower": "copper_golem_flower"
       },
       "textures": {
         "default": "textures/entity/copper_golem/copper_golem",
@@ -16,10 +17,16 @@
         "eyes_default": "textures/entity/copper_golem/copper_golem_eyes",
         "eyes_exposed": "textures/entity/copper_golem/copper_golem_eyes_exposed",
         "eyes_weathered": "textures/entity/copper_golem/copper_golem_eyes_weathered",
-        "eyes_oxidized": "textures/entity/copper_golem/copper_golem_eyes_oxidized"
+        "eyes_oxidized": "textures/entity/copper_golem/copper_golem_eyes_oxidized",
+        "flower": "textures/entity/copper_golem/copper_golem_flower"
       },
       "geometry": {
-        "default": "geometry.copper_golem"
+        "default": "geometry.copper_golem",
+        "flower": "geometry.copper_golem.flower",
+        "standing": "geometry.copper_golem",
+        "sitting": "geometry.copper_golem.sitting",
+        "running": "geometry.copper_golem.running",
+        "star": "geometry.copper_golem.star"
       },
       "animations": {
         "look_at_target": "animation.common.look_at_target",
@@ -45,7 +52,7 @@
           "v.chest_interaction = query.property('minecraft:chest_interaction');"
         ],
         "animate": [
-          { "look_at_target": "query.property('minecraft:oxidation_level') == 'none'" },
+          "look_at_target",
           { "walk_controller": "query.property('minecraft:chest_interaction') == 'none'" },
           { "idle_controller": "query.property('minecraft:chest_interaction') == 'none'" },
           "chest_interaction_controller"
@@ -62,6 +69,7 @@
         "take_item_fail": "mob.copper_golem.chest_interaction.take_item_fail"
       },
       "render_controllers": [
+        "controller.render.copper_golem_flower",
         "controller.render.copper_golem",
         "controller.render.copper_golem_eyes"
       ],
