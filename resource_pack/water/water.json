@@ -1,5 +1,5 @@
 {
-  "format_version": "1.21.80",
+  "format_version": "1.21.120",
   "minecraft:water_settings": {
     "description": {
       "identifier": "minecraft:default_water"
@@ -20,7 +20,6 @@
       "frequency": 1,
       "octaves": 28,
       "depth": 1,
-      "sampleWidth": 0.009999999776482582,
       "speed": 2,
       "shape": 1.5,
       "pull": 0.3799999952316284,

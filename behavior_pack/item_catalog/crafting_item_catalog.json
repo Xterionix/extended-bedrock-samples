@@ -1472,17 +1472,30 @@
                     "icon" : "minecraft:bread",
                     "name" : "minecraft:itemGroup.name.miscFood"
                  },
-                 "items" : [
+                "items": [
                     "minecraft:bread",
                     "minecraft:mushroom_stew",
                     "minecraft:beetroot_soup",
                     "minecraft:rabbit_stew",
+                    "minecraft:suspicious_stew:0",
+                    "minecraft:suspicious_stew:1",
+                    "minecraft:suspicious_stew:2",
+                    "minecraft:suspicious_stew:3",
+                    "minecraft:suspicious_stew:4",
+                    "minecraft:suspicious_stew:5",
+                    "minecraft:suspicious_stew:6",
+                    "minecraft:suspicious_stew:7",
+                    "minecraft:suspicious_stew:8",
+                    "minecraft:suspicious_stew:9",
+                    "minecraft:suspicious_stew:10",
+                    "minecraft:suspicious_stew:11",
+                    "minecraft:suspicious_stew:12",
                     "minecraft:baked_potato",
                     "minecraft:cookie",
                     "minecraft:pumpkin_pie",
                     "minecraft:cake",
                     "minecraft:dried_kelp"
-                 ]
+                ]
               },
               {
                  "items" : [

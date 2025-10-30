@@ -1,8 +1,7 @@
 [
-  {
-    "flipbook_texture": "textures/blocks/firefly_bush_firefly",
-    "atlas_tile": "firefly_bush",
-    "atlas_index": 1,
-    "ticks_per_frame": 3
-  }
+    {
+        "flipbook_texture": "textures/blocks/soul_lantern",
+        "atlas_tile": "soul_lantern",
+        "ticks_per_frame": 8
+    }
 ]
