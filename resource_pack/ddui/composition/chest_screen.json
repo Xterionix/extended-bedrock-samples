@@ -1,0 +1,98 @@
+{
+  "format_version": "1.21.130",
+  "minecraft:ui-composition": {
+    "description": {
+      "identifier": "minecraft:chest_screen"
+    },
+    "attribs": {},
+    "layout": {
+      "markup": [
+        {
+          "tag": "Container",
+          "children": [
+            {
+              "tag": "Context",
+              "attribs": { "data": { "$path": "$.minecraft.container" } },
+              "children": [
+                {
+                  "tag": "Panel",
+                  "attribs": { "colorMode": "chest" },
+                  "children": [
+                    { "tag": "Panel.Decoration" },
+                    { "tag": "Panel.Text", "attribs": { "text": { "$relativePath": "$.name" } } },
+                    { "tag": "Panel.Spacing" },
+                    {
+                      "tag": "Container.FixedGridLayout",
+                      "children": [
+                        {
+                          "tag": "Context.List",
+                          "attribs": {
+                            "data": { "$relativePath": "$.items.levelEntityContainer" }
+                          },
+                          "children": [
+                            {
+                              "tag": "Container.Item",
+                              "attribs": { "item": { "$relativePath": "$" } }
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+
+                {
+                  "tag": "Panel",
+                  "attribs": { "stacked": true },
+                  "children": [
+                    { "tag": "Panel.Text", "attribs": { "text": "Inventory" } },
+                    {
+                      "tag": "Panel.CloseButton",
+                      "attribs": { "onClick": { "$relativePath": "$.closeCommand" } }
+                    },
+                    { "tag": "Panel.Spacing" },
+                    {
+                      "tag": "Container.FixedGridLayout",
+                      "children": [
+                        {
+                          "tag": "Context.List",
+                          "attribs": {
+                            "data": { "$relativePath": "$.items.inventoryContainer" }
+                          },
+                          "children": [
+                            {
+                              "tag": "Container.Item",
+                              "attribs": { "item": { "$relativePath": "$" } }
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    { "tag": "Panel.Spacing" },
+                    {
+                      "tag": "Container.FixedGridLayout",
+                      "children": [
+                        {
+                          "tag": "Context.List",
+                          "attribs": {
+                            "data": { "$relativePath": "$.items.hotbarContainer" }
+                          },
+                          "children": [
+                            {
+                              "tag": "Container.Item",
+                              "attribs": { "item": { "$relativePath": "$" } }
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
