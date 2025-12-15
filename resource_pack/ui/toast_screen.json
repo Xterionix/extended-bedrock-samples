@@ -323,7 +323,8 @@
     "color": "$body_text_color",
     "size": [ "default", "default" ],
     "min_size": [ "default", "default" ],
-    "max_size": [ 165, 20 ],
+    "$max_label_size|default": [ 165, 20 ],
+    "max_size": "$max_label_size",
     "$label_text|default": "#toast_title",
     "text": "$label_text",
     "bindings": [
@@ -981,7 +982,7 @@
   "offset": "$toast_offset",
   "anchor_from": "$toast_anchor_from",
   "anchor_to": "$toast_anchor_to",
-  "size": [ "100% - 210px", 30 ],
+  "size": [ "100% - 210px", 36 ],
   "$alpha_anims|default": [],
   "$offset_anims|default": [
     "@toast_screen.popup_anim"
@@ -1002,7 +1003,7 @@
         "size": [ "100%", "100%" ],
         "anchor_from": "top_left",
         "anchor_to": "top_left",
-        "offset": [ 5, 5 ],
+        "offset": [ 6.5, 6.5 ],
         "layer": 1,
         "controls": [
           {
@@ -1053,7 +1054,7 @@
           {
             "text_padding": {
               "type": "panel",
-              "size": [ 5, "100%" ],
+              "size": [ 6.5, "100%" ],
               "bindings": [
                 {
                   "binding_name": "#text_padding_visible",
@@ -1074,7 +1075,8 @@
                   "title_text_label@toast_screen.game_tip_label": {
                     "anchor_from": "top_left",
                     "anchor_to": "top_left",
-                    "size": [ "100%", "fill" ]
+                    "size": [ "100%", "fill" ],
+                    "$max_label_size":  [ "100%", 20 ]
                   }
                 },
                 {
@@ -1103,7 +1105,13 @@
                     "anchor_to": "top_left",
                     "size": [ "100%", "fill" ]
                   }
-                }
+                },
+				{
+					"end_progress_padding": {
+						"type": "panel",
+						"size": [ "100%", 5 ]
+					}
+				}
               ]
             }
           },
@@ -1125,6 +1133,7 @@
           },
           {
             "popup_decline_button@common_buttons.no_background_content_button": {
+              "$focus_enabled": false,
               "$button_size_override": [ 75, 22 ],
               "$button_image_size_override": [ "100%c", 22 ],
               "$button_content_size_override": [ 75, 22 ],
@@ -1144,16 +1153,6 @@
                   "from_button_id": "button.menu_select",
                   "to_button_id": "$pressed_button_name",
                   "mapping_type": "pressed"
-                },
-                {
-                  "from_button_id": "button.menu_ok",
-                  "to_button_id": "$pressed_button_name",
-                  "mapping_type": "focused"
-                },
-                {
-                  "from_button_id": "button.toast_decline",
-                  "to_button_id": "$pressed_button_name",
-                  "mapping_type": "global"
                 }
               ],
               "variables": [
@@ -1193,7 +1192,7 @@
   "offset": "$toast_offset",
   "anchor_from": "$toast_anchor_from",
   "anchor_to": "$toast_anchor_to",
-  "size": [ "100% - 210px", 30 ],
+  "size": [ "100% - 210px", 36 ],
   "$alpha_anims|default": [],
   "$offset_anims|default": [
     "@toast_screen.popup_anim"
@@ -1214,7 +1213,7 @@
         "size": [ "100%", "100%" ],
         "anchor_from": "top_left",
         "anchor_to": "top_left",
-        "offset": [ 5, 5 ],
+        "offset": [ 6.5, 6.5 ],
         "layer": 1,
         "controls": [
           {
@@ -1240,7 +1239,7 @@
           {
             "text_padding": {
               "type": "panel",
-              "size": [ 5, "100%" ]
+              "size": [ 6.5, "100%" ]
             }
           },
           {
@@ -1283,7 +1282,7 @@
                 {
                   "end_padding": {
                     "type": "panel",
-                    "size": [ "100%", 5 ]
+                    "size": [ "100%", 15 ]
                   }
                 }
               ]
@@ -1307,6 +1306,7 @@
           },
           {
             "party_invite_button@common_buttons.no_background_content_button": {
+              "$focus_enabled": false,
               "$button_size_override": [ 75, 22 ],
               "$button_image_size_override": [ "100%c", 22 ],
               "$button_content_size_override": [ 75, 22 ],
@@ -1326,16 +1326,6 @@
                   "from_button_id": "button.menu_select",
                   "to_button_id": "$pressed_button_name",
                   "mapping_type": "pressed"
-                },
-                {
-                  "from_button_id": "button.menu_ok",
-                  "to_button_id": "$pressed_button_name",
-                  "mapping_type": "focused"
-                },
-                {
-                  "from_button_id": "button.toast_decline",
-                  "to_button_id": "$pressed_button_name",
-                  "mapping_type": "global"
                 }
               ],
               "variables": [
@@ -1365,6 +1355,8 @@
       "#context": "toast"
     }
 },
+
+  "party_travel_popup@toast_screen.progress_popup": {},
 
   "toast_screen@common.base_screen": {
     "always_accepts_input": true,
@@ -1396,6 +1388,7 @@
         "formfitting_alpha_toast": "toast_screen.formfitting_alpha_toast",
         "progress_popup": "progress_popup@toast_screen.progress_popup",
         "party_invite_popup": "party_invite_popup@toast_screen.party_invite_popup",
+        "party_travel_popup": "party_travel_popup@toast_screen.party_travel_popup",
         "snackbar": "snackbar@toast_screen.snackbar"
       }
     },

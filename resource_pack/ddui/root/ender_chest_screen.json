@@ -1,0 +1,52 @@
+{
+  "format_version": "1.21.130",
+  "minecraft:ui-root": {
+    "description": {
+      "identifier": "minecraft:ender_chest_screen"
+    },
+    "attribs": {
+      "root_point": "minecraft:screen"
+    },
+    "layout": {
+      "markup": [
+        {
+          "tag": "Container.Layout",
+          "children": [
+            {
+              "tag": "Context",
+              "attribs": { "data": { "$path": "$.minecraft.container" } },
+              "children": [
+                {
+                  "tag": "Panel",
+                  "attribs": { "colorMode": "enderChest" },
+                  "children": [
+                    { "tag": "Panel.Decoration" },
+                    { "tag": "Panel.Text", "attribs": { "text": { "$relativePath": "$.name" } } },
+                    { "tag": "Panel.Spacing" },
+                    {
+                      "tag": "Container.FixedGridLayout",
+                      "children": [
+                        {
+                          "tag": "Context.List",
+                          "attribs": {
+                            "data": { "$relativePath": "$.items.levelEntityContainer" }
+                          },
+                          "children": [
+                            {
+                              "tag": "Container.Item",
+                              "attribs": { "item": { "$relativePath": "$" } }
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -5,12 +5,12 @@
       "identifier": "minecraft:end_atmospherics"
     },
     "sky_zenith_color": {
-      "0.0": [ 83, 2, 108 ],
-      "1.0": [ 83, 2, 108 ]
+      "0.0": [ 22, 17, 36 ],
+      "1.0": [ 22, 17, 36 ]
     },
     "sky_horizon_color": {
-      "0.0": [ 193, 109, 255 ],
-      "1.0": [ 193, 109, 255 ]
+      "0.0": [ 1, 1, 5 ],
+      "1.0": [ 1, 1, 5 ]
     },
     "horizon_blend_stops": {
       "min": 0.0,

@@ -4228,6 +4228,7 @@
     "focus_enabled": "$focus_for_tts_enabled",
     "$scrollbar_tts_name|default": "accessibility.scrollbar.tts.title",
     "tts_name": "$scrollbar_tts_name",
+    "tts_ignore_count": true,
     "button_mappings": [
       {
         "from_button_id": "button.menu_select",
@@ -6066,7 +6067,7 @@
               "$store_modal_screen_size": [ "80%", "80%" ],
               "$csb_upsell_screen_size": [ "90%", "60%x" ]
             },
-            // PE edition and VR
+            // PE edition
             {
               //Pocket Texel Size:  [320, 210]
               "requires": "($pocket_screen)",
@@ -6570,6 +6571,56 @@
         "from_button_id": "button.chat",
         "to_button_id": "button.chat",
         "mapping_type": "global"
+      },
+      {
+        "from_button_id": "button.slot0",
+        "to_button_id": "button.slot_0",
+        "mapping_type": "global"
+      },
+      {
+        "from_button_id": "button.slot1",
+        "to_button_id": "button.slot_1",
+        "mapping_type": "global"
+      },
+      {
+        "from_button_id": "button.slot2",
+        "to_button_id": "button.slot_2",
+        "mapping_type": "global"
+      },
+      {
+        "from_button_id": "button.slot3",
+        "to_button_id": "button.slot_3",
+        "mapping_type": "global"
+      },
+      {
+        "from_button_id": "button.slot4",
+        "to_button_id": "button.slot_4",
+        "mapping_type": "global"
+      },
+      {
+        "from_button_id": "button.slot5",
+        "to_button_id": "button.slot_5",
+        "mapping_type": "global"
+      },
+      {
+        "from_button_id": "button.slot6",
+        "to_button_id": "button.slot_6",
+        "mapping_type": "global"
+      },
+      {
+        "from_button_id": "button.slot7",
+        "to_button_id": "button.slot_7",
+        "mapping_type": "global"
+      },
+      {
+        "from_button_id": "button.slot8",
+        "to_button_id": "button.slot_8",
+        "mapping_type": "global"
+      },
+      {
+        "from_button_id": "button.slot9",
+        "to_button_id": "button.slot_9",
+        "mapping_type": "global"
       }
     ]
   },
@@ -6682,6 +6733,8 @@
           "type": "stack_panel",
           "orientation": "horizontal",
           "size": [ "100% - 10px", "100%cm" ],
+          "$tooltip_image_text_panel_offset|default": [ 0, 0 ],
+          "offset": "$tooltip_image_text_panel_offset",
           "layer": 2,
           "controls": [
             {
@@ -6737,12 +6790,18 @@
               "tooltip_text": {
                 "type": "label",
                 "size": [ "fill", "default" ],
+                "$tool_tip_text_max_size|default": [ "default", "default" ],
+                "max_size": "$tool_tip_text_max_size",
                 "$tooltip_text_binding_name|default": "#tooltip_text",
                 "text": "$tooltip_text_binding_name",
                 "$tooltip_text_color|default": "$f_color_format",
                 "color": "$tooltip_text_color",
                 "$tooltip_text_font_type|default": "default",
+                "$tooltip_text_font_size|default": "normal",
+                "$tooltip_text_line_padding|default": 1,
                 "font_type": "$tooltip_text_font_type",
+                "font_size": "$tooltip_text_font_size",
+                "line_padding": "$tooltip_text_line_padding",
                 "$tooltip_text_binding_type|default": "$tooltip_button_binding_type",
                 "$tooltip_text_bindings|default": [
                   {
@@ -6959,6 +7018,17 @@
         }
       }
     ]
+  },
+
+  // Helper for tooltips intended to be left of the control
+  "dynamic_tooltip_left@dynamic_tooltip_popup_with_image_and_text": {
+    "$tooltip_panel_offset": [ 0, 0 ],
+    "$tooltip_chevron_anchor": "right_middle",
+    "$tooltip_popup_chevron_offset": [ 9, 0 ],
+    "$tooltip_popup_chevron_texture": "textures/ui/tooltip_default_chevron_right",
+    "$tooltip_popup_chevron_size": [ 13, 19 ],
+    "anchor_to": "right_middle",
+    "anchor_from": "left_middle"
   },
 
   // Helper for tooltips intended to be below control
