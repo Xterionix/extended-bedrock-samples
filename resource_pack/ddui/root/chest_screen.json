@@ -21,7 +21,18 @@
                   "attribs": { "colorMode": "chest" },
                   "children": [
                     { "tag": "Panel.Decoration" },
-                    { "tag": "Panel.Text", "attribs": { "text": { "$relativePath": "$.name" } } },
+                    {
+                      "tag": "Panel.Text",
+                      "attribs": { "text": { "$relativePath": "$.name" } }
+                    },
+                    {
+                      "tag": "Panel.CloseButton",
+                      "attribs": {
+                        "onClick": {
+                          "$relativePath": "$.closeCommand"
+                        }
+                      }
+                    },
                     { "tag": "Panel.Spacing" },
                     {
                       "tag": "Container.FixedGridLayout",
@@ -29,7 +40,9 @@
                         {
                           "tag": "Context.List",
                           "attribs": {
-                            "data": { "$relativePath": "$.items.levelEntityContainer" }
+                            "data": {
+                              "$relativePath": "$.items.levelEntityContainer"
+                            }
                           },
                           "children": [
                             {

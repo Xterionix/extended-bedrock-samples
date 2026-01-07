@@ -1008,10 +1008,17 @@
       ],
       "subtitle": "subtitles.item.horse_armor.unequip"
     },
-    "mob.nautilus.nautilus_saddle": {
+    "mob.nautilus.saddle": {
       "category": "neutral",
       "sounds": [
         "sounds/mob/nautilus/nautilus_saddle_equip"
+      ],
+      "subtitle": "subtitles.item.nautilus_saddle_equip"
+    },
+    "mob.nautilus.saddle_underwater": {
+      "category": "neutral",
+      "sounds": [
+        "sounds/mob/nautilus/nautilus_saddle_underwater_equip"
       ],
       "subtitle": "subtitles.item.nautilus_saddle_equip"
     },

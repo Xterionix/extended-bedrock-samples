@@ -20,7 +20,18 @@
                   "tag": "Panel",
                   "attribs": { "colorMode": "barrel" },
                   "children": [
-                    { "tag": "Panel.Text", "attribs": { "text": { "$relativePath": "$.name" } } },
+                    {
+                      "tag": "Panel.Text",
+                      "attribs": { "text": { "$relativePath": "$.name" } }
+                    },
+                    {
+                      "tag": "Panel.CloseButton",
+                      "attribs": {
+                        "onClick": {
+                          "$relativePath": "$.closeCommand"
+                        }
+                      }
+                    },
                     { "tag": "Panel.Spacing" },
                     {
                       "tag": "Container.FixedGridLayout",
@@ -28,7 +39,9 @@
                         {
                           "tag": "Context.List",
                           "attribs": {
-                            "data": { "$relativePath": "$.items.barrelContainer" }
+                            "data": {
+                              "$relativePath": "$.items.barrelContainer"
+                            }
                           },
                           "children": [
                             {

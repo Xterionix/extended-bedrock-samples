@@ -13,7 +13,8 @@
           "death.in.water": "mob.nautilus.death.in.water",
           "dash_ready": "mob.nautilus.dash_ready",
           "eat": "mob.nautilus.eat",
-          "saddle": "mob.nautilus.nautilus_saddle",
+          "saddle": "mob.nautilus.saddle",
+          "saddle_in_water": "mob.nautilus.saddle_underwater",
           "unsaddle": "mob.unsaddle",
           "armor.unequip_generic": "mob.nautilus.armor_unequip",
           "swim": "mob.nautilus.swim"
@@ -38,17 +39,17 @@
             "adult": {
               "pitch": 1.0,
               "volume": 3.0,
-                "events": {
-                    "ambient": "mob.nautilus.ambient",
-                    "ambient.in.water": "mob.nautilus.ambient.in.water",
-                    "hurt": "mob.nautilus.hurt",
-                    "hurt.in.water": "mob.nautilus.hurt.in.water",
-                    "death": "mob.nautilus.death",
-                    "death.in.water": "mob.nautilus.death.in.water",
-                    "dash_ready": "mob.nautilus.dash_ready",
-                    "eat": "mob.nautilus.eat",
-                    "swim": "mob.nautilus.swim"
-                }
+              "events": {
+                "ambient": "mob.nautilus.ambient",
+                "ambient.in.water": "mob.nautilus.ambient.in.water",
+                "hurt": "mob.nautilus.hurt",
+                "hurt.in.water": "mob.nautilus.hurt.in.water",
+                "death": "mob.nautilus.death",
+                "death.in.water": "mob.nautilus.death.in.water",
+                "dash_ready": "mob.nautilus.dash_ready",
+                "eat": "mob.nautilus.eat",
+                "swim": "mob.nautilus.swim"
+              }
             }
           }
         }
@@ -65,112 +66,104 @@
           "death.in.water": "mob.zombie_nautilus.death.in.water",
           "dash_ready": "mob.zombie_nautilus.dash_ready",
           "eat": "mob.zombie_nautilus.eat",
-          "saddle": "mob.nautilus.nautilus_saddle",
+          "saddle": "mob.nautilus.saddle",
+          "saddle_in_water": "mob.nautilus.saddle_underwater",
           "unsaddle": "mob.unsaddle",
           "armor.unequip_generic": "mob.nautilus.armor_unequip",
           "swim": "mob.zombie_nautilus.swim"
-        }
-      },
-      "zombie_horse": {
-        "volume": 0.8,
-        "pitch": [ 0.8, 1.2 ],
-        "events": {
-          "mad": "mob.horse.zombie.angry",
-          "eat": {
-            "sound": "mob.horse.eat",
-            "volume": [ 0.5, 1.5 ],
-            "pitch": [ 0.8, 1.2 ]
-          }
-        }
-      },
-      "parched": {
-        "volume": 1.0,
-        "pitch": [ 0.8, 1.2 ],
-        "events": {
-          "ambient": "mob.parched.ambient",
-          "hurt": "mob.parched.hurt",
-          "death": "mob.parched.death",
-          "step": {
-            "sound": "mob.parched.step",
-            "volume": 1.0,
-            "pitch": 1.0
-          }
-        }
-      },
-      "camel_husk": {
-        "volume": 1,
-        "pitch": [ 0.8, 1.2 ],
-        "events": {
-          "ambient": "mob.camel_husk.ambient",
-          "death": "mob.camel_husk.death",
-          "eat": "mob.camel_husk.eat",
-          "hurt": "mob.camel_husk.hurt",
-          "saddle": "mob.horse.leather",
-          "step": "mob.camel_husk.step",
-          "step_sand": "mob.camel_husk.step_sand",
-          "dash_ready": "mob.camel_husk.dash_ready"
-        }
-      },
-      "parrot": {
-        "events": {
-          "imitate.parched": {
-            "sound": "mob.imitate.parched",
-            "volume": 0.7,
-            "pitch": 1.7
-          },
-          "imitate.camel_husk": {
-            "sound": "mob.imitate.camel_husk",
-            "volume": 0.7,
-            "pitch": 1.7
-          }
         }
       }
     }
   },
   "individual_event_sounds": {
     "events": {
-      "item.enchant.lunge1": {
-        "sound": "item.enchant.lunge1",
-        "volume": 1.0,
-        "pitch": 1.0
-      },
-      "item.enchant.lunge2": {
-        "sound": "item.enchant.lunge2",
-        "volume": 1.0,
-        "pitch": 1.0
-      },
-      "item.enchant.lunge3": {
-        "sound": "item.enchant.lunge3",
-        "volume": 1.0,
-        "pitch": 1.0
-      },
-      "item.spear.attack_hit": {
+      "item.stone_spear.attack_hit": {
         "sound": "item.spear.attack_hit",
         "volume": 1.0,
         "pitch": 1.0
       },
-      "item.spear.attack_miss": {
+      "item.iron_spear.attack_hit": {
+        "sound": "item.spear.attack_hit",
+        "volume": 1.0,
+        "pitch": 1.0
+      },
+      "item.copper_spear.attack_hit": {
+        "sound": "item.spear.attack_hit",
+        "volume": 1.0,
+        "pitch": 1.0
+      },
+      "item.golden_spear.attack_hit": {
+        "sound": "item.spear.attack_hit",
+        "volume": 1.0,
+        "pitch": 1.0
+      },
+      "item.diamond_spear.attack_hit": {
+        "sound": "item.spear.attack_hit",
+        "volume": 1.0,
+        "pitch": 1.0
+      },
+      "item.netherite_spear.attack_hit": {
+        "sound": "item.spear.attack_hit",
+        "volume": 1.0,
+        "pitch": 1.0
+      },
+      "item.stone_spear.attack_miss": {
         "sound": "item.spear.attack_miss",
         "volume": 1.0,
         "pitch": 1.0
       },
-      "item.wooden_spear.attack_hit": {
-        "sound": "item.wooden_spear.attack_hit",
+      "item.iron_spear.attack_miss": {
+        "sound": "item.spear.attack_miss",
         "volume": 1.0,
         "pitch": 1.0
       },
-      "item.wooden_spear.attack_miss": {
-        "sound": "item.wooden_spear.attack_miss",
+      "item.copper_spear.attack_miss": {
+        "sound": "item.spear.attack_miss",
         "volume": 1.0,
         "pitch": 1.0
       },
-      "item.spear.use": {
+      "item.golden_spear.attack_miss": {
+        "sound": "item.spear.attack_miss",
+        "volume": 1.0,
+        "pitch": 1.0
+      },
+      "item.diamond_spear.attack_miss": {
+        "sound": "item.spear.attack_miss",
+        "volume": 1.0,
+        "pitch": 1.0
+      },
+      "item.netherite_spear.attack_miss": {
+        "sound": "item.spear.attack_miss",
+        "volume": 1.0,
+        "pitch": 1.0
+      },
+      "item.stone_spear.use": {
         "sound": "item.spear.use",
         "volume": 1.0,
         "pitch": 1.0
       },
-      "item.wooden_spear.use": {
-        "sound": "item.wooden_spear.use",
+      "item.copper_spear.use": {
+        "sound": "item.spear.use",
+        "volume": 1.0,
+        "pitch": 1.0
+      },
+      "item.iron_spear.use": {
+        "sound": "item.spear.use",
+        "volume": 1.0,
+        "pitch": 1.0
+      },
+      "item.golden_spear.use": {
+        "sound": "item.spear.use",
+        "volume": 1.0,
+        "pitch": 1.0
+      },
+      "item.diamond_spear.use": {
+        "sound": "item.spear.use",
+        "volume": 1.0,
+        "pitch": 1.0
+      },
+      "item.netherite_spear.use": {
+        "sound": "item.spear.use",
         "volume": 1.0,
         "pitch": 1.0
       }

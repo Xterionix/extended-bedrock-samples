@@ -131,38 +131,6 @@
                 "tooltip": "This is a tooltip",
                 "variant": "primary"
               }
-            },
-            { "tag": "Panel.Spacing" },
-            {
-              "tag": "Form.Button",
-              "attribs": {
-                "label": "This is another button",
-                "onClick": {
-                  "$path": "$.minecraft.sampleButton.two.with[0].path.action"
-                },
-                "tooltip": "This is a tooltip",
-                "variant": "secondary"
-              }
-            },
-            { "tag": "Panel.Spacing" },
-            {
-              "tag": "Form.Button",
-              "attribs": {
-                "label": "This is another button",
-                "onClick": { "$path": "$.minecraft.sampleButton3.action" },
-                "tooltip": "This is a tooltip",
-                "variant": "destructive"
-              }
-            },
-            { "tag": "Panel.Spacing" },
-            {
-              "tag": "Form.Button",
-              "attribs": {
-                "label": "This is another button",
-                "onClick": { "$path": "$.minecraft.sampleButton4.action" },
-                "tooltip": "This is a tooltip",
-                "variant": "hero"
-              }
             }
           ]
         }
