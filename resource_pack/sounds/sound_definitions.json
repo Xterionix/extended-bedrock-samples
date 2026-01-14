@@ -3,11 +3,11 @@
   "sound_definitions": {
     "mob.nautilus.ride": {
       "category": "neutral",
-      "min_distance": 5.0,
+      "max_distance": 16.0,
       "sounds": [
         {
           "name": "sounds/mob/nautilus/ride",
-          "volume": 0.4
+          "volume": 0.2
         }
       ]
     },
