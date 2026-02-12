@@ -1114,7 +1114,7 @@
               "icon": "minecraft:chicken_spawn_egg",
               "name": "minecraft:itemGroup.name.mobEgg"
             },
-            // Keep each subset alphabetically sorted!
+            // Keep each subset alphabetically sorted based on the actual in-game name!
             "items": [
               // Overworld - Farm Animals
               "minecraft:chicken_spawn_egg",
@@ -1205,8 +1205,8 @@
               "minecraft:happy_ghast_spawn_egg",
               "minecraft:hoglin_spawn_egg",
               "minecraft:magma_cube_spawn_egg",
-              "minecraft:piglin_brute_spawn_egg",
               "minecraft:piglin_spawn_egg",
+              "minecraft:piglin_brute_spawn_egg",
               "minecraft:strider_spawn_egg",
               "minecraft:wither_skeleton_spawn_egg",
               "minecraft:zoglin_spawn_egg",

@@ -1,0 +1,140 @@
+{
+  "format_version": "1.21.130",
+  "minecraft:ui-root": {
+    "description": {
+      "identifier": "minecraft:modal_form"
+    },
+    "attribs": {
+      "root_point": "minecraft:screen"
+    },
+    "layout": {
+      "markup": [
+        {
+          "tag": "Panel",
+          "attribs": { "colorMode": "barrel", "stacked": false },
+          "children": [
+            {
+              "tag": "Panel.Text",
+              "attribs": { "text": "§aH§be§cl§dl§eo World!! ;)" }
+            },
+            {
+              "tag": "Panel.CloseButton",
+              "attribs": {}
+            },
+            { "tag": "Panel.Spacing" },
+            {
+              "tag": "Panel.Text",
+              "attribs": { "text": "This is a sample modal form." }
+            },
+            { "tag": "Panel.Spacing" },
+            { "tag": "Form.Divider" },
+            { "tag": "Panel.Spacing" },
+            {
+              "tag": "Form.ScrollView",
+              "attribs": { "size": "small", "floating": false },
+              "children": [
+                {
+                  "tag": "Form.Switch",
+                  "attribs": {
+                    "title": "This is a switch",
+                    "onChange": {
+                      "$path": "$.minecraft.sampleSwitch.setBoolean"
+                    },
+                    "value": { "$path": "$.minecraft.sampleSwitch.getBoolean" },
+                    "description": "Switch description"
+                  }
+                },
+                { "tag": "Panel.Spacing" },
+                { "tag": "Form.Divider" },
+                { "tag": "Panel.Spacing" },
+                {
+                  "tag": "Panel.Text",
+                  "attribs": { "text": "This is between dividers." }
+                },
+                { "tag": "Panel.Spacing" },
+                { "tag": "Form.Divider" },
+                { "tag": "Panel.Spacing" },
+                {
+                  "tag": "Form.TextField",
+                  "attribs": {
+                    "label": "This is a text field",
+                    "onChange": {
+                      "$path": "$.minecraft.sampleTextfield.setString"
+                    },
+                    "value": {
+                      "$path": "$.minecraft.sampleTextfield.getString"
+                    },
+                    "description": "Text field description"
+                  }
+                },
+                { "tag": "Panel.Spacing" },
+                { "tag": "Form.Divider" },
+                { "tag": "Panel.Spacing" },
+                {
+                  "tag": "Form.Slider",
+                  "attribs": {
+                    "title": "This is a slider",
+                    "onChange": {
+                      "$path": "$.minecraft.sampleSlider.setNumber"
+                    },
+                    "value": { "$path": "$.minecraft.sampleSlider.getNumber" },
+                    "description": "Slider description",
+                    "minValue": 0,
+                    "maxValue": 100
+                  }
+                },
+                { "tag": "Panel.Spacing" },
+                {
+                  "tag": "Form.Dropdown",
+                  "attribs": {
+                    "label": "This is a dropdown",
+                    "onChange": {
+                      "$path": "$.minecraft.sampleDropdown.setNumber"
+                    },
+                    "value": 1,
+                    "description": "Dropdown description",
+                    "options": [
+                      {
+                        "value": 1,
+                        "label": "Option 1",
+                        "description": "This is option 1"
+                      },
+                      {
+                        "value": 2,
+                        "label": "Option 2",
+                        "description": "This is option 2"
+                      },
+                      {
+                        "value": 3,
+                        "label": "Option 3",
+                        "description": "This is option 3"
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            { "tag": "Panel.Spacing" },
+            { "tag": "Form.Divider" },
+            { "tag": "Panel.Spacing" },
+            {
+              "tag": "ExtensionPoint",
+              "attribs": {
+                "name": "minecraft:extension_modal_form_below_controls"
+              }
+            },
+            {
+              "tag": "Form.Button",
+              "attribs": {
+                "label": "This is a button",
+                "onClick": { "$path": "$.minecraft.sampleButton.one.action" },
+                "tooltip": "This is a tooltip",
+                "variant": "primary"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

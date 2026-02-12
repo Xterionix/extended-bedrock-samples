@@ -1,0 +1,42 @@
+{
+  "format_version": "1.21.130",
+  "minecraft:ui-composition": {
+    "description": {
+      "identifier": "minecraft:extension_sample"
+    },
+    "attribs": {
+      "extension_point": "minecraft:extension_modal_form_below_controls"
+    },
+    "layout": {
+      "markup": [
+        {
+          "tag": "Form.ScrollView",
+          "attribs": { "size": "small", "floating": false },
+          "children": [
+            {
+              "tag": "Panel.Text",
+              "attribs": { "text": "Extension Point" }
+            },
+            { "tag": "Panel.Spacing" },
+            {
+              "tag": "Form.Switch",
+              "attribs": {
+                "title": "This is a switch",
+                "onChange": {
+                  "$path": "$.minecraft.sampleExtensionSwitch.setBoolean"
+                },
+                "value": {
+                  "$path": "$.minecraft.sampleExtensionSwitch.getBoolean"
+                },
+                "description": "Switch description"
+              }
+            }
+          ]
+        },
+        { "tag": "Panel.Spacing" },
+        { "tag": "Form.Divider" },
+        { "tag": "Panel.Spacing" }
+      ]
+    }
+  }
+}
