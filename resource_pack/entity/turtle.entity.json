@@ -5,19 +5,21 @@
       "identifier": "minecraft:turtle",
       "materials": { "default": "turtle" },
       "textures": {
-        "default": "textures/entity/sea_turtle"
+        "default": "textures/entity/sea_turtle",
+        "baby": "textures/entity/turtle/sea_turtle_baby"
       },
       "geometry": {
-        "default": "geometry.turtle"
+        "default": "geometry.turtle",
+        "baby": "geometry.turtle.baby"
       },
       "scripts": {
+        "scale": "query.is_baby ? (1 / 0.16) : 1.0",
         "pre_animation": [
           "variable.timeMultiplier = query.has_rider ? 0.39972 : 1.0;",
           "variable.backLegMultiplier = query.has_rider ? 0.5 : 3.0;",
           "variable.frontLegMultiplier = query.has_rider ? 2.0 : 8.0;",
           "variable.legSpeedMultiplier = query.has_rider ? 2.0 : 5.0;"
-        ],
-        "scale": "1.2"
+        ]
       },
       "animations": {
         "general": "animation.turtle.general",
@@ -29,7 +31,7 @@
         { "general": "controller.animation.turtle.general" },
         { "move": "controller.animation.turtle.move" }
       ],
-      "render_controllers": [ "controller.render.turtle" ],
+      "render_controllers": ["controller.render.turtle.v2"],
       "spawn_egg": {
         "texture": "spawn_egg_turtle"
       }

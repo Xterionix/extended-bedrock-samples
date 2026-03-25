@@ -10,35 +10,35 @@
     "layout": {
       "markup": [
         {
-          "tag": "Container.Layout",
+          "component": "Container.Layout",
           "children": [
             {
-              "tag": "Context",
+              "component": "Context",
               "attribs": { "data": { "$path": "$.minecraft.container" } },
               "children": [
                 {
-                  "tag": "Panel",
+                  "component": "Panel",
                   "attribs": { "colorMode": "chest" },
                   "children": [
-                    { "tag": "Panel.Decoration" },
+                    { "component": "Panel.Decoration" },
                     {
-                      "tag": "Panel.Text",
+                      "component": "Panel.Text",
                       "attribs": { "text": { "$relativePath": "$.name" } }
                     },
                     {
-                      "tag": "Panel.CloseButton",
+                      "component": "Panel.CloseButton",
                       "attribs": {
                         "onClick": {
                           "$relativePath": "$.closeCommand"
                         }
                       }
                     },
-                    { "tag": "Panel.Spacing" },
+                    { "component": "Panel.Spacing" },
                     {
-                      "tag": "Container.FixedGridLayout",
+                      "component": "Container.FixedGridLayout",
                       "children": [
                         {
-                          "tag": "Context.List",
+                          "component": "Context.List",
                           "attribs": {
                             "data": {
                               "$relativePath": "$.items.levelEntityContainer"
@@ -46,7 +46,7 @@
                           },
                           "children": [
                             {
-                              "tag": "Container.Item",
+                              "component": "Container.Item",
                               "attribs": { "item": { "$relativePath": "$" } }
                             }
                           ]

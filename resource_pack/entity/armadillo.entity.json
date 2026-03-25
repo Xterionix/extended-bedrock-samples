@@ -7,15 +7,16 @@
         "default": "armadillo"
       },
       "geometry": {
-        "default": "geometry.armadillo"
+        "default": "geometry.armadillo",
+        "baby": "geometry.armadillo.baby"
       },
       "textures": {
-        "default": "textures/entity/armadillo"
+        "default": "textures/entity/armadillo",
+        "baby": "textures/entity/armadillo/armadillo_baby"
       },
-      "render_controllers": [
-        "controller.render.armadillo"
-      ],
+      "render_controllers": ["controller.render.armadillo.v2"],
       "scripts": {
+        "scale": "query.is_baby ? (1 / 0.6) : 1.0",
         "pre_animation": [
           "variable.x_head_rotation = math.clamp(query.target_x_rotation, -32.5, 32.5);",
           "variable.y_head_rotation = math.clamp(query.target_y_rotation, -22.5, 25);",
@@ -45,7 +46,13 @@
         "peek": "animation.armadillo.peek",
         "unroll": "animation.armadillo.unroll",
         "unroll_fast": "animation.armadillo.unroll_fast",
-        "roll_up_controller": "controller.animation.armadillo.roll_up"
+        "roll_up_controller": "controller.animation.armadillo.roll_up",
+        "baby_walk": "animation.armadillo.baby_walk",
+        "baby_roll_up": "animation.armadillo.baby_roll_up",
+        "baby_rolled_up": "animation.armadillo.baby_rolled_up",
+        "baby_peek": "animation.armadillo.baby_peek",
+        "baby_unroll": "animation.armadillo.baby_unroll",
+        "baby_unroll_fast": "animation.armadillo.baby_unroll_fast"
       },
       "sound_effects": {
         "roll": "mob.armadillo.roll",

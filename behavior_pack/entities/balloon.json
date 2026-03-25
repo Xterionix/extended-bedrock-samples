@@ -1,23 +1,29 @@
 {
-  "format_version": "1.8.0",
+  "format_version": "1.26.0",
   "minecraft:entity": {
     "description": {
       "identifier": "minecraft:balloon",
-      "is_spawnable": false,
+      "is_experimental": false,
       "is_summonable": false,
-      "is_experimental": false
+      "is_spawnable": false,
+      "spawn_category": "misc"
     },
     "components": {
+      "minecraft:balloon": {
+        "lift_force": [
+          0.0,
+          1.6,
+          0.0
+        ]
+      },
       "minecraft:collision_box": {
-        "width": 0.4,
-        "height": 0.4
+        "height": 0.4,
+        "width": 0.4
       },
       "minecraft:physics": {
         "has_gravity": false
-      },
-      "minecraft:balloon": {
-        "lift_force": [ 0.0, 1.6, 0.0 ]
       }
-    }
+    },
+    "events": null
   }
 }

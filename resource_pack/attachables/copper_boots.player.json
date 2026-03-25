@@ -24,7 +24,7 @@
       "animations": {
         "offset": "animation.armor.boots.offset"
       },
-      "render_controllers": [ "controller.render.armor" ]
+      "render_controllers": [ "controller.render.armor.player" ]
     }
   }
 }

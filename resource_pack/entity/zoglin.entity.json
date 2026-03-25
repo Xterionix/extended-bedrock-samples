@@ -5,15 +5,18 @@
       "identifier": "minecraft:zoglin",
       "materials": { "default": "zoglin" },
       "textures": {
-        "default": "textures/entity/zoglin/zoglin"
+        "default": "textures/entity/zoglin/zoglin",
+        "baby": "textures/entity/zoglin/zoglin_baby"
       },
       "geometry": {
-        "default": "geometry.hoglin"
+        "default": "geometry.hoglin",
+        "baby": "geometry.hoglin.baby"
       },
       "spawn_egg": {
         "texture": "spawn_egg_zoglin"
       },
       "scripts": {
+        "scale": "query.is_baby ? 2.0 : 1.0",
         "pre_animation": [
           "variable.tcos_right_side = (Math.cos(query.modified_distance_moved * 38.17) * query.modified_move_speed / variable.gliding_speed_value) * 57.3;",
           "variable.tcos_left_side = -variable.tcos_right_side;",
@@ -22,17 +25,15 @@
         "animate": [
           "walk",
           "look_at_target",
-          { "attack": "variable.has_target && variable.attack_time >= 0.0" },
-          { "hoglin_baby_scaling": "query.is_baby" }
+          { "attack": "variable.has_target && variable.attack_time >= 0.0" }
         ]
       },
       "animations": {
         "walk": "animation.hoglin.walk",
         "look_at_target": "animation.hoglin.look_at_target",
-        "attack": "animation.hoglin.attack",
-        "hoglin_baby_scaling":  "animation.hoglin.baby_scaling"
+        "attack": "animation.hoglin.attack"
       },
-      "render_controllers": [ "controller.render.zoglin" ]
+      "render_controllers": [ "controller.render.zoglin.v2" ]
     }
   }
 }

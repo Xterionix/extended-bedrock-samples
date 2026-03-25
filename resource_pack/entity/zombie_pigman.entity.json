@@ -6,25 +6,31 @@
       "min_engine_version": "1.8.0",
       "materials": { "default": "zombie" },
       "textures": {
-        "default": "textures/entity/piglin/zombie_piglin"
+        "default": "textures/entity/piglin/zombie_piglin",
+        "baby": "textures/entity/piglin/zombie_piglin_baby"
       },
       "geometry": {
-        "default": "geometry.piglin"
+        "default": "geometry.piglin",
+        "baby": "geometry.piglin.baby"
       },
       "spawn_egg": {
         "texture": "spawn_egg_zombified_piglin"
       },
       "scripts": {
+        "scale": "query.is_baby ? 2.0 : 1.0",
         "variables": {
           "variable.item_use_normalized": "public",
-          "variable.tp_melee_spear_use_attachable_rotation_z": "public"
+          "variable.tp_melee_spear_use_attachable_rotation_z": "public",
+          "variable.use_dedicated_baby_armor": "public"
         },
         "initialize": [
           "v.tp_melee_spear_base_arm_rotation_x = -30.0;"
         ],
         "pre_animation": [
+          // Baby Armor for all mobs with a separate baby geo
+          "v.use_dedicated_baby_armor = true;",
           "v.tcos0 = (Math.cos(query.modified_distance_moved * 38.17) * query.modified_move_speed / v.gliding_speed_value) * 57.3;",
-          "v.riding_y_offset_baby_scaling = query.is_baby ? -3.5 : 0.0;",
+          "v.riding_y_offset_baby_scaling = query.is_baby ? -0.5 : 0.0;",
           "v.riding_y_offset_with_respect_to_player = 1.0;",
           "v.riding_y_offset_on_vehicle_where_other_entites_can_stand = query.is_riding_any_entity_of_type('minecraft:minecart', 'minecraft:boat', 'minecraft:chest_boat', 'minecraft:strider') ? -3.0 : 0.0;",
           "v.unscaled_riding_y_offset = v.riding_y_offset_with_respect_to_player + v.riding_y_offset_on_vehicle_where_other_entites_can_stand;",
@@ -62,7 +68,6 @@
           "};"
         ],
         "animate": [
-          "humanoid_baby_big_head_controller",
           "humanoid_base_pose_controller",
           "look_at_target_controller",
           "move_controller",
@@ -83,8 +88,6 @@
         "should_update_effects_offscreen": "1.0"
       },
       "animations": {
-        "humanoid_big_head": "animation.humanoid.big_head",
-        "humanoid_baby_big_head_controller": "controller.animation.humanoid.baby_big_head",
         "humanoid_base_pose": "animation.humanoid.base_pose",
         "humanoid_base_pose_controller": "controller.animation.humanoid.base_pose",
         "look_at_target_default": "animation.humanoid.look_at_target.default",
@@ -119,12 +122,13 @@
         "use_item_progress_controller": "controller.animation.humanoid.use_item_progress",
         "zombie_attack_bare_hand": "animation.zombie.attack_bare_hand",
         "zombie_attack_bare_hand_controller": "controller.animation.zombie.attack_bare_hand",
+        "baby_zombie_attack_bare_hand": "animation.zombie.baby_attack_bare_hand",
         "melee_spear_use": "animation.zombie.melee_spear_use",
         "melee_spear_hold": "animation.zombie.melee_spear_hold",
         "melee_spear_controller": "controller.animation.humanoid.melee_spear"
 
       },
-      "render_controllers": [ "controller.render.zombie_pigman" ],
+      "render_controllers": [ "controller.render.zombie_pigman.v2" ],
       "enable_attachables": true
     }
   }

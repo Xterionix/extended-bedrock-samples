@@ -1,0 +1,28 @@
+{
+  "format_version": "1.8.0",
+  "minecraft:attachable": {
+    "description": {
+      "identifier": "minecraft:iron_leggings",
+      "materials": {
+        "default": "armor",
+        "enchanted": "armor_enchanted"
+      },
+      "textures": {
+        "default": "textures/models/armor/iron_2",
+        "enchanted": "textures/misc/enchanted_actor_glint",
+        "baby": "textures/models/armor/iron_baby"
+      },
+      "geometry": {
+        "default": "geometry.humanoid.armor.leggings",
+        "baby": "geometry.humanoid.baby.armor.leggings"
+      },
+      "scripts": {
+        "parent_setup": "variable.leg_layer_visible = 0.0;",
+        "pre_animation": [
+          "variable.use_baby_geo = query.is_baby;"
+        ]
+      },
+      "render_controllers": [ "controller.render.armor.v2" ]
+    }
+  }
+}
