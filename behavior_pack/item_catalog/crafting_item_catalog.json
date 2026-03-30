@@ -1,5 +1,5 @@
 {
-  "format_version": "1.21.110",
+  "format_version": "1.26.10",
   "minecraft:crafting_items_catalog": {
     "categories": [
       {
@@ -936,6 +936,7 @@
               "minecraft:crimson_roots",
               "minecraft:warped_roots",
               "minecraft:dandelion",
+              "minecraft:golden_dandelion",
               "minecraft:poppy",
               "minecraft:blue_orchid",
               "minecraft:allium",

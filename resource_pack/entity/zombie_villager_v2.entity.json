@@ -9,6 +9,7 @@
       },
       "textures": {
         "default": "textures/entity/zombie_villager2/zombie-villager",
+        "baby_default": "textures/entity/zombie_villager2/zombie-villager_baby",
         // Biome Layer
         "desert": "textures/entity/zombie_villager2/biomes/biome-desert-zombie",
         "jungle": "textures/entity/zombie_villager2/biomes/biome-jungle-zombie",
@@ -17,6 +18,13 @@
         "snow": "textures/entity/zombie_villager2/biomes/biome-snow-zombie",
         "swamp": "textures/entity/zombie_villager2/biomes/biome-swamp-zombie",
         "taiga": "textures/entity/zombie_villager2/biomes/biome-taiga-zombie",
+        "baby_desert": "textures/entity/zombie_villager2/biomes/biome_desert_baby",
+        "baby_jungle": "textures/entity/zombie_villager2/biomes/biome_jungle_baby",
+        "baby_plains": "textures/entity/zombie_villager2/biomes/biome_plains_baby",
+        "baby_savanna": "textures/entity/zombie_villager2/biomes/biome_savanna_baby",
+        "baby_snow": "textures/entity/zombie_villager2/biomes/biome_snow_baby",
+        "baby_swamp": "textures/entity/zombie_villager2/biomes/biome_swamp_baby",
+        "baby_taiga": "textures/entity/zombie_villager2/biomes/biome_taiga_baby",
         // Profession Layer
         "armorer": "textures/entity/zombie_villager2/professions/armorer",
         "butcher": "textures/entity/zombie_villager2/professions/butcher",
@@ -35,27 +43,32 @@
         "unskilled": "textures/entity/zombie_villager2/professions/unskilled"
       },
       "geometry": {
-        "default": "geometry.zombie.villager_v2"
+        "default": "geometry.zombie.villager_v2",
+        "baby": "geometry.villagerzombie.baby"
       },
       "spawn_egg": {
         "texture": "spawn_egg_zombie_villager"
       },
       "scripts": {
+        "scale": "query.is_baby ? 2.0 : 1.0",
         "variables": {
           "variable.item_use_normalized": "public",
-          "variable.tp_melee_spear_use_attachable_rotation_z": "public"
+          "variable.tp_melee_spear_use_attachable_rotation_z": "public",
+          "variable.use_dedicated_baby_armor": "public"
         },
         "initialize": [
           "v.tp_melee_spear_base_arm_rotation_x = -30.0;"
         ],
         "pre_animation": [
+          // Baby Armor for all mobs with a separate baby geo
+          "variable.use_dedicated_baby_armor = true;",
           // Profession
           "variable.num_professions = 15;",
           "variable.profession_index = ((query.variant < variable.num_professions) ? query.variant : 0);",
           // Body
           "variable.tcos0 = (Math.cos(query.modified_distance_moved * 38.17) * query.modified_move_speed / variable.gliding_speed_value) * 57.3;",
           // Riding
-          "variable.riding_y_offset_baby_scaling = query.is_baby ? -3.5 : 0.0;",
+          "variable.riding_y_offset_baby_scaling = 0.0;",
           "variable.riding_y_offset_with_respect_to_player = 1.0;",
           "variable.riding_y_offset_on_vehicle_where_other_entites_can_stand = query.is_riding_any_entity_of_type('minecraft:minecart', 'minecraft:boat', 'minecraft:chest_boat') ? -3.0 : 0.0;",
           "variable.unscaled_riding_y_offset = variable.riding_y_offset_with_respect_to_player + variable.riding_y_offset_on_vehicle_where_other_entites_can_stand;",
@@ -94,7 +107,6 @@
         ],
         "animate": [
           "humanoid_base_pose_controller",
-          "humanoid_big_head_controller",
           "look_at_target_controller",
           "move_controller",
           "riding_controller",
@@ -116,8 +128,6 @@
       "animations": {
         "humanoid_base_pose": "animation.humanoid.base_pose",
         "humanoid_base_pose_controller": "controller.animation.humanoid.base_pose",
-        "humanoid_big_head": "animation.humanoid.big_head",
-        "humanoid_big_head_controller": "controller.animation.humanoid.baby_big_head",
         "look_at_target_default": "animation.humanoid.look_at_target.default",
         "look_at_target_gliding": "animation.humanoid.look_at_target.gliding",
         "look_at_target_swimming": "animation.humanoid.look_at_target.swimming",
@@ -148,6 +158,7 @@
         "use_item_progress_controller": "controller.animation.humanoid.use_item_progress",
         "zombie_attack_bare_hand": "animation.zombie.attack_bare_hand",
         "zombie_attack_bare_hand_controller": "controller.animation.zombie.attack_bare_hand",
+        "baby_zombie_attack_bare_hand": "animation.zombie.baby_attack_bare_hand",
         "swimming": "animation.zombie.swimming",
         "swimming_controller": "controller.animation.zombie.swimming",
         "melee_spear_use": "animation.zombie.melee_spear_use",
@@ -155,8 +166,8 @@
         "melee_spear_controller": "controller.animation.humanoid.melee_spear"
       },
       "render_controllers": [
-        "controller.render.zombie_villager_v2_base",
-        "controller.render.zombie_villager_v2_masked"
+        "controller.render.zombie_villager_v3_base",
+        "controller.render.zombie_villager_v3_masked"
       ],
       "enable_attachables": true
     }

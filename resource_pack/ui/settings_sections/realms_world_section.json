@@ -97,24 +97,6 @@
     ]
   },
 
-  "manage_feed_button@settings_common.action_button": {
-    "ignored": "$is_realm_slot",
-    "anchor_from": "left_middle",
-    "anchor_to": "left_middle",
-    "$button_text": "feed.manage_feed",
-    "$pressed_button_name": "menu_manage_feed",
-    "bindings": [
-      {
-        "binding_name": "#manage_feed_button_enabled",
-        "binding_name_override": "#enabled"
-      },
-      {
-        "binding_name": "#manage_feed_button_visible",
-        "binding_name_override": "#visible"
-      }
-    ]
-  },
-
   "club_info_label@settings_common.option_info_label": {
     "ignored": "$is_realm_slot",
     "$container_text_binding_name": "#club_infotext",
@@ -154,65 +136,6 @@
   "panel_content": {
     "type": "stack_panel",
     "controls": [
-      {
-        "new_edit_world_opt_in_panel": {
-          "ignored": "$realm_no_world_edit",
-          "type": "stack_panel",
-          "orientation": "vertical",
-          "size": [ "100%", "100%c + 4px" ],
-          "bindings": [
-            {
-              "binding_name": "#show_new_edit_realm_world_opt_in",
-              "binding_name_override": "#visible"
-            }
-          ],
-          "controls": [
-            {
-              "panel_title@settings_common.option_group_label": {
-                "$text": "options.newUiEditWorld.title"
-              }
-            },
-            {
-              "panel_text@settings_common.option_group_label": {
-                "$text": "options.newUiEditWorld.info"
-              }
-            },
-            {
-              "opt_in_button@settings_common.action_button": {
-                "size": [ "100%", 30 ],
-                "$button_text": "options.newUiEditWorld.initiate",
-                "$pressed_button_name": "switch_to_new_edit_realm_world",
-                "$focus_override_right": "FOCUS_OVERRIDE_STOP"
-              }
-            }
-          ]
-        }
-      },
-      {
-        "new_edit_world_opt_in_divider": {
-          "ignored": "$realm_no_world_edit",
-          "type": "panel",
-          "size": [ "100%", "100%c + 14px" ],
-          "bindings": [
-            {
-              "binding_name": "#show_new_edit_realm_world_opt_in",
-              "binding_name_override": "#visible"
-            }
-          ],
-          "controls": [
-            {
-              "section_divider": {
-                "type": "image",
-                "size": [ "100% - 30px", 1 ],
-                "anchor_from": "center",
-                "anchor_to": "center",
-                "layer": 3,
-                "texture": "textures/ui/list_item_divider_line_light"
-              }
-            }
-          ]
-        }
-      },
       {
         "option_info_label@settings_common.option_info_label": {
           "$container_text_binding_name": "#achievement_warning_text",
@@ -585,8 +508,7 @@
           "size": [ "100%", 16 ]
         }
       },
-      { "club_info_label@realms_world_section.club_info_label": {} },
-      { "manage_feed_button@realms_world_section.manage_feed_button": {} }
+      { "club_info_label@realms_world_section.club_info_label": {} }
     ]
   }
 }

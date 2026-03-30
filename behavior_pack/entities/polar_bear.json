@@ -1,5 +1,5 @@
 {
-  "format_version": "1.26.0",
+  "format_version": "1.26.10",
   "minecraft:entity": {
     "description": {
       "identifier": "minecraft:polar_bear",
@@ -10,13 +10,14 @@
 
     "component_groups": {
       "minecraft:baby": {
-        "minecraft:is_baby": {
-        },
+        "minecraft:is_baby": {},
         "minecraft:scale": {
           "value": 0.5
         },
         "minecraft:ageable": {
           "duration": 1200,
+          "pause_growth_items": [ "golden_dandelion" ],
+          "reset_growth_items": [ "golden_dandelion" ],
           "grow_up": {
             "event": "minecraft:ageable_grow_up",
             "target": "self"
@@ -32,6 +33,19 @@
         "minecraft:on_target_acquired": {
           "event": "minecraft:on_scared",
           "target": "self"
+        },
+        "minecraft:behavior.nearest_attackable_target": {
+          "priority": 4,
+          "entity_types": [
+            {
+              "filters": {
+                "test": "is_family",
+                "subject": "other",
+                "value": "player"
+              },
+              "max_dist": 16
+            }
+          ]
         }
       },
 
@@ -54,8 +68,7 @@
         "minecraft:loot": {
           "table": "loot_tables/entities/polar_bear.json"
         },
-        "minecraft:leashable_to": {
-        }
+        "minecraft:leashable_to": {}
       },
 
       "minecraft:adult_wild": {
@@ -194,9 +207,9 @@
       },
       "minecraft:physics": {
       },
-      "minecraft:pushable": {
-        "is_pushable": true,
-        "is_pushable_by_piston": true
+      "minecraft:pushable_by_entity": {
+      },
+      "minecraft:pushable_by_block": {
       },
       "minecraft:leashable": {
       },
