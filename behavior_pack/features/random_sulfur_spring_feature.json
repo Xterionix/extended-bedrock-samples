@@ -1,0 +1,20 @@
+{
+  "format_version": "1.26.10",
+  "minecraft:weighted_random_feature": {
+    "description": {
+      "identifier": "minecraft:random_sulfur_spring_feature"
+    },
+    "features": [
+      [ "minecraft:sulfur_spring_small_1_feature", 5000 ],
+      [ "minecraft:sulfur_spring_small_2_feature", 5000 ],
+      [ "minecraft:sulfur_spring_small_3_feature", 5000 ],
+      [ "minecraft:sulfur_spring_small_4_feature", 5000 ],
+      [ "minecraft:sulfur_spring_medium_1_feature", 3000 ],
+      [ "minecraft:sulfur_spring_medium_2_feature", 3000 ],
+      [ "minecraft:sulfur_spring_medium_3_feature", 3000 ],
+      [ "minecraft:sulfur_spring_large_1_feature", 1000 ],
+      [ "minecraft:sulfur_spring_large_2_feature", 1000 ],
+      [ "minecraft:sulfur_spring_extra_large_1_feature", 500 ]
+    ]
+  }
+}
