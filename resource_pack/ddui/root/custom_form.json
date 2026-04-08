@@ -11,7 +11,9 @@
       "markup": [
         {
           "component": "Context",
-          "attribs": { "data": { "$path": "$.minecraft.custom_form_data_{instanceId}" } },
+          "attribs": {
+            "data": { "$path": "$.minecraft.custom_form_data_{instanceId}" }
+          },
           "children": [
             {
               "component": "Panel",
@@ -20,7 +22,7 @@
                 {
                   "component": "Panel.Text",
                   "attribs": {
-                    "font": "Minecraft Ten",
+                    "type": "header",
                     "text": { "$relativePath": "$.title.getString" }
                   }
                 },
@@ -319,7 +321,8 @@
                                 {
                                   "component": "Panel.Text",
                                   "attribs": {
-                                    "font": "Minecraft Ten",
+                                    "type": "header",
+                                    "multiline": true,
                                     "text": {
                                       "$relativePath": "$.text.getString"
                                     }
@@ -350,7 +353,8 @@
                                   "attribs": {
                                     "text": {
                                       "$relativePath": "$.text.getString"
-                                    }
+                                    },
+                                    "multiline": true
                                   }
                                 }
                               ]

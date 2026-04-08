@@ -24,6 +24,9 @@
       "minecraft:subsurface_builder": {
         "builder": {
           "type": "minecraft:noise_gradient",
+          "noise_seed_string": "minecraft:sulfur_cave_gradient",
+          "first_octave": -5,
+          "amplitudes": [1.0, 0.0, 1.0],
           "non_replaceable_blocks": [],
           "gradient_blocks": [
             "minecraft:air",
