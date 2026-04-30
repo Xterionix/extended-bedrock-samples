@@ -7,7 +7,7 @@
     "early_out": "first_failure",
     "features": [
       "minecraft:sulfur_pool",
-      "minecraft:potent_sulfur_block_search_feature"
+      "minecraft:potent_sulfur_search_feature"
     ]
   }
 }

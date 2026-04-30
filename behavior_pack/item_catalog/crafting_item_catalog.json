@@ -1,5 +1,5 @@
 {
-  "format_version": "1.26.10",
+  "format_version": "1.26.30",
   "minecraft:crafting_items_catalog": {
     "categories": [
       {
@@ -57,7 +57,13 @@
               "minecraft:tuff_brick_wall",
               "minecraft:polished_tuff_wall",
               "minecraft:mud_brick_wall",
-              "minecraft:resin_brick_wall"
+              "minecraft:resin_brick_wall",
+              "minecraft:cinnabar_wall",
+              "minecraft:polished_cinnabar_wall",
+              "minecraft:cinnabar_brick_wall",
+              "minecraft:sulfur_wall",
+              "minecraft:polished_sulfur_wall",
+              "minecraft:sulfur_brick_wall"
             ]
           },
           {
@@ -164,7 +170,13 @@
               "minecraft:waxed_exposed_cut_copper_stairs",
               "minecraft:waxed_weathered_cut_copper_stairs",
               "minecraft:waxed_oxidized_cut_copper_stairs",
-              "minecraft:resin_brick_stairs"
+              "minecraft:resin_brick_stairs",
+              "minecraft:cinnabar_stairs",
+              "minecraft:polished_cinnabar_stairs",
+              "minecraft:cinnabar_brick_stairs",
+              "minecraft:sulfur_stairs",
+              "minecraft:polished_sulfur_stairs",
+              "minecraft:sulfur_brick_stairs"
             ]
           },
           {
@@ -362,7 +374,13 @@
               "minecraft:waxed_exposed_cut_copper_slab",
               "minecraft:waxed_weathered_cut_copper_slab",
               "minecraft:waxed_oxidized_cut_copper_slab",
-              "minecraft:resin_brick_slab"
+              "minecraft:resin_brick_slab",
+              "minecraft:cinnabar_slab",
+              "minecraft:polished_cinnabar_slab",
+              "minecraft:cinnabar_brick_slab",
+              "minecraft:sulfur_slab",
+              "minecraft:polished_sulfur_slab",
+              "minecraft:sulfur_brick_slab"
             ]
           },
           {
@@ -388,7 +406,11 @@
               "minecraft:cracked_deepslate_bricks",
               "minecraft:chiseled_deepslate",
               "minecraft:chiseled_tuff",
-              "minecraft:chiseled_tuff_bricks"
+              "minecraft:chiseled_tuff_bricks",
+              "minecraft:cinnabar_bricks",
+              "minecraft:chiseled_cinnabar",
+              "minecraft:sulfur_bricks",
+              "minecraft:chiseled_sulfur"
             ]
           },
           {
@@ -726,7 +748,12 @@
               "minecraft:polished_deepslate",
               "minecraft:polished_tuff",
               "minecraft:polished_basalt",
-              "minecraft:smooth_basalt"
+              "minecraft:smooth_basalt",
+              "minecraft:cinnabar",
+              "minecraft:polished_cinnabar",
+              "minecraft:sulfur",
+              "minecraft:polished_sulfur",
+              "minecraft:potent_sulfur"
             ]
           },
           {
@@ -1030,7 +1057,8 @@
               "minecraft:large_amethyst_bud",
               "minecraft:medium_amethyst_bud",
               "minecraft:small_amethyst_bud",
-              "minecraft:calcite"
+              "minecraft:calcite",
+              "minecraft:sulfur_spike"
             ]
           },
           {
@@ -1192,6 +1220,7 @@
               "minecraft:phantom_spawn_egg",
               "minecraft:silverfish_spawn_egg",
               "minecraft:slime_spawn_egg",
+              "minecraft:sulfur_cube_spawn_egg",
               "minecraft:warden_spawn_egg",
               "minecraft:witch_spawn_egg",
               // Overworld - Illagers
@@ -2149,7 +2178,8 @@
               "minecraft:pufferfish_bucket",
               "minecraft:powder_snow_bucket",
               "minecraft:axolotl_bucket",
-              "minecraft:tadpole_bucket"
+              "minecraft:tadpole_bucket",
+              "minecraft:sulfur_cube_bucket"
             ]
           },
           {

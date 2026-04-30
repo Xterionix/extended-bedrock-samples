@@ -3359,6 +3359,39 @@
         }
       },
       {
+        "panorama_speed_option_slider@settings_common.option_slider": {
+          "$option_label": "#panorama_speed_slider_label",
+          "$slider_name": "panorama_speed",
+          "$slider_value_binding_name": "#panorama_speed",
+          "$slider_tts_text_value": "#panorama_speed_text_value",
+          "$option_enabled_binding_name": "#panorama_speed_enabled",
+          "$label_bindings": [
+            {
+              "binding_name": "$option_label"
+            }
+          ],
+          "bindings": [
+            {
+              "binding_name": "#screen_animations_visible",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "spacer_9.5": {
+          "ignored": "(not $settings_spatial_pattern_fix_enabled)",
+          "type": "panel",
+          "size": "$spatialPatternsPadding",
+          "bindings": [
+            {
+              "binding_name": "#screen_animations_visible",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      },
+      {
         "hud_opacity_slider@settings_common.option_slider": {
           "$option_label": "#interface_opacity_slider_label",
           "$slider_name": "interface_opacity",
@@ -5692,6 +5725,7 @@
             },
             {
               "toast_notification_duration_info_label_edu_wrapper@common.tts_label_focus_wrapper": {
+                "ignored": "(not $education_edition)",
                 "$tts_label_panel": "general_section.toast_notification_duration_info_edu_label"
               }
             },
@@ -5703,6 +5737,7 @@
             },
             {
               "toast_notification_duration_dropdown@settings_common.option_dropdown": {
+                "$disable_label_tts_focus_border": true,
                 "$dropdown_content": "general_section.toast_notification_duration_dropdown_content",
                 "$dropdown_area": "content_area",
                 "$dropdown_name": "toast_notification_duration_dropdown",
@@ -5738,6 +5773,7 @@
             },
             {
               "chat_message_duration_dropdown@settings_common.option_dropdown": {
+                "$disable_label_tts_focus_border": true,
                 "$dropdown_content": "general_section.chat_message_duration_dropdown_content",
                 "$dropdown_area": "content_area",
                 "$dropdown_name": "chat_message_duration_dropdown",
@@ -6187,15 +6223,7 @@
     "$toggle_binding_type": "collection",
     "$toggle_name": "languages",
     "$toggle_grid_collection_name": "languages",
-    "$option_enabled_binding_name": "",
-    "bindings": [
-      {
-        "binding_name": "#default_focus_precedence",
-        "binding_type": "collection",
-        "binding_condition": "visible",
-        "binding_collection_name": "languages"
-      }
-    ]
+    "$option_enabled_binding_name": ""
   },
 
   "language_section": {
@@ -8055,14 +8083,6 @@
                                 "binding_name_override": "#visible"
                               }
                             ]
-                          }
-                        },
-                        {
-                          "discovery_overrides_do_not_save_label": {
-                            "type": "label",
-                            "text": "Overridden endpoints do not save or persist on game restart!",
-                            "size": [ "100%", "default" ],
-                            "color": "$warning_text_color"
                           }
                         },
                         {

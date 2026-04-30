@@ -1,57 +1,25 @@
 {
-    "resource_pack_name": "vanilla",
-    "texture_name": "atlas.items",
-    "texture_data": {
-        "wood_spear": {
-            "textures": "textures/items/spear/wood_spear"
-        },
-        "stone_spear": {
-            "textures": "textures/items/spear/stone_spear"
-        },
-        "copper_spear": {
-            "textures": "textures/items/spear/copper_spear"
-        },
-        "iron_spear": {
-            "textures": "textures/items/spear/iron_spear"
-        },
-        "gold_spear": {
-            "textures": "textures/items/spear/gold_spear"
-        },
-        "diamond_spear": {
-            "textures": "textures/items/spear/diamond_spear"
-        },
-        "netherite_spear": {
-            "textures": "textures/items/spear/netherite_spear"
-        },
-        "spawn_egg_nautilus": {
-            "textures": "textures/items/spawn_eggs/spawn_egg_nautilus"
-        },
-        "spawn_egg_zombie_nautilus": {
-            "textures": "textures/items/spawn_eggs/spawn_egg_zombie_nautilus"
-        },
-        "copper_nautilus_armor": {
-            "textures": "textures/items/nautilus_armor/copper_nautilus_armor"
-        },
-        "iron_nautilus_armor": {
-            "textures": "textures/items/nautilus_armor/iron_nautilus_armor"
-        },
-        "gold_nautilus_armor": {
-            "textures": "textures/items/nautilus_armor/gold_nautilus_armor"
-        },
-        "diamond_nautilus_armor": {
-            "textures": "textures/items/nautilus_armor/diamond_nautilus_armor"
-        },
-        "netherite_nautilus_armor": {
-            "textures": "textures/items/nautilus_armor/netherite_nautilus_armor"
-        },
-        "spawn_egg_parched": {
-            "textures": "textures/items/spawn_eggs/spawn_egg_parched"
-        },
-        "spawn_egg_camel_husk": {
-            "textures": "textures/items/spawn_eggs/spawn_egg_camel_husk"
-        },
-        "netherite_horse_armor": {
-            "textures": "textures/items/netherite_horse_armor"
-        }
+  "resource_pack_name": "vanilla",
+  "texture_name": "atlas.items",
+  "texture_data": {
+    "sulfur_cube_spawn_egg": {
+      "textures": "textures/items/spawn_eggs/sulfur_cube_spawn_egg"
+    },
+    "bucket": {
+      "textures": [
+        "textures/items/bucket_empty",
+        "textures/items/bucket_milk",
+        "textures/items/bucket_water",
+        "textures/items/bucket_lava",
+        "textures/items/bucket_cod",
+        "textures/items/bucket_salmon",
+        "textures/items/bucket_tropical",
+        "textures/items/bucket_pufferfish",
+        "textures/items/bucket_powder_snow",
+        "textures/items/bucket_axolotl",
+        "textures/items/bucket_tadpole",
+        "textures/items/bucket_sulfur_cube"
+      ]
     }
+  }
 }
