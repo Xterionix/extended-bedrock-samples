@@ -1,0 +1,13 @@
+{
+  "format_version": "1.21.40",
+  "minecraft:aggregate_feature": {
+    "description": {
+      "identifier": "minecraft:sulfur_pool_with_potent_sulfur"
+    },
+    "early_out": "first_failure",
+    "features": [
+      "minecraft:sulfur_pool",
+      "minecraft:potent_sulfur_block_search_feature"
+    ]
+  }
+}

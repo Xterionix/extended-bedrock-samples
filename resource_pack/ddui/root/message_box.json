@@ -11,7 +11,9 @@
       "markup": [
         {
           "component": "Context",
-          "attribs": { "data": { "$path": "$.minecraft.message_box_data" } },
+          "attribs": {
+            "data": { "$path": "$.minecraft.message_box_data_{instanceId}" }
+          },
           "children": [
             {
               "component": "Panel",
@@ -21,7 +23,7 @@
                   "component": "Panel.Text",
                   "attribs": {
                     "text": { "$relativePath": "$.title.getString" },
-                    "font": "Minecraft Ten"
+                    "type": "header"
                   }
                 },
                 { "component": "Panel.Spacing" },
@@ -32,7 +34,8 @@
                     {
                       "component": "Panel.Text",
                       "attribs": {
-                        "text": { "$relativePath": "$.body.getString" }
+                        "text": { "$relativePath": "$.body.getString" },
+                        "multiline": true
                       }
                     }
                   ]
@@ -43,7 +46,9 @@
                 {
                   "component": "Form.Button",
                   "attribs": {
-                    "onClick": { "$relativePath": "$.button1.onClick.action" },
+                    "onClick": {
+                      "$relativePath": "$.button1.onClick.closeAction"
+                    },
                     "label": { "$relativePath": "$.button1.label.getString" },
                     "tooltip": {
                       "$relativePath": "$.button1.tooltip.getString"
@@ -57,7 +62,9 @@
                 {
                   "component": "Form.Button",
                   "attribs": {
-                    "onClick": { "$relativePath": "$.button2.onClick.action" },
+                    "onClick": {
+                      "$relativePath": "$.button2.onClick.closeAction"
+                    },
                     "label": { "$relativePath": "$.button2.label.getString" },
                     "tooltip": {
                       "$relativePath": "$.button2.tooltip.getString"

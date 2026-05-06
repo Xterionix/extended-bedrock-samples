@@ -1,0 +1,15 @@
+{
+  "format_version": "1.26.10",
+  "minecraft:structure_template_feature": {
+    "description": {
+      "identifier": "minecraft:sulfur_spring_small_4_feature"
+    },
+    "structure_name": "sulfur_spring:sulfur_spring_small_4",
+    "adjustment_radius": 0,
+    "rotate_around_center": true,
+    "constraints": {
+      "grounded": {},
+      "unburied": {}
+    }
+  }
+}

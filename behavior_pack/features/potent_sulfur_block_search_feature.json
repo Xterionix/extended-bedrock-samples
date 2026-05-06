@@ -1,0 +1,15 @@
+{
+  "format_version": "1.21.40",
+  "minecraft:search_feature": {
+    "description": {
+      "identifier": "minecraft:potent_sulfur_block_search_feature"
+    }, 
+    "places_feature": "minecraft:potent_sulfur_block_feature",
+    "search_volume": {
+      "min": [ -8, -8, -8 ],
+      "max": [ 8, 0, 8 ]
+    },
+    "search_axis": "-y",
+    "required_successes": 1
+  }
+}

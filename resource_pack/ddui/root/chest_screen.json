@@ -18,7 +18,9 @@
               "children": [
                 {
                   "component": "Panel",
-                  "attribs": { "colorMode": "chest" },
+                  "attribs": {
+                    "colorMode": { "$relativePath": "$.colorMode" }
+                  },
                   "children": [
                     { "component": "Panel.Decoration" },
                     {

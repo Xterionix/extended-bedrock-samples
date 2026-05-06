@@ -1,0 +1,15 @@
+{
+  "format_version": "1.26.10",
+  "minecraft:scatter_feature": {
+    "description": {
+      "identifier": "minecraft:scatter_random_sulfur_spring_feature"
+    },
+    "places_feature": "minecraft:random_sulfur_spring_feature",
+    "distribution": {
+      "iterations": 1,
+      "x": 0,
+      "y": -2,
+      "z": 0
+    }
+  }
+}

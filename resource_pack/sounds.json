@@ -1,662 +1,4 @@
 {
-  "block_sounds" : {
-    "sand": {
-    "events": {
-      "place": {
-        "sound": "place.sand",
-        "volume": 1.0,
-        "pitch": [
-          0.8,
-          1.0
-        ]
-      }
-    }
-  },
-  "glow_lichen": {
-    "events": {
-      "place": {
-        "sound": "place.grass",
-        "volume": 0.8,
-        "pitch": [
-          0.8,
-          1.0
-        ]
-      }
-    }
-  },
-  "mob_spawner": {
-    "events": {
-      "place": {
-        "sound": "block.mob_spawner.place",
-        "pitch": 0.8
-      }
-    }
-  },
-  "copper_grate": {
-    "events": {
-      "place": {
-        "sound": "place.copper_grate",
-        "volume": 1.0,
-        "pitch": 0.8
-      }
-    }
-  },
-  "copper": {
-    "events": {
-      "place": {
-        "sound": "place.copper",
-        "volume": 1.0,
-        "pitch": [
-          0.8,
-          1.0
-        ]
-      }
-    }
-  },
-  "heavy_core": {
-    "events": {
-      "place": {
-        "sound": "place.heavy_core",
-        "volume": 1.0,
-        "pitch": 0.8
-      }
-    }
-  },
-  "web": {
-    "events": {
-      "place": {
-        "sound": "place.web"
-      }
-    }
-  },
-  "normal": {
-    "events": {
-      "place": {
-        "sound": "place.stone",
-        "volume": 1.0,
-        "pitch": [
-          0.8,
-          1.0
-        ]
-      }
-    }
-  },
-  "cherry_wood_hanging_sign": {
-    "events": {
-      "place": {
-        "sound": "place.cherry_wood_hanging_sign",
-        "volume": 1.0,
-        "pitch": [
-          0.8,
-          1.0
-        ]
-      }
-    }
-  },
-  "decorated_pot": {
-    "events": {
-      "place": {
-        "sound": "place.decorated_pot",
-        "volume": 1.0,
-        "pitch": 1.0
-      }
-    }
-  },
-  "hanging_sign": {
-    "events": {
-      "place": {
-        "sound": "place.hanging_sign",
-        "volume": 1.0,
-        "pitch": [
-          0.8,
-          1.0
-        ]
-      }
-    }
-  },
-  "bamboo_wood_hanging_sign": {
-    "events": {
-      "place": {
-        "sound": "place.bamboo_wood_hanging_sign",
-        "volume": 1.0,
-        "pitch": [
-          0.8,
-          1.0
-        ]
-      }
-    }
-  },
-  "nether_wood_hanging_sign": {
-    "events": {
-      "place": {
-        "sound": "place.nether_wood_hanging_sign",
-        "volume": 1.0,
-        "pitch": [
-          0.8,
-          1.0
-        ]
-      }
-    }
-  },
-  "lever": {
-    "events": {
-      "place": {
-        "sound": "place.wood",
-        "volume": 1.0,
-        "pitch": [
-          0.8,
-          0.8
-        ]
-      }
-    }
-  },
-  "stone": {
-    "events": {
-      "place": {
-        "sound": "place.stone",
-        "volume": 1.0,
-        "pitch": [
-          0.8,
-          1.0
-        ]
-      }
-    }
-  },
-  "metal": {
-    "events": {
-      "place": {
-        "sound": "place.stone",
-        "volume": 1.0,
-        "pitch": [
-          1.2,
-          1.25
-        ]
-      }
-    }
-  },
-  "wood": {
-    "events": {
-      "place": {
-        "sound": "place.wood",
-        "volume": 1.0,
-        "pitch": [
-          0.8,
-          0.8
-        ]
-      }
-    }
-  },
-  "froglight": {
-    "events": {
-      "place": {
-        "sound": "place.froglight",
-        "volume": 1.0
-      }
-    }
-  },
-  "frog_spawn": {
-    "events": {
-      "place": {
-        "sound": "place.frog_spawn",
-        "volume": 0.2,
-        "pitch": 1.5
-      }
-    }
-  },
-  "sculk": {
-    "events": {
-      "place": {
-        "sound": "place.sculk",
-        "volume": 1.0,
-        "pitch": [
-          0.8,
-          1.0
-        ]
-      }
-    }
-  },
-  "sculk_catalyst": {
-    "events": {
-      "place": {
-        "sound": "place.sculk_catalyst",
-        "volume": 1.0,
-        "pitch": [
-          0.8,
-          1.0
-        ]
-      }
-    }
-  },
-  "sculk_vein": {
-    "events": {
-      "place": {
-        "sound": "place.sculk_vein",
-        "volume": 1.0,
-        "pitch": [
-          0.8,
-          1.0
-        ]
-      }
-    }
-  },
-  "sculk_shrieker": {
-    "events": {
-      "place": {
-        "sound": "place.sculk_shrieker",
-        "volume": 1.0,
-        "pitch": [
-          0.8,
-          1.0
-        ]
-      }
-    }
-  },
-  "powder_snow": {
-    "events": {
-      "place": {
-        "sound": "place.powder_snow",
-        "volume": 1.0,
-        "pitch": [
-          0.8,
-          1.0
-        ]
-      }
-    }
-  },
-  "azalea_leaves": {
-    "events": {
-      "place": {
-        "sound": "place.azalea_leaves",
-        "volume": 1.0,
-        "pitch": [
-          0.8,
-          1.0
-        ]
-      }
-    }
-  },
-  "gravel": {
-    "events": {
-      "place": {
-        "sound": "place.gravel",
-        "volume": 1.0,
-        "pitch": [
-          0.8,
-          1.0
-        ]
-      }
-    }
-  },
-  "grass": {
-    "events": {
-      "place": {
-        "sound": "place.grass",
-        "volume": 0.8,
-        "pitch": [
-          0.8,
-          1.0
-        ]
-      }
-    }
-  },
-  "cloth": {
-    "events": {
-      "place": {
-        "sound": "place.cloth",
-        "volume": 1.0,
-        "pitch": [
-          0.8,
-          1.0
-        ]
-      }
-    }
-  },
-  "glass": {
-    "events": {
-      "place": {
-        "sound": "place.stone",
-        "volume": 1.0,
-        "pitch": [
-          0.8,
-          1.0
-        ]
-      }
-    }
-  },
-  "snow": {
-    "events": {
-      "place": {
-        "sound": "place.snow",
-        "volume": 1.0,
-        "pitch": [
-          0.8,
-          1.0
-        ]
-      }
-    }
-  },
-  "ladder": {
-    "events": {
-      "place": {
-        "sound": "place.wood",
-        "volume": 1.0,
-        "pitch": [
-          0.8,
-          1.0
-        ]
-      }
-    }
-  },
-  "slime": {
-    "events": {
-      "place": {
-        "sound": "place.slime.big",
-        "volume": 1.0,
-        "pitch": [
-          0.8,
-          1.0
-        ]
-      }
-    }
-  },
-  "turtle_egg": {
-    "events": {
-      "place": {
-        "sound": "place.stone",
-        "volume": 1.0,
-        "pitch": [
-          0.8,
-          1.0
-        ]
-      }
-    }
-  },
-  "soul_sand": {
-    "events": {
-      "place": {
-        "sound": "place.soul_sand",
-        "volume": 1.0,
-        "pitch": [
-          0.8,
-          1.0
-        ]
-      }
-    }
-  },
-  "soul_soil": {
-    "events": {
-      "place": {
-        "sound": "place.soul_soil",
-        "volume": 1.0,
-        "pitch": [
-          0.8,
-          1.0
-        ]
-      }
-    }
-  },
-  "nylium": {
-    "events": {
-      "place": {
-        "sound": "place.nylium",
-        "volume": 1.0,
-        "pitch": [
-          0.8,
-          0.8
-        ]
-      }
-    }
-  },
-  "roots": {
-    "events": {
-      "place": {
-        "sound": "place.roots",
-        "volume": 1.0,
-        "pitch": [
-          0.8,
-          1.0
-        ]
-      }
-    }
-  },
-  "fungus": {
-    "events": {
-      "place": {
-        "sound": "place.fungus",
-        "volume": 1.0,
-        "pitch": [
-          0.8,
-          1.0
-        ]
-      }
-    }
-  },
-  "stem": {
-    "events": {
-      "place": {
-        "sound": "place.stem",
-        "volume": 1.0,
-        "pitch": [
-          0.8,
-          1.0
-        ]
-      }
-    }
-  },
-  "shroomlight": {
-    "events": {
-      "place": {
-        "sound": "place.shroomlight",
-        "volume": 1.0,
-        "pitch": [
-          0.8,
-          1.0
-        ]
-      }
-    }
-  },
-  "basalt": {
-    "events": {
-      "place": {
-        "sound": "place.basalt",
-        "volume": 1.0,
-        "pitch": [
-          0.8,
-          1.0
-        ]
-      }
-    }
-  },
-  "bone_block": {
-    "events": {
-      "place": {
-        "sound": "place.bone_block",
-        "volume": 1.0,
-        "pitch": [
-          0.8,
-          1.0
-        ]
-      }
-    }
-  },
-  "nether_brick": {
-    "events": {
-      "place": {
-        "sound": "place.nether_brick",
-        "volume": 1.0,
-        "pitch": [
-          0.8,
-          1.0
-        ]
-      }
-    }
-  },
-  "netherrack": {
-    "events": {
-      "place": {
-        "sound": "place.netherrack",
-        "volume": 1.0,
-        "pitch": [
-          0.8,
-          1.0
-        ]
-      }
-    }
-  },
-  "nether_sprouts": {
-    "events": {
-      "place": {
-        "sound": "place.nether_sprouts",
-        "volume": 1.0,
-        "pitch": [
-          1.2,
-          1.25
-        ]
-      }
-    }
-  },
-  "nether_wart": {
-    "events": {
-      "place": {
-        "sound": "place.nether_wart",
-        "volume": 0.7,
-        "pitch": [
-          0.8,
-          1.0
-        ]
-      }
-    }
-  },
-  "nether_gold_ore": {
-    "events": {
-      "place": {
-        "sound": "place.nether_gold_ore",
-        "volume": 1.0,
-        "pitch": [
-          0.8,
-          1.0
-        ]
-      }
-    }
-  },
-  "ancient_debris": {
-    "events": {
-      "place": {
-        "sound": "place.ancient_debris",
-        "volume": 1.0,
-        "pitch": [
-          0.8,
-          1.0
-        ]
-      }
-    }
-  },
-  "honey_block": {
-    "events": {
-      "place": {
-        "sound": "place.honey_block",
-        "volume": 1.0,
-        "pitch": [
-          0.8,
-          1.0
-        ]
-      }
-    }
-  },
-  "coral": {
-    "events": {
-      "place": {
-        "sound": "place.coral",
-        "volume": 1.0,
-        "pitch": [
-          0.8,
-          1.0
-        ]
-      }
-    }
-  },
-  "netherite": {
-    "events": {
-      "place": {
-        "sound": "place.netherite",
-        "volume": 1.0,
-        "pitch": [
-          0.8,
-          1.0
-        ]
-      }
-    }
-  },
-  "lodestone": {
-    "events": {
-      "place": {
-        "sound": "place.lodestone",
-        "volume": 1.0,
-        "pitch": [
-          0.8,
-          1.0
-        ]
-      }
-    }
-  },
-  "chain": {
-    "events": {
-      "place": {
-        "sound": "place.chain",
-        "volume": 1.0,
-        "pitch": [
-          0.8,
-          1.0
-        ]
-      }
-    }
-  },
-  "vines": {
-    "events": {
-      "place": {
-        "sound": "place.vines",
-        "volume": 1.0,
-        "pitch": [
-          0.8,
-          1.0
-        ]
-      }
-    }
-  },
-  "comparator": {
-    "events": {
-      "place": {
-        "sound": "place.wood",
-        "volume": 1.0,
-        "pitch": [
-          0.8,
-          0.8
-        ]
-      }
-    }
-  },
-  "candle": {
-    "events": {
-      "place": {
-        "sound": "place.candle",
-        "volume": 1.0,
-        "pitch": 1.0
-      }
-    }
-  },
-  "cave_vines": {
-    "events": {
-      "place": {
-        "sound": "place.cave_vines",
-        "volume": 1.0,
-        "pitch": [
-          0.8,
-          1.0
-        ]
-      }
-    }
-  }
-  },
   "entity_sounds": {
     "entities": {
       "pig": {
@@ -668,7 +10,8 @@
           "death": "mob.pig.death",
           "step": "mob.pig.step",
           "boost": "mob.pig.boost",
-          "death.to.zombie": "mob.pig.death"
+          "death.to.zombie": "mob.pig.death",
+          "eat": "mob.pig.eat"
         },
         "variants": {
           "key": "query.is_baby ? 'baby' : query.property('minecraft:sound_variant')",
@@ -677,7 +20,16 @@
               "pitch": 1.0,
               "volume": 1.0,
               "events": {
-                "ambient": "mob.baby_pig.ambient",
+                "ambient": {
+                  "sound": "mob.baby_pig.ambient",
+                  "volume": 0.5,
+                  "pitch": 0.5
+                },
+                "ambient.baby": {
+                  "sound": "mob.baby_pig.ambient",
+                  "volume": 0.5,
+                  "pitch": 0.5
+                },
                 "hurt": {
                   "sound": "mob.baby_pig.hurt",
                   "volume": 1.0,
@@ -702,6 +54,11 @@
                   "sound": "mob.baby_pig.death",
                   "volume": 1.0,
                   "pitch": -0.05
+                },
+                "eat": {
+                  "sound": "mob.baby_pig.eat",
+                  "volume": 1.0,
+                  "pitch": 1
                 }
               }
             },
@@ -716,7 +73,8 @@
                   "volume": 0.5,
                   "pitch": 0.9
                 },
-                "step": "mob.pig.step"
+                "step": "mob.pig.step",
+                "eat": "mob.pig.eat"
               }
             },
             "mini": {
@@ -728,7 +86,8 @@
                 "death": "mob.mini_pig.death",
                 "step": "mob.pig.step",
                 "boost": "mob.pig.boost",
-                "death.to.zombie": "mob.mini_pig.death"
+                "death.to.zombie": "mob.mini_pig.death",
+                "eat": "mob.mini_pig.eat"
               }
             },
             "big": {
@@ -740,7 +99,8 @@
                 "death": "mob.big_pig.death",
                 "step": "mob.pig.step",
                 "boost": "mob.pig.boost",
-                "death.to.zombie": "mob.big_pig.death"
+                "death.to.zombie": "mob.big_pig.death",
+                "eat": "mob.big_pig.eat"
               }
             }
           }
@@ -766,7 +126,16 @@
               "pitch": 1.0,
               "volume": 1.0,
               "events": {
-                "ambient": "mob.baby_wolf.bark",
+                "ambient": {
+                  "sound": "mob.baby_wolf.bark",
+                  "volume": 1.0,
+                  "pitch": 0.5
+                },
+                "ambient.baby": {
+                  "sound": "mob.baby_wolf.bark",
+                  "volume": 1.0,
+                  "pitch": 0.5
+                },
                 "hurt": "mob.baby_wolf.hurt",
                 "death": {
                   "sound": "mob.baby_wolf.death",
@@ -823,12 +192,17 @@
                 "ambient.tame": {
                   "sound": "mob.baby_cat.ambient",
                   "volume": 1.0,
-                  "pitch": 0.0
+                  "pitch": 0.5
                 },
                 "ambient": {
                   "sound": "mob.baby_cat.ambient",
                   "volume": 1.0,
-                  "pitch": 0.0
+                  "pitch": 0.5
+                },
+                "ambient.baby": {
+                  "sound": "mob.baby_cat.ambient",
+                  "volume": 1.0,
+                  "pitch": 0.5
                 },
                 "hurt": {
                   "sound": "mob.baby_cat.hurt",
@@ -935,7 +309,12 @@
                 "ambient": {
                   "sound": "mob.baby_horse.ambient",
                   "volume": 1.0,
-                  "pitch": 0.0
+                  "pitch": 0.5
+                },
+                "ambient.baby": {
+                  "sound": "mob.baby_horse.ambient",
+                  "volume": 1.0,
+                  "pitch": 0.5
                 },
                 "angry": {
                   "sound": "mob.baby_horse.angry",
@@ -1050,7 +429,12 @@
                 "ambient": {
                   "sound": "mob.baby_chicken.ambient",
                   "volume": 1.0,
-                  "pitch": 0.0
+                  "pitch": 0.5
+                },
+                "ambient.baby": {
+                  "sound": "mob.baby_chicken.ambient",
+                  "volume": 1.0,
+                  "pitch": 0.5
                 },
                 "hurt": {
                   "sound": "mob.baby_chicken.hurt",
@@ -1106,102 +490,6 @@
             }
           }
         }
-      },
-      "cow": {
-        "volume": 1.0,
-        "pitch": [ 0.8, 1.2 ],
-        "events": {
-          "ambient": "mob.cow.say",
-          "hurt": "mob.cow.hurt",
-          "death": "mob.cow.death",
-          "step": "mob.cow.step"
-        },
-        "variants": {
-          "key": "query.property('minecraft:sound_variant')",
-          "map": {
-            "default": {
-              "pitch": 1.0,
-              "volume": 1.0,
-              "events": {
-                "ambient": {
-                  "sound": "mob.cow.say",
-                  "volume": 1.0
-                },
-                "hurt": {
-                  "sound": "mob.cow.hurt"
-                },
-                "death": {
-                  "sound": "mob.cow.hurt",
-                  "volume": 0.5,
-                  "pitch": 0.9
-                },
-                "step": {
-                  "sound": "mob.cow.step",
-                  "volume": 0.65,
-                  "pitch": [ 0.9, 1.1 ]
-                }
-              }
-            },
-            "moody": {
-              "pitch": 1.0,
-              "volume": 1.0,
-              "events": {
-                "ambient": "mob.moody_cow.say",
-                "hurt": "mob.moody_cow.hurt",
-                "death": "mob.moody_cow.death",
-                "step": {
-                  "sound": "mob.cow.step",
-                  "volume": 0.65,
-                  "pitch": [ 0.9, 1.1 ]
-                }
-              }
-            }
-          }
-        }
-      },
-      "player": {
-        "volume": 1.0,
-        "pitch": [ 0.8, 1.2 ],
-        "events": {
-          "teleport": "entity.player.teleport"
-        }
-      },
-      "fox": {
-        "volume": 1.0,
-        "pitch": [ 0.8, 1.2 ],
-        "events": {
-          "teleport": "entity.fox.teleport"
-        }
-      },
-      "shulker": {
-        "volume": 1.0,
-        "pitch": [ 0.8, 1.2 ],
-        "events": {
-          "teleport": "mob.shulker.teleport"
-        }
-      }
-    }
-  },
-  "individual_event_sounds": {
-    "events": {
-      "armor.equip_elytra": {
-        "sound": "armor.equip_elytra",
-        "volume": 1.0,
-        "pitch": 1.0
-      }
-    }
-  },
-  "individual_event_sounds": {
-    "events": {
-      "pause_growth": {
-        "sound": "mob.pause_growth",
-        "volume": 1.0,
-        "pitch": 1.0
-      },
-      "reset_growth": {
-        "sound": "mob.reset_growth",
-        "volume": 1.0,
-        "pitch": 1.0
       }
     }
   }

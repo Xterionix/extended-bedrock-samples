@@ -11,7 +11,9 @@
       "markup": [
         {
           "component": "Context",
-          "attribs": { "data": { "$path": "$.minecraft.custom_form_data" } },
+          "attribs": {
+            "data": { "$path": "$.minecraft.custom_form_data_{instanceId}" }
+          },
           "children": [
             {
               "component": "Panel",
@@ -20,7 +22,7 @@
                 {
                   "component": "Panel.Text",
                   "attribs": {
-                    "font": "Minecraft Ten",
+                    "type": "header",
                     "text": { "$relativePath": "$.title.getString" }
                   }
                 },
@@ -28,7 +30,7 @@
                   "component": "Panel.CloseButton",
                   "attribs": {
                     "onClick": {
-                      "$relativePath": "$.closeButton.onClick.action"
+                      "$relativePath": "$.closeButton.onClick.closeAction"
                     }
                   }
                 },
@@ -140,7 +142,7 @@
                                       "$relativePath": "$.description.getString"
                                     },
                                     "options": {
-                                      "$relativePath": "$.items.getObject"
+                                      "$relativePath": "$.items.getObjectArray"
                                     }
                                   }
                                 }
@@ -319,7 +321,8 @@
                                 {
                                   "component": "Panel.Text",
                                   "attribs": {
-                                    "font": "Minecraft Ten",
+                                    "type": "header",
+                                    "multiline": true,
                                     "text": {
                                       "$relativePath": "$.text.getString"
                                     }
@@ -350,7 +353,8 @@
                                   "attribs": {
                                     "text": {
                                       "$relativePath": "$.text.getString"
-                                    }
+                                    },
+                                    "multiline": true
                                   }
                                 }
                               ]
@@ -374,7 +378,7 @@
                       "component": "Form.Button",
                       "attribs": {
                         "onClick": {
-                          "$relativePath": "$.closeButton.onClick.action"
+                          "$relativePath": "$.closeButton.onClick.closeAction"
                         },
                         "label": {
                           "$relativePath": "$.closeButton.label.getString"

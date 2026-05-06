@@ -18,7 +18,9 @@
               "children": [
                 {
                   "component": "Panel",
-                  "attribs": { "colorMode": "shulkerBox" },
+                  "attribs": {
+                    "colorMode": { "$relativePath": "$.colorMode" }
+                  },
                   "children": [
                     {
                       "component": "Panel.Text",
