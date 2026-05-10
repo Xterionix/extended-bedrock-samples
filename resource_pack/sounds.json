@@ -164,6 +164,20 @@
       }
     }
   },
+  "individual_event_sounds": {
+    "events": {
+      "geyser_eruption_start": {
+        "sound": "block.potent_sulfur.geyser_eruption_start",
+        "volume": 1.0,
+        "pitch": 1.0
+      },
+      "geyser_eruption_active": {
+        "sound": "block.potent_sulfur.geyser_eruption_active",
+        "volume": 1.0,
+        "pitch": 1.0
+      }
+    }
+  },
   "entity_sounds": {
     "entities": {
       "sulfur_cube": {
@@ -193,6 +207,11 @@
               "events": {
                 "squish.small": {
                   "sound": "mob.sulfur_cube.small.jump",
+                  "volume": 1.0,
+                  "pitch": 0.5
+                },
+                "slime_landing": {
+                  "sound": "mob.sulfur_cube.small.landing",
                   "volume": 1.0,
                   "pitch": 0.5
                 },
@@ -422,12 +441,33 @@
               "volume": 1.0,
               "events": {
                 "hurt": {
-                  "sound": "mob.sulfur_cube.regular.hit",
+                  "sound": "mob.sulfur_cube.explosive.hit",
                   "volume": [ 0.5, 1.5 ],
                   "pitch": [ 0.8, 1.2 ]
                 },
                 "pushed_by_player": {
-                  "sound": "mob.sulfur_cube.regular.push",
+                  "sound": "mob.sulfur_cube.explosive.push",
+                  "volume": 1.0,
+                  "pitch": [ 0.8, 1.2 ]
+                },
+                "bounce": {
+                  "sound": "mob.sulfur_cube.bounce",
+                  "volume": 1.0,
+                  "pitch": [ 0.8, 1.2 ]
+                }
+              }
+            },
+            "hot": {
+              "pitch": 1.0,
+              "volume": 1.0,
+              "events": {
+                "hurt": {
+                  "sound": "mob.sulfur_cube.hot.hit",
+                  "volume": [ 0.5, 1.5 ],
+                  "pitch": [ 0.8, 1.2 ]
+                },
+                "pushed_by_player": {
+                  "sound": "mob.sulfur_cube.hot.push",
                   "volume": 1.0,
                   "pitch": [ 0.8, 1.2 ]
                 },

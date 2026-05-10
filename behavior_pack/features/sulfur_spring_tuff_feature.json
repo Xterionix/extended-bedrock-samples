@@ -1,0 +1,41 @@
+{
+  "format_version": "1.21.40",
+  "minecraft:single_block_feature": {
+    "description": {
+      "identifier": "minecraft:sulfur_spring_tuff_feature"
+    },
+    "places_block": [
+      {
+        "block": "minecraft:tuff",
+        "weight": 1
+      }
+    ],
+    "may_replace": [
+      // Blocks that compose the surface of the overworld.
+      // Keep aligned with each "minecraft:sulfur_spring_xxx_feature".
+      { "tags": "query.any_tag('dirt', 'sand', 'gravel')" },
+      "minecraft:stone",
+      "minecraft:granite",
+      "minecraft:diorite",
+      "minecraft:andesite",
+      "minecraft:tuff",
+      "minecraft:deepslate",
+      "minecraft:calcite",
+      "minecraft:sandstone",
+      "minecraft:red_sandstone",
+      "minecraft:hardened_clay",
+      "minecraft:brown_terracotta",
+      "minecraft:orange_terracotta",
+      "minecraft:light_gray_terracotta",
+      "minecraft:red_terracotta",
+      "minecraft:white_terracotta",
+      "minecraft:yellow_terracotta"
+    ],
+    "may_attach_to": {
+      "min_sides_must_attach": 1,
+      "top": "minecraft:air"
+    },
+    "enforce_placement_rules": false,
+    "enforce_survivability_rules": false
+  }
+}

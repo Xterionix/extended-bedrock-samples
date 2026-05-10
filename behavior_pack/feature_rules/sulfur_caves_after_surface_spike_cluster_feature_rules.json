@@ -10,7 +10,6 @@
       "minecraft:biome_filter": [
         {
           "test": "has_biome_tag",
-          "operator": "==",
           "value": "sulfur_caves"
         }
       ]
@@ -19,15 +18,15 @@
       "iterations": "Math.Random(48, 96)",
       "x": {
         "distribution": "uniform",
-        "extent": [0, 16]
+        "extent": [ 0, 16 ]
       },
       "y": {
         "distribution": "uniform",
-        "extent": [-64, 256]
+        "extent": [ -64, 256 ]
       },
       "z": {
         "distribution": "uniform",
-        "extent": [0, 16]
+        "extent": [ 0, 16 ]
       }
     }
   }

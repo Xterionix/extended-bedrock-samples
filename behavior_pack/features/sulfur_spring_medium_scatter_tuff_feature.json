@@ -1,0 +1,24 @@
+{
+  "format_version": "1.13.0",
+  "minecraft:scatter_feature": {
+    "description": {
+      "identifier": "minecraft:sulfur_spring_medium_scatter_tuff_feature"
+    },
+    "iterations": 80,
+    "x": {
+      "distribution": "triangle",
+      "extent": [ -8, 8 ]
+    },
+    "y": {
+      "distribution": "gaussian",
+      "extent": [ -3, 3 ]
+    },
+    "z": {
+      "distribution": "triangle",
+      "extent": [ -8, 8 ]
+    },
+    "coordinate_eval_order": "zyx",
+    "project_input_to_floor": true,
+    "places_feature": "minecraft:sulfur_spring_tuff_snap_to_surface_feature"
+  }
+}
