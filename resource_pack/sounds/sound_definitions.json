@@ -106,17 +106,17 @@
   "mob.sulfur_cube.landing": {
     "category": "neutral",
     "sounds": [
-      "sounds/mob/sulfur_cube/squish/squish1",
-      "sounds/mob/sulfur_cube/squish/squish2",
-      "sounds/mob/sulfur_cube/squish/squish3",
-      "sounds/mob/sulfur_cube/squish/squish4",
-      "sounds/mob/sulfur_cube/squish/squish5",
-      "sounds/mob/sulfur_cube/squish/squish6",
-      "sounds/mob/sulfur_cube/squish/squish7",
-      "sounds/mob/sulfur_cube/squish/squish8",
-      "sounds/mob/sulfur_cube/squish/squish9",
-      "sounds/mob/sulfur_cube/squish/squish10",
-      "sounds/mob/sulfur_cube/squish/squish11"
+      "sounds/mob/sulfur_cube/squish1",
+      "sounds/mob/sulfur_cube/squish2",
+      "sounds/mob/sulfur_cube/squish3",
+      "sounds/mob/sulfur_cube/squish4",
+      "sounds/mob/sulfur_cube/squish5",
+      "sounds/mob/sulfur_cube/squish6",
+      "sounds/mob/sulfur_cube/squish7",
+      "sounds/mob/sulfur_cube/squish8",
+      "sounds/mob/sulfur_cube/squish9",
+      "sounds/mob/sulfur_cube/squish10",
+      "sounds/mob/sulfur_cube/squish11"
     ]
   },
   "mob.sulfur_cube.bouncy.push": {
@@ -578,7 +578,7 @@
   },
   "block.potent_sulfur.geyser_eruption_active": {
     "category": "block",
-    "max_distance": 16.0,
+    "max_distance": 32.0,
     "sounds": [
       "sounds/block/potent_sulfur/eruption_active1",
       "sounds/block/potent_sulfur/eruption_active2",
@@ -588,6 +588,32 @@
       "sounds/block/potent_sulfur/eruption_active6",
       "sounds/block/potent_sulfur/eruption_active7",
       "sounds/block/potent_sulfur/eruption_active8"
+    ]
+  },
+  "block.potent_sulfur.geyser_continuous_eruption_start": {
+    "category": "block",
+    "max_distance": 16.0,
+    "sounds": [
+      "sounds/block/potent_sulfur/continuous/eruption1",
+      "sounds/block/potent_sulfur/continuous/eruption2",
+      "sounds/block/potent_sulfur/continuous/eruption3",
+      "sounds/block/potent_sulfur/continuous/eruption4",
+      "sounds/block/potent_sulfur/continuous/eruption5",
+      "sounds/block/potent_sulfur/continuous/eruption6"
+    ],
+    "subtitle": "subtitles.block.potent_sulfur.geyser_eruption_start"
+  },
+  "block.potent_sulfur.geyser_continuous_eruption_active": {
+    "category": "block",
+    "max_distance": 32.0,
+    "sounds": [
+      "sounds/block/potent_sulfur/continuous/eruption_active1",
+      "sounds/block/potent_sulfur/continuous/eruption_active2",
+      "sounds/block/potent_sulfur/continuous/eruption_active3",
+      "sounds/block/potent_sulfur/continuous/eruption_active4",
+      "sounds/block/potent_sulfur/continuous/eruption_active5",
+      "sounds/block/potent_sulfur/continuous/eruption_active6",
+      "sounds/block/potent_sulfur/continuous/eruption_active7"
     ]
   },
   "block.cinnabar.break": {
@@ -1837,7 +1863,7 @@
     "category": "music",
     "sounds": [
       {
-        "name": "sounds/music/game/clark",
+        "name": "sounds/music/game/calm2",
         "stream": true
       },
       {

@@ -564,7 +564,17 @@
       },
       "geyser_eruption_active": {
         "sound": "block.potent_sulfur.geyser_eruption_active",
+        "volume": 2.0,
+        "pitch": 1.0
+      },
+      "geyser_continuous_eruption_start": {
+        "sound": "block.potent_sulfur.geyser_continuous_eruption_start",
         "volume": 1.0,
+        "pitch": 1.0
+      },
+      "geyser_continuous_eruption_active": {
+        "sound": "block.potent_sulfur.geyser_continuous_eruption_active",
+        "volume": 2.0,
         "pitch": 1.0
       }
     }
