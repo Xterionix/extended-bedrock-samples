@@ -2,8 +2,8 @@
   "resource_pack_name": "vanilla",
   "texture_name": "atlas.items",
   "texture_data": {
-    "sulfur_cube_spawn_egg": {
-      "textures": "textures/items/spawn_eggs/sulfur_cube_spawn_egg"
+    "spawn_egg_sulfur_cube": {
+      "textures": "textures/items/spawn_eggs/spawn_egg_sulfur_cube"
     },
     "bucket": {
       "textures": [
@@ -20,6 +20,9 @@
         "textures/items/bucket_tadpole",
         "textures/items/bucket_sulfur_cube"
       ]
+    },
+    "record_bounce": {
+      "textures": "textures/items/music_disc_bounce"
     }
   }
 }

@@ -164,20 +164,6 @@
       }
     }
   },
-  "individual_event_sounds": {
-    "events": {
-      "geyser_eruption_start": {
-        "sound": "block.potent_sulfur.geyser_eruption_start",
-        "volume": 1.0,
-        "pitch": 1.0
-      },
-      "geyser_eruption_active": {
-        "sound": "block.potent_sulfur.geyser_eruption_active",
-        "volume": 1.0,
-        "pitch": 1.0
-      }
-    }
-  },
   "entity_sounds": {
     "entities": {
       "sulfur_cube": {
@@ -477,6 +463,27 @@
                   "pitch": [ 0.8, 1.2 ]
                 }
               }
+            },
+            "slow_bouncy": {
+              "pitch": 1.0,
+              "volume": 1.0,
+              "events": {
+                "hurt": {
+                  "sound": "mob.sulfur_cube.slow_bouncy.hit",
+                  "volume": [ 0.5, 1.5 ],
+                  "pitch": [ 0.8, 1.2 ]
+                },
+                "pushed_by_player": {
+                  "sound": "mob.sulfur_cube.slow_bouncy.push",
+                  "volume": 1.0,
+                  "pitch": [ 0.8, 1.2 ]
+                },
+                "bounce": {
+                  "sound": "mob.sulfur_cube.bounce",
+                  "volume": 1.0,
+                  "pitch": [ 0.8, 1.2 ]
+                }
+              }
             }
           }
         }
@@ -530,6 +537,35 @@
             "pitch": [ 0.8, 1.2 ]
           }
         }
+      }
+    }
+  },
+  "individual_event_sounds": {
+    "events": {
+      "record.bounce": {
+        "sound": "record.bounce",
+        "volume": 1.0,
+        "pitch": 1.0
+      },
+      "bucket.fill.land_animal": {
+        "sound": "item.sulfur_cube.fill",
+        "volume": 1.0,
+        "pitch": 1.0
+      },
+      "bucket.empty.land_animal": {
+        "sound": "item.sulfur_cube.empty",
+        "volume": 1.0,
+        "pitch": 1.0
+      },
+      "geyser_eruption_start": {
+        "sound": "block.potent_sulfur.geyser_eruption_start",
+        "volume": 1.0,
+        "pitch": 1.0
+      },
+      "geyser_eruption_active": {
+        "sound": "block.potent_sulfur.geyser_eruption_active",
+        "volume": 1.0,
+        "pitch": 1.0
       }
     }
   }
