@@ -59,6 +59,27 @@
           "pitch": 0.5
         }
       }
+    },
+    "sulfur_spike": {
+      "volume": 1.0,
+      "pitch": 1.0,
+      "events": {
+        "break": {
+          "sound": "block.sulfur_spike.break",
+          "volume": 1.0,
+          "pitch": 0.8
+        },
+        "place": {
+          "sound": "block.sulfur_spike.place",
+          "volume": 1.0,
+          "pitch": 0.8
+        },
+        "hit": {
+          "sound": "block.sulfur_spike.hit",
+          "volume": 0.3,
+          "pitch": 0.5
+        }
+      }
     }
   },
   "interactive_sounds": {
@@ -152,6 +173,37 @@
           "land": {
             "sound": "block.cinnabar.step",
             "volume": 0.4,
+            "pitch": 1.0
+          }
+        }
+      },
+      "sulfur_spike": {
+        "volume": 1.0,
+        "pitch": 1.0,
+        "events": {
+          "step": {
+            "sound": "block.sulfur_spike.step",
+            "volume": 0.3,
+            "pitch": 1.0
+          },
+          "hit": {
+            "sound": "block.sulfur_spike.hit",
+            "volume": 0.5,
+            "pitch": 0.5
+          },
+          "fall": {
+            "sound": "block.sulfur_spike.fall",
+            "volume": 1.0,
+            "pitch": 0.75
+          },
+          "jump": {
+            "sound": "block.sulfur_spike.step",
+            "volume": 0.4,
+            "pitch": 1.0
+          },
+          "land": {
+            "sound": "block.sulfur_spike.land",
+            "volume": 1.0,
             "pitch": 1.0
           }
         }
@@ -508,7 +560,7 @@
             "pitch": [ 0.64, 0.96 ]
           },
           "attack": {
-            "sound": "mob.attack",
+            "sound": "missing.ADO1624579",
             "pitch": [ 0.8, 1.2 ]
           }
         }
@@ -533,7 +585,7 @@
             "pitch": [ 0.64, 0.96 ]
           },
           "attack": {
-            "sound": "mob.attack",
+            "sound": "missing.ADO1624579",
             "pitch": [ 0.8, 1.2 ]
           }
         }

@@ -84,14 +84,14 @@
   "mob.sulfur_cube.bounce": {
     "category": "neutral",
     "sounds": [
-      "sounds/mob/sulfur_cube/ball/bounce1",
-      "sounds/mob/sulfur_cube/ball/bounce2",
-      "sounds/mob/sulfur_cube/ball/bounce3",
-      "sounds/mob/sulfur_cube/ball/bounce4",
-      "sounds/mob/sulfur_cube/ball/bounce5",
-      "sounds/mob/sulfur_cube/ball/bounce6",
-      "sounds/mob/sulfur_cube/ball/bounce7",
-      "sounds/mob/sulfur_cube/ball/bounce8"
+      "sounds/mob/sulfur_cube/bounce1",
+      "sounds/mob/sulfur_cube/bounce2",
+      "sounds/mob/sulfur_cube/bounce3",
+      "sounds/mob/sulfur_cube/bounce4",
+      "sounds/mob/sulfur_cube/bounce5",
+      "sounds/mob/sulfur_cube/bounce6",
+      "sounds/mob/sulfur_cube/bounce7",
+      "sounds/mob/sulfur_cube/bounce8"
     ],
     "subtitle": "subtitles.entity.sulfur_cube.bounce"
   },
@@ -590,6 +590,75 @@
       "sounds/block/potent_sulfur/eruption_active8"
     ]
   },
+  "block.sulfur_spike.break": {
+    "category": "block",
+    "max_distance": 16.0,
+    "sounds": [
+      "sounds/block/sulfur_spike/break1",
+      "sounds/block/sulfur_spike/break2",
+      "sounds/block/sulfur_spike/break3",
+      "sounds/block/sulfur_spike/break4",
+      "sounds/block/sulfur_spike/break5",
+      "sounds/block/sulfur_spike/break6",
+      "sounds/block/sulfur_spike/break7"
+    ],
+    "subtitle": "subtitles.block.generic.break"
+  },
+  "block.sulfur_spike.hit": {
+    "category": "block",
+    "max_distance": 16.0,
+    "sounds": [
+      "sounds/block/sulfur_spike/hit1",
+      "sounds/block/sulfur_spike/hit2",
+      "sounds/block/sulfur_spike/hit3",
+      "sounds/block/sulfur_spike/hit4",
+      "sounds/block/sulfur_spike/hit5",
+      "sounds/block/sulfur_spike/hit6",
+      "sounds/block/sulfur_spike/hit7"
+    ],
+    "subtitle": "subtitles.block.generic.hit"
+  },
+  "block.sulfur_spike.place": {
+    "category": "block",
+    "max_distance": 16.0,
+    "sounds": [
+      "sounds/block/sulfur_spike/place1",
+      "sounds/block/sulfur_spike/place2",
+      "sounds/block/sulfur_spike/place3",
+      "sounds/block/sulfur_spike/place4",
+      "sounds/block/sulfur_spike/place5",
+      "sounds/block/sulfur_spike/place6",
+      "sounds/block/sulfur_spike/place7",
+      "sounds/block/sulfur_spike/place8"
+    ],
+    "subtitle": "subtitles.block.generic.place"
+  },
+  "block.sulfur_spike.step": {
+    "category": "player",
+    "sounds": [
+      "sounds/block/sulfur_spike/step1",
+      "sounds/block/sulfur_spike/step2",
+      "sounds/block/sulfur_spike/step3",
+      "sounds/block/sulfur_spike/step4",
+      "sounds/block/sulfur_spike/step5",
+      "sounds/block/sulfur_spike/step6",
+      "sounds/block/sulfur_spike/step7"
+    ],
+    "subtitle": "subtitles.block.generic.footsteps"
+  },
+  "block.sulfur_spike.fall": {
+    "category": "neutral",
+    "sounds": [
+      "sounds/block/sulfur_spike/hit1",
+      "sounds/block/sulfur_spike/hit2",
+      "sounds/block/sulfur_spike/hit3",
+      "sounds/block/sulfur_spike/hit4",
+      "sounds/block/sulfur_spike/hit5",
+      "sounds/block/sulfur_spike/hit6",
+      "sounds/block/sulfur_spike/hit7"
+    ],
+    "subtitle": "subtitles.block.generic.fall"
+  },
   "block.potent_sulfur.geyser_continuous_eruption_start": {
     "category": "block",
     "max_distance": 16.0,
@@ -615,6 +684,19 @@
       "sounds/block/potent_sulfur/continuous/eruption_active6",
       "sounds/block/potent_sulfur/continuous/eruption_active7"
     ]
+  },
+  "block.sulfur_spike.land": {
+    "category": "player",
+    "sounds": [
+      "sounds/block/sulfur_spike/land1",
+      "sounds/block/sulfur_spike/land2",
+      "sounds/block/sulfur_spike/land3",
+      "sounds/block/sulfur_spike/land4",
+      "sounds/block/sulfur_spike/land5",
+      "sounds/block/sulfur_spike/land6",
+      "sounds/block/sulfur_spike/land7"
+    ],
+    "subtitle": "subtitles.block.generic.fall"
   },
   "block.cinnabar.break": {
     "category": "block",

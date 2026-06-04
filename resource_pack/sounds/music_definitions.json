@@ -1,11 +1,11 @@
 {
   "mega_taiga": {
-    "event_name" : "music.game.old_growth_taiga",
+    "event_name" : "music.overworld.old_growth_taiga",
     "min_delay": 600,
     "max_delay": 1200
   },
   "redwood_taiga_mutated": {
-    "event_name": "music.game.old_growth_taiga",
+    "event_name": "music.overworld.old_growth_taiga",
     "min_delay": 600,
     "max_delay": 1200
   },

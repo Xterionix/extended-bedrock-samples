@@ -370,7 +370,7 @@
                   "component": "Visibility",
                   "attribs": {
                     "visible": {
-                      "$relativePath": "$.closeButton.button_visible.getBoolean"
+                      "$relativePath": "$.closeButton.visible.getBoolean"
                     }
                   },
                   "children": [

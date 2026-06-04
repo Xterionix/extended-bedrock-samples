@@ -141,6 +141,6 @@
       "west": "sulfur_spike_merge",
       "east": "sulfur_spike_base"
     },
-    "sound": "sulfur"
+    "sound": "sulfur_spike"
   }
 }
