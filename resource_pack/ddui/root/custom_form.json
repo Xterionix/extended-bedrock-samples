@@ -382,7 +382,8 @@
                         },
                         "label": {
                           "$relativePath": "$.closeButton.label.getString"
-                        }
+                        },
+                        "data-testid": "test-CustomFormCloseButton"
                       }
                     }
                   ]

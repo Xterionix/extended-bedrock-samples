@@ -1,7 +1,146 @@
 {
   "format_version": "1.21.40",
-  "golden_dandelion": {
-    "textures": "golden_dandelion",
-    "sound": "grass"
+  "sulfur": {
+    "textures": "sulfur",
+    "sound": "sulfur"
+  },
+  "sulfur_slab": {
+    "textures": "sulfur",
+    "sound": "sulfur"
+  },
+  "sulfur_double_slab": {
+    "textures": "sulfur",
+    "sound": "sulfur"
+  },
+  "sulfur_stairs": {
+    "textures": "sulfur",
+    "sound": "sulfur"
+  },
+  "sulfur_wall": {
+    "textures": "sulfur",
+    "sound": "sulfur"
+  },
+  "polished_sulfur": {
+    "textures": "polished_sulfur",
+    "sound": "sulfur"
+  },
+  "polished_sulfur_slab": {
+    "textures": "polished_sulfur",
+    "sound": "sulfur"
+  },
+  "polished_sulfur_double_slab": {
+    "textures": "polished_sulfur",
+    "sound": "sulfur"
+  },
+  "polished_sulfur_stairs": {
+    "textures": "polished_sulfur",
+    "sound": "sulfur"
+  },
+  "polished_sulfur_wall": {
+    "textures": "polished_sulfur",
+    "sound": "sulfur"
+  },
+  "sulfur_bricks": {
+    "textures": "sulfur_bricks",
+    "sound": "sulfur"
+  },
+  "sulfur_brick_slab": {
+    "textures": "sulfur_bricks",
+    "sound": "sulfur"
+  },
+  "sulfur_brick_double_slab": {
+    "textures": "sulfur_bricks",
+    "sound": "sulfur"
+  },
+  "sulfur_brick_stairs": {
+    "textures": "sulfur_bricks",
+    "sound": "sulfur"
+  },
+  "sulfur_brick_wall": {
+    "textures": "sulfur_bricks",
+    "sound": "sulfur"
+  },
+  "chiseled_sulfur": {
+    "textures": "chiseled_sulfur",
+    "sound": "sulfur"
+  },
+  "potent_sulfur": {
+    "textures": "potent_sulfur",
+    "sound": "potent_sulfur"
+  },
+  "cinnabar": {
+    "textures": "cinnabar",
+    "sound": "cinnabar"
+  },
+  "cinnabar_slab": {
+    "textures": "cinnabar",
+    "sound": "cinnabar"
+  },
+  "cinnabar_double_slab": {
+    "textures": "cinnabar",
+    "sound": "cinnabar"
+  },
+  "cinnabar_stairs": {
+    "textures": "cinnabar",
+    "sound": "cinnabar"
+  },
+  "cinnabar_wall": {
+    "textures": "cinnabar",
+    "sound": "cinnabar"
+  },
+  "polished_cinnabar": {
+    "textures": "polished_cinnabar",
+    "sound": "cinnabar"
+  },
+  "polished_cinnabar_slab": {
+    "textures": "polished_cinnabar",
+    "sound": "cinnabar"
+  },
+  "polished_cinnabar_double_slab": {
+    "textures": "polished_cinnabar",
+    "sound": "cinnabar"
+  },
+  "polished_cinnabar_stairs": {
+    "textures": "polished_cinnabar",
+    "sound": "cinnabar"
+  },
+  "polished_cinnabar_wall": {
+    "textures": "polished_cinnabar",
+    "sound": "cinnabar"
+  },
+  "cinnabar_bricks": {
+    "textures": "cinnabar_bricks",
+    "sound": "cinnabar"
+  },
+  "cinnabar_brick_slab": {
+    "textures": "cinnabar_bricks",
+    "sound": "cinnabar"
+  },
+  "cinnabar_brick_double_slab": {
+    "textures": "cinnabar_bricks",
+    "sound": "cinnabar"
+  },
+  "cinnabar_brick_stairs": {
+    "textures": "cinnabar_bricks",
+    "sound": "cinnabar"
+  },
+  "cinnabar_brick_wall": {
+    "textures": "cinnabar_bricks",
+    "sound": "cinnabar"
+  },
+  "chiseled_cinnabar": {
+    "textures": "chiseled_cinnabar",
+    "sound": "cinnabar"
+  },
+  "sulfur_spike": {
+    "textures": {
+      "north": "sulfur_spike_tip",
+      "up": "sulfur_spike_base",
+      "down": "sulfur_spike_frustum",
+      "south": "sulfur_spike_middle",
+      "west": "sulfur_spike_merge",
+      "east": "sulfur_spike_base"
+    },
+    "sound": "sulfur"
   }
 }

@@ -11,6 +11,7 @@
     "vertical_search_range": 32,
     "surface": "floor",
     "allow_air_placement": true,
-    "allow_underwater_placement": true
+    "allow_underwater_placement": true,
+    "embed_in_surface": true
   }
 }

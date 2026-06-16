@@ -14,17 +14,27 @@
           "children": [
             {
               "component": "Context",
-              "attribs": { "data": { "$path": "$.minecraft.container" } },
+              "attribs": {
+                "data": {
+                  "$path": "$.minecraft.container"
+                }
+              },
               "children": [
                 {
                   "component": "Panel",
                   "attribs": {
-                    "colorMode": { "$relativePath": "$.colorMode" }
+                    "colorMode": {
+                      "$relativePath": "$.colorMode"
+                    }
                   },
                   "children": [
                     {
                       "component": "Panel.Text",
-                      "attribs": { "text": { "$relativePath": "$.name" } }
+                      "attribs": {
+                        "text": {
+                          "$relativePath": "$.name"
+                        }
+                      }
                     },
                     {
                       "component": "Panel.CloseButton",
@@ -34,23 +44,24 @@
                         }
                       }
                     },
-                    { "component": "Panel.Spacing" },
                     {
-                      "component": "Container.FixedGridLayout",
+                      "component": "Panel.Spacing"
+                    },
+                    {
+                      "component": "ScrollableGridLayout",
+                      "attribs": {
+                        "data": {
+                          "$relativePath": "$.slots.shulkerBoxContainer"
+                        }
+                      },
                       "children": [
                         {
-                          "component": "Context.List",
+                          "component": "Container.Slot",
                           "attribs": {
-                            "data": {
-                              "$relativePath": "$.items.shulkerBoxContainer"
+                            "item": {
+                              "$relativePath": "$"
                             }
-                          },
-                          "children": [
-                            {
-                              "component": "Container.Item",
-                              "attribs": { "item": { "$relativePath": "$" } }
-                            }
-                          ]
+                          }
                         }
                       ]
                     }

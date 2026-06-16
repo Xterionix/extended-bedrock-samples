@@ -1,0 +1,13 @@
+{
+  "format_version": "1.13.0",
+  "minecraft:aggregate_feature": {
+    "description": {
+      "identifier": "minecraft:sulfur_spring_medium_1_with_tuff_feature"
+    },
+    "early_out": "first_failure",
+    "features": [
+      "minecraft:sulfur_spring_medium_1_feature",
+      "minecraft:sulfur_spring_medium_scatter_tuff_feature"
+    ]
+  }
+}

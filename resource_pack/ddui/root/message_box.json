@@ -40,9 +40,7 @@
                     }
                   ]
                 },
-                { "component": "Panel.Spacing" },
                 { "component": "Form.Divider" },
-                { "component": "Panel.Spacing" },
                 {
                   "component": "Form.Button",
                   "attribs": {
@@ -56,9 +54,7 @@
                     "data-testid": "test-MessageFormButton1"
                   }
                 },
-                { "component": "Panel.Spacing" },
                 { "component": "Form.Divider" },
-                { "component": "Panel.Spacing" },
                 {
                   "component": "Form.Button",
                   "attribs": {
