@@ -346,7 +346,6 @@
     "lategameTips.27"
   ],
   "realms_loading_messages": [
-    "onlinePlay.message",
     "tips.realms.1",
     "tips.realms.2",
     "tips.realms.3",
@@ -354,7 +353,10 @@
     "tips.realms.5",
     "tips.realms.6",
     "tips.realms.7",
-    "tips.realms.8"
+    "tips.realms.8",
+    "tips.realms.9",
+    "tips.realms.10",
+    "tips.realms.11"
   ],
   "addons_loading_messages": [
     "onlinePlay.message",

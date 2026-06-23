@@ -1,5 +1,5 @@
 {
-  "format_version": "1.26.30",
+  "format_version": "1.26.40",
   "minecraft:crafting_items_catalog": {
     "categories": [
       {
@@ -752,8 +752,8 @@
               "minecraft:cinnabar",
               "minecraft:polished_cinnabar",
               "minecraft:sulfur",
-              "minecraft:polished_sulfur",
-              "minecraft:potent_sulfur"
+              "minecraft:potent_sulfur",
+              "minecraft:polished_sulfur"
             ]
           },
           {
