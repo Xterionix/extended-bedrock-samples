@@ -1,0 +1,12 @@
+{
+  "format_version": "1.26.20",
+  "minecraft:weighted_random_feature": {
+    "description": {
+      "identifier": "minecraft:select_dappled_forest_fallen_tree_decoration"
+    },
+    "features": [
+      [ "minecraft:optional_shelf_mushroom_feature", 1 ],
+      [ "minecraft:optional_log_brown_mushroom_feature", 1 ]
+    ]
+  }
+}

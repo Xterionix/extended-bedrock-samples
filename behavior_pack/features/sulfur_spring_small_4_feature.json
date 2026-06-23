@@ -4,7 +4,7 @@
     "description": {
       "identifier": "minecraft:sulfur_spring_small_4_feature"
     },
-    "structure_name": "sulfur_spring:sulfur_spring_small_4",
+    "structure_name": "minecraft:sulfur_spring_small_4",
     "adjustment_radius": 0,
     "ground_level": 7,
     "rotate_around_center": true,

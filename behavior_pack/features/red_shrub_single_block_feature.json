@@ -1,0 +1,17 @@
+{
+  "format_version": "1.26.30",
+  "minecraft:single_block_feature": {
+    "description": {
+      "identifier": "minecraft:red_shrub_single_block_feature"
+    },
+    "places_block": [
+      {
+        "block": "minecraft:red_shrub",
+        "weight": 1
+      }
+    ],
+    "randomize_rotation": false,
+    "enforce_survivability_rules": true,
+    "enforce_placement_rules": true
+  }
+}

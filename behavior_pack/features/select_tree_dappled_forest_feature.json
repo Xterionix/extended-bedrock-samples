@@ -1,0 +1,15 @@
+{
+  "format_version": "1.26.30",
+  "minecraft:weighted_random_feature": {
+    "description": {
+      "identifier": "minecraft:select_tree_dappled_forest_feature"
+    },
+    "features": [
+      ["minecraft:red_poplar_tree_with_leaf_litter_feature", 200],
+      ["minecraft:orange_poplar_tree_with_leaf_litter_feature", 240],
+      ["minecraft:yellow_poplar_tree_with_leaf_litter_feature", 90],
+      ["minecraft:select_standing_spruce_tree_feature", 27],
+      ["minecraft:fallen_poplar_tree_feature", 120]
+    ]
+  }
+}

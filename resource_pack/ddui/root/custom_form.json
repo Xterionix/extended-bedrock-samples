@@ -360,6 +360,40 @@
                               ]
                             }
                           ]
+                        },
+                        {
+                          "component": "Visibility",
+                          "attribs": {
+                            "visible": {
+                              "$relativePath": "$.image_visible.getBoolean"
+                            }
+                          },
+                          "children": [
+                            {
+                              "component": "Visibility",
+                              "attribs": {
+                                "visible": {
+                                  "$relativePath": "$.visible.getBoolean"
+                                }
+                              },
+                              "children": [
+                                {
+                                  "component": "Form.Image",
+                                  "attribs": {
+                                    "src": {
+                                      "$relativePath": "$.image_src.getString"
+                                    },
+                                    "width": {
+                                      "$relativePath": "$.image_width.getNumber"
+                                    },
+                                    "pack": {
+                                      "$relativePath": "$.image_pack.getString"
+                                    }
+                                  }
+                                }
+                              ]
+                            }
+                          ]
                         }
                       ]
                     }

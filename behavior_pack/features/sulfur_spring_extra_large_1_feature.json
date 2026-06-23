@@ -4,7 +4,7 @@
     "description": {
       "identifier": "minecraft:sulfur_spring_extra_large_1_feature"
     },
-    "structure_name": "sulfur_spring:sulfur_spring_extra_large_1",
+    "structure_name": "minecraft:sulfur_spring_extra_large_1",
     "adjustment_radius": 0,
     "ground_level": 7,
     "rotate_around_center": true,

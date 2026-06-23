@@ -1,0 +1,17 @@
+{
+  "format_version": "1.13.0",
+  "minecraft:scatter_feature": {
+    "description": {
+      "identifier": "minecraft:optional_shelf_mushroom_feature"
+    },
+    "iterations": 1,
+    "scatter_chance":{
+        "numerator": 1,
+        "denominator": 4
+    },
+    "x": 0,
+    "y": 0,
+    "z": 0,
+    "places_feature": "minecraft:shelf_mushroom_feature"
+  }
+}
